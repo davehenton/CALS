@@ -34,7 +34,6 @@ export default class SearchInput extends React.Component {
   render () {
     const facilityTypes = this.props.facilityTypes
     const countyList = this.props.countyList
-    const countyId = this.state.countyId
     const facilityIterate = facilityTypes.map((facilityType) =>
       <option key={facilityType.id} id={facilityType.id} value={facilityType.value}>{facilityType.value}</option>
     )
@@ -50,7 +49,7 @@ export default class SearchInput extends React.Component {
                 <span>County</span>
               </div>
               <div>
-                <select className='searchSelect' id='county_select' value={this.state.county} onChange={(event) => this.handleChange('countyValue', dictionaryNilSelectValue(event.target.options))}>
+                <select className='searchSelect' id='county_select' value={this.state.searchId.countyValue} onChange={(event) => this.handleChange('countyValue', dictionaryNilSelectValue(event.target.options))}>
                   <option value=' ' />
                   {countyIterate}
                 </select>
@@ -62,7 +61,7 @@ export default class SearchInput extends React.Component {
                 <span>Facility Type</span>
               </div>
               <div>
-                <select className='searchSelect' id='facility_select' value={this.state.facility} onChange={(event) => this.handleChange('facilityTypeValue', event.target.value)}>
+                <select className='searchSelect' id='facility_select' value={this.state.searchId.facilityTypeValue} onChange={(event) => this.handleChange('facilityTypeValue', dictionaryNilSelectValue(event.target.options))}>
                   <option value='' />
                   {facilityIterate}
                 </select>
@@ -85,7 +84,7 @@ export default class SearchInput extends React.Component {
               <InputComponent id='facilityNameValue'
                 fieldClassName='form-control'
                 value={this.state.searchId.facilityNameValue}
-                placeholder='Enter Facility ID #'
+                placeholder='Enter Facility Name'
                 type='text'
                 onChange={(event) => this.handleChange('facilityNameValue', event.target.value)} />
             </InputDataBlock>
@@ -95,7 +94,7 @@ export default class SearchInput extends React.Component {
               <InputComponent id='facilityAddressValue'
                 fieldClassName='form-control'
                 value={this.state.searchId.facilityAddressValue}
-                placeholder='Enter Facility ID #'
+                placeholder='Enter Facility Address'
                 type='text'
                 onChange={(event) => this.handleChange('facilityAddressValue', event.target.value)} />
             </InputDataBlock>
