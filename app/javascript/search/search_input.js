@@ -1,5 +1,6 @@
 import React from 'react'
 import InputDataBlock from './common/inputDataBlock.js'
+import {InputComponent} from 'components/common/inputFields'
 import {dictionaryNilSelectValue} from 'helpers/commonHelper.jsx'
 
 export default class SearchInput extends React.Component {
@@ -8,16 +9,18 @@ export default class SearchInput extends React.Component {
     this.state = {
       searchId: {
         countyValue: '',
-        facilityTypeValue: ''
+        facilityTypeValue: '',
+        facilityIdValue: '',
+        facilityNameValue: '',
+        facilityAddressValue: ''
       }
     }
     this.handleChange = this.handleChange.bind(this)
   }
 
-  handleChange (value, event) {
-    let selectedValue = dictionaryNilSelectValue(event.target.options)
+  handleChange (key, value) {
     let newSearchId = this.state.searchId
-    newSearchId[value] = selectedValue
+    newSearchId[key] = value
     this.setState({
       searchId: newSearchId
     })
@@ -25,7 +28,7 @@ export default class SearchInput extends React.Component {
 
   sendSearchInput (event) {
     event.preventDefault()
-    const finalQuery = (this.state.searchId.countyValue + ',' + this.state.searchId.facilityTypeValue + ',' + this.refs.facilityId.value + ',' + this.refs.facilityName.value + ',' + this.refs.facilityAddress.value)
+    const finalQuery = (this.state.searchId.countyValue + ',' + this.state.searchId.facilityTypeValue + ',' + this.state.searchId.facilityIdValue + ',' + this.state.searchId.facilityNameValue + ',' + this.state.searchId.facilityAddressValue)
     this.props.sendSearchInput(finalQuery)
   }
   render () {
@@ -47,7 +50,7 @@ export default class SearchInput extends React.Component {
                 <span>County</span>
               </div>
               <div>
-                <select className='searchSelect' id='county_select' ref={this.state.county} value={this.state.county} onChange={(event) => this.handleChange('countyValue', event)}>
+                <select className='searchSelect' id='county_select' value={this.state.county} onChange={(event) => this.handleChange('countyValue', dictionaryNilSelectValue(event.target.options))}>
                   <option value=' ' />
                   {countyIterate}
                 </select>
@@ -59,7 +62,7 @@ export default class SearchInput extends React.Component {
                 <span>Facility Type</span>
               </div>
               <div>
-                <select className='searchSelect' id='facility_select' ref={this.state.facility} value={this.state.facility} onChange={(event) => this.handleChange('facilityTypeValue', event)}>
+                <select className='searchSelect' id='facility_select' value={this.state.facility} onChange={(event) => this.handleChange('facilityTypeValue', event.target.value)}>
                   <option value='' />
                   {facilityIterate}
                 </select>
@@ -69,17 +72,32 @@ export default class SearchInput extends React.Component {
             <InputDataBlock
               title={'Facility ID #'}
               columnWidth={2}>
-              <input ref='facilityId' type='number' className='form-control type_number' placeholder='Enter Facility ID #'/>
+              <InputComponent id='facilityIdValue'
+                fieldClassName='form-control type_number'
+                value={this.state.searchId.facilityIdValue}
+                placeholder='Enter Facility ID #'
+                type='number'
+                onChange={(event) => this.handleChange('facilityIdValue', event.target.value)} />
             </InputDataBlock>
             <InputDataBlock
               title={'Facility Name'}
               columnWidth={3}>
-              <input ref='facilityName' type='text' className='form-control' placeholder='Enter Facility Name'/>
+              <InputComponent id='facilityNameValue'
+                fieldClassName='form-control'
+                value={this.state.searchId.facilityNameValue}
+                placeholder='Enter Facility ID #'
+                type='text'
+                onChange={(event) => this.handleChange('facilityNameValue', event.target.value)} />
             </InputDataBlock>
             <InputDataBlock
               title={'Facility Address'}
               columnWidth={3}>
-              <input ref='facilityAddress' type='text' className='form-control' placeholder='Enter Facility Address'/>
+              <InputComponent id='facilityAddressValue'
+                fieldClassName='form-control'
+                value={this.state.searchId.facilityAddressValue}
+                placeholder='Enter Facility ID #'
+                type='text'
+                onChange={(event) => this.handleChange('facilityAddressValue', event.target.value)} />
             </InputDataBlock>
           </div>
           <div className='field_search col-xs-12 col-sm-1 col-md-1 col-lg-1'>
