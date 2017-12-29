@@ -1,6 +1,6 @@
 import React from 'react'
 import SearchInput from '../../../app/javascript/search/search_input'
-import ShallowRenderer from 'react-test-renderer/shallow'
+import {shallow, mount} from 'enzyme'
 
 describe('Render Search Inputs', function () {
   const props = {
@@ -18,18 +18,45 @@ describe('Render Search Inputs', function () {
     ]
 
   }
-  const renderedComp = new ShallowRenderer()
-  const compRendered = renderedComp.render(<SearchInput {...props} />)
-  const resultTag = renderedComp.getRenderOutput()
 
-  // it('Rendered A React Component or Not', function () {
-  //     expect(TestUtils.isDOMComponent(compRendered)).toBe(true)
-  // });
+  const searchInputComp = mount(<SearchInput {...props} />)
 
-  it('render Input block', function () {
-    expect(resultTag.type).toBe('div')
+  it('verify component load', () => {
+    expect(searchInputComp.length).toBe(1)
   })
-  it('verify class name', function () {
-    expect(resultTag.props.className).toBe('search_input col-xs-12 col-sm-12 col-md-12 col-lg-12')
+
+  it('verify county select', () => {
+    let countyField = searchInputComp.find('#county_select')
+    spyOn(searchInputComp.instance(), 'handleChange').and.callThrough()
+    countyField.simulate('change', {target: {options: {'19': {id: '19', value: 'Los Angeles'}, selectedIndex: 19}}})
+    expect(searchInputComp.instance().handleChange).toHaveBeenCalledWith('countyValue', 'Los Angeles')
+  })
+
+  it('verify facilityTypes select', () => {
+    let countyField = searchInputComp.find('#facility_select')
+    spyOn(searchInputComp.instance(), 'handleChange').and.callThrough()
+    countyField.simulate('change', {target: {options: {'2': {id: '400', value: 'Adoption Agency'}, selectedIndex: 2}}})
+    expect(searchInputComp.instance().handleChange).toHaveBeenCalledWith('facilityTypeValue', 'Adoption Agency')
+  })
+
+  it('verify facility Id', () => {
+    let countyField = searchInputComp.find('#facilityIdValue').hostNodes()
+    spyOn(searchInputComp.instance(), 'handleChange').and.callThrough()
+    countyField.simulate('change', {target: {value: 300665437}})
+    expect(searchInputComp.instance().handleChange).toHaveBeenCalledWith('facilityIdValue', 300665437)
+  })
+
+  it('verify facility Name', () => {
+    let countyField = searchInputComp.find('#facilityNameValue').hostNodes()
+    spyOn(searchInputComp.instance(), 'handleChange').and.callThrough()
+    countyField.simulate('change', {target: {value: 'Lederhouse Transitions'}})
+    expect(searchInputComp.instance().handleChange).toHaveBeenCalledWith('facilityNameValue', 'Lederhouse Transitions')
+  })
+
+  it('verify facility Address', () => {
+    let countyField = searchInputComp.find('#facilityAddressValue').hostNodes()
+    spyOn(searchInputComp.instance(), 'handleChange').and.callThrough()
+    countyField.simulate('change', {target: {value: '36 Sequoia Dr,Aliso Viejo,CA 92656'}})
+    expect(searchInputComp.instance().handleChange).toHaveBeenCalledWith('facilityAddressValue', '36 Sequoia Dr,Aliso Viejo,CA 92656')
   })
 })
