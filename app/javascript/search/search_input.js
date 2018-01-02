@@ -53,7 +53,6 @@ export default class SearchInput extends React.Component {
                   <option value=' ' />
                   {countyIterate}
                 </select>
-                {/* <span className='glyphicon glyphicon-triangle-bottom' /> */}
               </div>
             </div>
             <div className='input_data col-xs-12 col-sm-2 col-md-2 col-lg-2'>
@@ -65,11 +64,10 @@ export default class SearchInput extends React.Component {
                   <option value='' />
                   {facilityIterate}
                 </select>
-                {/* <span className='glyphicon glyphicon-triangle-bottom' /> */}
               </div>
             </div>
             <InputDataBlock
-              title={'Facility ID #'}
+              title='Facility ID #'
               columnWidth={2}>
               <InputComponent id='facilityIdValue'
                 fieldClassName='form-control type_number'
@@ -79,7 +77,7 @@ export default class SearchInput extends React.Component {
                 onChange={(event) => this.handleChange('facilityIdValue', event.target.value)} />
             </InputDataBlock>
             <InputDataBlock
-              title={'Facility Name'}
+              title='Facility Name'
               columnWidth={3}>
               <InputComponent id='facilityNameValue'
                 fieldClassName='form-control'
@@ -89,7 +87,7 @@ export default class SearchInput extends React.Component {
                 onChange={(event) => this.handleChange('facilityNameValue', event.target.value)} />
             </InputDataBlock>
             <InputDataBlock
-              title={'Facility Address'}
+              title='Facility Address'
               columnWidth={3}>
               <InputComponent id='facilityAddressValue'
                 fieldClassName='form-control'
