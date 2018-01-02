@@ -98,7 +98,7 @@ export default class Employment extends React.Component {
   }
 }
 
-Employment.PropTypes = {
+Employment.propTypes = {
   employment: PropTypes.object.isRequired
 }
 

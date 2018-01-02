@@ -9,7 +9,7 @@ const RemoveLink = (
     <a onClick={clickClose} className='pull-right remove-btn'>Remove</a>
   </div>
 )
-RemoveLink.PropTypes = {
+RemoveLink.propTypes = {
   key: PropTypes.string
 }
 RemoveLink.defaultProps = {
