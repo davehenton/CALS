@@ -26,7 +26,7 @@ RSpec.configure do |config|
     else
       stub_auth_tokens
     end
-    $redis.flushdb
+    # $redis.flushdb
   end
 
   def authenticate_user_by_filling_in_form
