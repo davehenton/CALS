@@ -15,19 +15,20 @@ RSpec.feature 'RFA01C', js: true do
     fill_in('first_name', with: first_name, :match => :prefer_exact)
     fill_in('middle_name', with: 'k', :match => :prefer_exact)
     fill_in('last_name', with: last_name, :match => :prefer_exact)
-    find(:select, 'child_identified').first(:option, 'Yes').select_option
-    find(:select, 'child_in_home').first(:option, 'Yes').select_option
+    find('#child_identifiedYes').click
+    find('#child_in_homeYes').click
     click_button('Save Progress')
-    url = URI.parse(current_url)
-    packet_url = url.path.gsub('/edit', '') + '/packet'
-    visit page.driver.current_url
+
+    packet_url = current_url.gsub('/edit', '') + '/packet'
+    visit current_url
     visit packet_url
+
     page.find('#Rfa01COverview').find('a.btn.btn-default').click
     fill_in('first_name', with: first_name, :match => :prefer_exact)
     fill_in('middle_name', with: 'k', :match => :prefer_exact)
     fill_in('last_name', with: last_name, :match => :prefer_exact)
     fill_in('street_address', with: 'address here', :match => :prefer_exact)
-    fill_in('desiredChild[0].date_of_birth', with: '01/01/2000', :match => :prefer_exact)
+    fill_in('desiredChildCarddate_of_birth', with: '01/01/2000', :match => :prefer_exact)
     find(:select, 'name_suffix').first(:option, 'Sr').select_option
     find(:select, 'grade').first(:option, 'TK').select_option
     find(:select, 'state_type').first(:option, 'Alaska').select_option
@@ -42,6 +43,6 @@ RSpec.feature 'RFA01C', js: true do
     expect(find_field('grade').value).to eq '1'
     expect(find_field('name_suffix').value).to eq '6'
     expect(find_field('street_address').value).to eq 'address here'
-    expect(find_field('desiredChild[0].date_of_birth').value).to eq '01/01/2000'
+    expect(find_field('desiredChildCarddate_of_birth').value).to eq '01/01/2000'
   end
 end

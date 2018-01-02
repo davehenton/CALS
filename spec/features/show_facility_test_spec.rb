@@ -25,6 +25,26 @@ RSpec.feature 'Facilities', js: true, set_auth_header: true  do
     expect(page).to have_text('Approved')
   end
 
+  scenario 'click into facility and show children' do
+    facilities_list
+    click_link('Lederhouse Transitions')
+    expect(page).to have_text('Takahashi')
+  end
+
+  scenario 'select county dropdown and show search results' do
+    visit search_index_path
+    find(:select, 'county_select').first(:option, 'Alameda').select_option
+    find_button('search').click
+    expect(page).to have_text('West, Connie & Anthony CFH')
+  end
+
+  scenario 'select facility type dropdown and show search results' do
+    visit search_index_path
+    find(:select, 'facility_select').first(:option, 'Adoption Agency').select_option
+    find_button('search').click
+    expect(page).to have_text('Adventures in Family')
+  end
+
   def facilities_list
     visit search_index_path
     fill_in 'Enter Facility Name', with: 'Lederhouse Transitions'

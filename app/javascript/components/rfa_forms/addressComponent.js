@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {CommonAddressComponent} from 'react-wood-duck'
 import {fetchRequest} from 'helpers/http'
+import Immutable from 'immutable'
 
 export default class AddressComponent extends React.Component {
   constructor (props) {
@@ -10,8 +11,22 @@ export default class AddressComponent extends React.Component {
       suggestions: []
     }
     this.onSuggestionSelected = this.onSuggestionSelected.bind(this)
+    this.onSelectionUpdateProp = this.onSelectionUpdateProp.bind(this)
     this.onSuggestionsFetchRequested = this.onSuggestionsFetchRequested.bind(this)
   }
+
+  onInvalidAddressSelection (updateSuggetions) {
+    updateSuggetions.city = ''
+    updateSuggetions.state = null
+    // updateSuggetions.state = this.props.stateTypes.find(x => x.id === updateSuggetions.state)
+    // TODO: Have to find a fix for state to see why invalid address is causing an issue
+    updateSuggetions.zip = ''
+
+    let addressObj = Immutable.fromJS(this.props.addressFields)
+    addressObj = addressObj.update(x => updateSuggetions)
+    this.props.onSelection(addressObj)
+  }
+
   onSuggestionsFetchRequested ({value, reason}) {
     let url = '/geoservice/'
     let params = encodeURIComponent(value)
@@ -26,17 +41,24 @@ export default class AddressComponent extends React.Component {
       })
     })
   }
+
+  onSelectionUpdateProp (updateSuggetions) {
+    let addressObj = Immutable.fromJS(this.props.addressFields)
+    updateSuggetions.state = this.props.stateTypes.find(x => x.id === updateSuggetions.state)
+    addressObj = addressObj.update(x => updateSuggetions)
+    this.props.onSelection(addressObj)
+  }
+
   onSuggestionSelected (event, {suggestion, suggestionValue, suggestionIndex, sectionIndex, method}, addressType) {
     let url = '/geoservice/validate'
     let params = suggestion
     let updateSuggetions
     fetchRequest(url, 'POST', params).then(
       response => response.json()).then((response) => {
-      updateSuggetions = Array.isArray(response) ? response[0] : suggestion
-      this.props.onSelection(updateSuggetions)
+      updateSuggetions = Array.isArray(response) ? this.onSelectionUpdateProp(response[0]) : this.onInvalidAddressSelection(suggestion)
     }).catch(() => {
       updateSuggetions = suggestion
-      this.props.onSelection(updateSuggetions)
+      this.onInvalidAddressSelection(updateSuggetions)
     })
   }
   render () {

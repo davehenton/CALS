@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 
 const blankResidenceFields = Object.freeze({
   residence_ownership: '',
-  physical_mailing_similar: true,
+  physical_mailing_similar: '',
   weapon_in_home: '',
   body_of_water_exist: '',
   body_of_water_description: '',

@@ -89,7 +89,7 @@ describe('foster car card tests', function () {
 
   describe('Verify all Component fields', () => {
     it('verify default layout', () => {
-      expect(applicantMaritalHistoryCardGroupComponent.findWhere(n => n.type() === 'div').length).toEqual(12)
+      expect(applicantMaritalHistoryCardGroupComponent.findWhere(n => n.type() === 'div').length).toEqual(11)
       expect(applicantMaritalHistoryCardGroupComponent.find('#applicant_marital_history_cards').children.length).toEqual(1)
       expect(applicantMaritalHistoryCardGroupComponent.find('button').length).toEqual(2)
     })

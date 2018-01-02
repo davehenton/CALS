@@ -3,6 +3,7 @@ import SearchList from '../../../app/javascript/search/search_list'
 import ShallowRenderer from 'react-test-renderer/shallow'
 
 describe('Render search list', function () {
+  const indexValue = '0'
   const props = {
     searchResults: [
       {
@@ -81,8 +82,8 @@ describe('Render search list', function () {
     let tableChild = tableElement.props.children
     expect(tableChild[1].type).toBe('tbody')
   })
-  it('Verify assigned Facility ID', function () {
-    let tableFaclityID = tableElement.props.children[1].props.children[0]
-    expect(tableFaclityID.key).toEqual('193600008')
+  it('Verify index value from table', function () {
+    let tableIndex = tableElement.props.children[1].props.children[0]
+    expect(tableIndex.key).toEqual(indexValue)
   })
 })

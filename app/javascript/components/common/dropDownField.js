@@ -17,7 +17,7 @@ const DropDownField = ({gridClassName, id, value, disable, disableNullVal, selec
     </select>
   </div>
 )
-DropDownField.PropTypes = {
-  value: PropTypes.string
+DropDownField.propTypes = {
+  value: PropTypes.any
 }
 export {DropDownField}

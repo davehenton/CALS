@@ -1,30 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {urlPrefixHelper} from '../helpers/url_prefix_helper.js.erb'
-import {searchDataDefaults} from './search_grid.js'
+import {checkForNA, addressStringValueOrNa, phoneNumberOrNa} from './common/commonUtils'
 
 export default class SearchList extends React.Component {
   render () {
     const searchResult = this.props.searchResults
-    const resultTable = searchResult.map((result) => {
-      // let displayAddress = result.addresses[0] !== undefined && result.addresses[0].address.street_address !== undefined
-      let address = result.addresses[0].address.street_address + ',' + result.addresses[0].address.city +
-        ',' + result.addresses[0].address.state + ' ' + result.addresses[0].address.zip_code
-      let phone = result.phones[0].number.replace(/(\d{3})(\d{3})(\d{4})/, '($1)-$2-$3')
+    const resultTable = searchResult.map((result, index) => {
+      const fullAddress = addressStringValueOrNa(result.addresses)
+      const phoneNo = phoneNumberOrNa(result.phones)
 
       return (
-        <tr key={result.license_number}>
+        <tr key={index}>
           <td><a href={urlPrefixHelper('/facilities/' + result.license_number)}>{result.name}</a></td>
           <td>{result.license_number}</td>
-          <td>{result.type.value}</td>
-          <td>{result.status.value}</td>
+          <td>{checkForNA(result.type)}</td>
+          <td>{checkForNA(result.status)}</td>
           <td>{result.name}</td>
-          <td>{address}</td>
+          <td>{fullAddress}</td>
           <td>{result.county.value}</td>
-          <td>{phone}</td>
-          <td>{result.email_address ? result.email_address : 'N/A'}</td>
+          <td>{phoneNo}</td>
+          <td>{checkForNA(result.email_address)}</td>
           <td>{'N/A'
-          }<p>Phone: <span>{phone}</span></p></td>
+          }<p>Phone: <span>{phoneNo}</span></p></td>
         </tr>
       )
     })
@@ -59,5 +57,5 @@ SearchList.propTypes = {
 }
 
 SearchList.defaultProps = {
-  searchResults: [searchDataDefaults]
+  searchResults: []
 }

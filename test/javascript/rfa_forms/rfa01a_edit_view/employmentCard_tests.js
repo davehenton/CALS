@@ -7,12 +7,8 @@ import ShallowRenderer from 'react-test-renderer/shallow'
 
 describe('Employment Card', function () {
   const props = {
-    stateTypes: {
-      stateTypes
-    },
-    salaryTypes: {
-      salaryTypes
-    }
+    stateTypes: stateTypes.items,
+    salaryTypes: salaryTypes.items
   }
   const applicantFields = {
     employer_name: 'System Integration',
@@ -35,7 +31,6 @@ describe('Employment Card', function () {
   let employmentCardComp, onEmploymentChange, setCardState
   const employmentCard = new ShallowRenderer()
   const cardRendered = employmentCard.render(<Employment {...props} />)
-  // debugger
 
   it('verify Resident Address fields', function () {
     let employmentClassName = cardRendered
@@ -45,6 +40,7 @@ describe('Employment Card', function () {
     onEmploymentChange = jasmine.createSpy('onEmploymentChange')
     setCardState = jasmine.createSpy('setParentState')
     employmentCardComp = shallow(<Employment
+      index={0}
       stateTypes={stateTypes.items}
       salaryTypes={salaryTypes.items}
       employment={applicantFields}
@@ -79,31 +75,41 @@ describe('Employment Card', function () {
     incomeTypeField.simulate('change', {target: {options: {'2': {value: '2', text: 'Monthly'}, selectedIndex: 2}}})
     expect(employmentCardComp.instance().onEmploymentChange).toHaveBeenCalledWith('income_type', {id: '2', value: 'Monthly'})
   })
-  it('verify Physical Street Address Change', () => {
-    let streetAddressField = employmentCardComp.find('#street_address')
-    spyOn(employmentCardComp.instance(), 'onPhysicalAddressChange').and.callThrough()
-    streetAddressField.simulate('change', {target: {value: '2035 W El Camino Ave'}})
-    expect(employmentCardComp.instance().onPhysicalAddressChange).toHaveBeenCalledWith('street_address', '2035 W El Camino Ave')
-  })
-  it('verify zip Code Change', () => {
-    let physicalZipField = employmentCardComp.find('#zip')
-    spyOn(employmentCardComp.instance(), 'onPhysicalAddressChange').and.callThrough()
-    physicalZipField.simulate('change', {target: {value: '95832'}})
-    expect(employmentCardComp.instance().onPhysicalAddressChange).toHaveBeenCalledWith('zip', '95832')
-    applicantFields.physical_address.zip = '95832'
-    expect(setCardState).toHaveBeenCalledWith('employment', applicantFields)
-  })
-  it('verify City Change', () => {
-    let physicalCityField = employmentCardComp.find('#city')
-    spyOn(employmentCardComp.instance(), 'onPhysicalAddressChange').and.callThrough()
-    physicalCityField.simulate('change', {target: {value: 'San Mateo'}})
-    expect(employmentCardComp.instance().onPhysicalAddressChange).toHaveBeenCalledWith('city', 'San Mateo')
-  })
-  it('verify State Type Change', () => {
-    let physicalStateField = employmentCardComp.find('#state_type')
-    employmentCardComp.update()
-    spyOn(employmentCardComp.instance(), 'onPhysicalAddressChange').and.callThrough()
-    physicalStateField.simulate('change', {target: {options: {'17': {value: '17', text: 'Illinois'}, selectedIndex: 17}}})
-    expect(employmentCardComp.instance().onPhysicalAddressChange).toHaveBeenCalledWith('state', {id: '17', value: 'Illinois'})
+  describe('Reusable address component mount', () => {
+    beforeEach(() => {
+      employmentCardComp = mount(<Employment
+        index={0}
+        stateTypes={stateTypes.items}
+        salaryTypes={salaryTypes.items}
+        employment={applicantFields}
+        setParentState={setCardState} />)
+    })
+    it('verify Physical Street Address Change', () => {
+      let streetAddressField = employmentCardComp.find('#street_address').hostNodes()
+      spyOn(employmentCardComp.instance(), 'onPhysicalAddressChange').and.callThrough()
+      streetAddressField.simulate('change', {target: {value: '2035 W El Camino Ave'}})
+      expect(employmentCardComp.instance().onPhysicalAddressChange).toHaveBeenCalledWith('street_address', '2035 W El Camino Ave', 0)
+    })
+    it('verify zip Code Change', () => {
+      let physicalZipField = employmentCardComp.find('#zip').hostNodes()
+      spyOn(employmentCardComp.instance(), 'onPhysicalAddressChange').and.callThrough()
+      physicalZipField.simulate('change', {target: {value: '95832'}})
+      expect(employmentCardComp.instance().onPhysicalAddressChange).toHaveBeenCalledWith('zip', '95832', 0)
+      applicantFields.physical_address.zip = '95832'
+      expect(setCardState).toHaveBeenCalledWith('employment', applicantFields)
+    })
+    it('verify City Change', () => {
+      let physicalCityField = employmentCardComp.find('#city').hostNodes()
+      spyOn(employmentCardComp.instance(), 'onPhysicalAddressChange').and.callThrough()
+      physicalCityField.simulate('change', {target: {value: 'San Mateo'}})
+      expect(employmentCardComp.instance().onPhysicalAddressChange).toHaveBeenCalledWith('city', 'San Mateo', 0)
+    })
+    it('verify State Type Change', () => {
+      let physicalStateField = employmentCardComp.find('#state_type').hostNodes()
+      employmentCardComp.update()
+      spyOn(employmentCardComp.instance(), 'onPhysicalAddressChange').and.callThrough()
+      physicalStateField.simulate('change', {target: {selectedOptions: [{value: '17', text: 'Illinois'}]}})
+      expect(employmentCardComp.instance().onPhysicalAddressChange).toHaveBeenCalledWith('state', {id: '17', value: 'Illinois'}, 0)
+    })
   })
 })

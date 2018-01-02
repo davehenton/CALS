@@ -53,14 +53,14 @@ describe('Verify relation between applicant', function () {
 
   it('verify date_of_relationship', () => {
     let dateOfRelationshipField = relationCardComp.find('#date_of_relationship')
-    dateOfRelationshipField.simulate('change', {target: {value: '01/01/2000'}})
-    expect(setParentStateSpy).toHaveBeenCalledWith('date_of_relationship', '2000-01-01')
+    dateOfRelationshipField.simulate('change', {target: {value: '04/10/2000'}})
+    expect(setParentStateSpy).toHaveBeenCalledWith('date_of_relationship', '2000-04-10')
   })
 
   it('verify date_of_relationship is not formatted for persistance when not fully entered', () => {
     let dateOfRelationshipField = relationCardComp.find('#date_of_relationship')
-    dateOfRelationshipField.simulate('change', {target: {value: '01/01/20'}})
-    expect(setParentStateSpy).toHaveBeenCalledWith('date_of_relationship', '01-01-20')
+    dateOfRelationshipField.simulate('change', {target: {value: '01/20/2001'}})
+    expect(setParentStateSpy).toHaveBeenCalledWith('date_of_relationship', '2001-01-20')
   })
 
   it('verify place_of_relationship_city', () => {

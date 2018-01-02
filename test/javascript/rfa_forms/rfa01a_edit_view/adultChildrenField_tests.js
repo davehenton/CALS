@@ -5,7 +5,7 @@ import {mount} from 'enzyme'
 import Validator from 'helpers/validator.js'
 
 describe('Adult Children Component', () => {
-  let adultChildComponent, setParentStateSpy, onChangeSpy
+  let adultChildComponent, setParentStateSpy, onChangeSpy, adultChildNotInHomeComponent
   let relationshipToAdultsDefaults = Object.freeze({
     applicant_id: '34',
     relationship_to_applicant: null
@@ -27,6 +27,19 @@ describe('Adult Children Component', () => {
       relationshipToAdultsDefaults
     ],
     lives_in_home: 'true',
+    address: addressDefaults
+  }
+
+  const adultChildLivesOutsideHome = {
+    name_prefix: null,
+    first_name: '',
+    middle_name: '',
+    last_name: '',
+    name_suffix: null,
+    relationship_to_applicants: [
+      relationshipToAdultsDefaults
+    ],
+    lives_in_home: 'false',
     address: addressDefaults
   }
   const applicants = Object.freeze([
@@ -64,6 +77,23 @@ describe('Adult Children Component', () => {
       setParentState={setParentStateSpy}
       validator={validator}
     />)
+    adultChildNotInHomeComponent = mount(<AdultChildrenFields
+      index={0}
+      idPrefix={''}
+      changeAdultChild={onChangeSpy}
+      changeAdultHistoryAddress={onChangeSpy}
+      handleRelationshipTypeToApplicant={onChangeSpy}
+      changeAdultHistoryAddress={onChangeSpy}
+      applicants={applicants}
+      adultChild={adultChildLivesOutsideHome}
+      suffixTypes={suffixTypes.items}
+      prefixTypes={prefixTypes.items}
+      stateTypes={stateTypes.items}
+      nameTypes={nameTypes.items}
+      relationshipToApplicantTypes={relationshipToApplicantTypes.items}
+      setParentState={setParentStateSpy}
+      validator={validator}
+    />)
   })
   it('relation ship type DropDown Change', () => {
     let selectRelationType = adultChildComponent.find('select').at(0)
@@ -81,17 +111,33 @@ describe('Adult Children Component', () => {
     expect(onChangeSpy).toHaveBeenCalledWith('name_prefix', {id: '1', value: 'Mr.'}, 0)
   })
   describe('verify lives in Home logic', () => {
-    let selectLivesInHome
+    let selectLivesInHome, selectLivesInHomeForNotInHomeChild
     beforeEach(() => {
-      selectLivesInHome = adultChildComponent.find('select').at(4)
+      selectLivesInHome = adultChildComponent.find('input[type="radio"]').at(0)
+      selectLivesInHomeForNotInHomeChild = adultChildNotInHomeComponent.find('input[type="radio"]').at(0)
     })
     it('Lives in Home set to true', () => {
       expect(selectLivesInHome.props().value).toBe('true')
-      expect(adultChildComponent.find('select').length).toEqual(5)
+      expect(adultChildComponent.find('select').length).toEqual(4)
     })
+
     it('set lives in Home to No', () => {
       selectLivesInHome.simulate('change', {target: {value: false}})
       expect(onChangeSpy).toHaveBeenCalledWith('lives_in_home', false, 0)
+    })
+
+    it('Lives in Home set to false as props', () => {
+      expect(selectLivesInHomeForNotInHomeChild.props().value).toBe('true')
+      expect(adultChildNotInHomeComponent.find('select').length).toEqual(5)
+    })
+
+    it('set lives in Home to true', () => {
+      selectLivesInHome.simulate('change', {target: {value: true}})
+      expect(onChangeSpy).toHaveBeenCalledWith('lives_in_home', true, 0)
+    })
+    it('Lives in Home set to true', () => {
+      expect(selectLivesInHome.props().value).toBe('true')
+      expect(adultChildNotInHomeComponent.find('select').length).toEqual(5)
     })
   })
 })

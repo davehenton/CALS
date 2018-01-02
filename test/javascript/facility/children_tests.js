@@ -8,11 +8,13 @@ describe('Verify Children Component', function () {
       count: 3,
       children: [{
         id: 2222,
-        first_name: 'abcd',
-        last_name: 'efgh',
-        sex: 'M',
-        age: 14,
-        date_of_birth: '01/02/2003',
+        person: {
+          age: 17,
+          date_of_birth: '2000-05-28',
+          first_name: 'Mei',
+          gender: 'F',
+          last_name: 'Takahashi'
+        },
         date_of_placement: '01/02/2003',
         assigned_worker: 'asdfg',
         county_of_origin: 'sacramento'

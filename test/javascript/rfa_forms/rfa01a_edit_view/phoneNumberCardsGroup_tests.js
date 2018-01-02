@@ -66,7 +66,7 @@ describe('Verify Phone Card Component View', function () {
   describe('when close phone card is clicked', () => {
     it('Clears data when 1 phone number is present', () => {
       spyOn(component.instance(), 'onPhoneClickClose').and.callThrough()
-      component.find('.glyphicon-remove').simulate('click')
+      component.find('.remove-btn').simulate('click')
       expect(component.instance().onPhoneClickClose).toHaveBeenCalledWith(0)
 
       // check if setParent is called
@@ -81,7 +81,7 @@ describe('Verify Phone Card Component View', function () {
       component.setProps({phones: newData})
 
       spyOn(component.instance(), 'onPhoneClickClose').and.callThrough()
-      component.find('.glyphicon-remove').at(1).simulate('click')
+      component.find('.remove-btn').at(1).simulate('click')
       expect(component.instance().onPhoneClickClose).toHaveBeenCalledWith(1)
 
       // check if setParent is called

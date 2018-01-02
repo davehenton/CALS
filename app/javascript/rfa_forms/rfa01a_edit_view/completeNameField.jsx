@@ -92,4 +92,8 @@ CompleteNameFields.propTypes = {
   onChange: PropTypes.func.isRequired
 }
 
+CompleteNameFields.defaultProps = {
+  suffixTypes: []
+}
+
 export default CompleteNameFields

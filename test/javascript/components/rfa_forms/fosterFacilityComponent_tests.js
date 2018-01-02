@@ -23,7 +23,7 @@ describe('foster Facility Component', () => {
     />)
   })
   it('verify remove added Facility Name', () => {
-    let removeButton = component.find('span')
+    let removeButton = component.find('a')
     removeButton.simulate('click', 'event')
     expect(removeFacilityCardSpy).toHaveBeenCalledWith('event', [ 'new' ], 0, 'applications_for_adoption_q2', 'facilities')
   })

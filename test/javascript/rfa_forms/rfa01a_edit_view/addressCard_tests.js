@@ -136,8 +136,8 @@ describe('Verify Address card fields', function () {
     expect(addressCardMount.instance().onAddressChange).toHaveBeenCalledWith('Mailing', 'state', {id: '17', value: 'Illinois'})
   })
   it('verify mailing address', () => {
-    let relationShipField = addressCardMount.find('#mailing_similar').hostNodes()
-    relationShipField.simulate('change', {target: {options: {'2': {value: 'yes', text: 'yes'}, selectedIndex: 2}}})
-    expect(setParentStateSpy).toHaveBeenCalledWith('physical_mailing_similar', 'yes')
+    let relationShipField = addressCardMount.find('#mailing_similartrue').hostNodes()
+    relationShipField.simulate('change', {target: {value: 'false'}})
+    expect(setParentStateSpy).toHaveBeenCalledWith('physical_mailing_similar', 'false')
   })
 })

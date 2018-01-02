@@ -88,7 +88,7 @@ describe('Verify other adults Component View', function () {
   describe('when close other adult card is clicked', () => {
     it('Clears data when 1 adult is present', () => {
       spyOn(component.instance(), 'clickClose').and.callThrough()
-      component.find('.glyphicon-remove').simulate('click')
+      component.find('.remove-btn').simulate('click')
 
       expect(component.instance().clickClose).toHaveBeenCalled()
 
@@ -102,7 +102,7 @@ describe('Verify other adults Component View', function () {
       newData[1] = otherAdultsDefaults
       component.setProps({otherAdults: newData})
       spyOn(component.instance(), 'clickClose').and.callThrough()
-      component.find('.glyphicon-remove').at(0).simulate('click')
+      component.find('.remove-btn').at(0).simulate('click')
       component.update()
       expect(component.instance().clickClose).toHaveBeenCalledWith(0)
       expect(props.otherAdults.length).toEqual(1)

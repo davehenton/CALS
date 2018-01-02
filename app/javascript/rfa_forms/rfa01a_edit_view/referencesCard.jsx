@@ -14,7 +14,6 @@ export default class ReferencesCard extends React.Component {
   constructor (props) {
     super(props)
     this.handleAddressChange = this.handleAddressChange.bind(this)
-    this.onSelection = this.onSelection.bind(this)
     this.state = {
       suggestions: []
     }
@@ -24,12 +23,6 @@ export default class ReferencesCard extends React.Component {
     let mailingAddressObj = Immutable.fromJS(this.props.reference.mailing_address)
     mailingAddressObj = mailingAddressObj.set(key, value)
     this.props.setParentState('mailing_address', mailingAddressObj.toJS(), referencesIndex)
-  }
-  onSelection (autofillData, referencesIndex) {
-    let mailingAddressObj = Immutable.fromJS(this.props.reference.mailing_address)
-    autofillData.state = this.props.stateTypes.find(x => x.id === autofillData.state)
-    mailingAddressObj = mailingAddressObj.update(x => autofillData)
-    this.props.setParentState('mailing_address', mailingAddressObj, referencesIndex)
   }
 
   render () {
@@ -58,7 +51,7 @@ export default class ReferencesCard extends React.Component {
           addressTitle='Physical Address'
           id='street_address'
           addressFields={this.props.reference.mailing_address}
-          onSelection={(suggestionData) => this.onSelection(suggestionData, this.props.index)}
+          onSelection={(autofillData) => this.props.setParentState('mailing_address', autofillData, this.props.index)}
           onChange={(fieldId, event) => this.handleAddressChange(fieldId, event, this.props.index)}
         />
 

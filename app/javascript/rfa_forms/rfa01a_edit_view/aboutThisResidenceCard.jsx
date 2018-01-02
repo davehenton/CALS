@@ -7,6 +7,7 @@ import {InputComponent} from 'components/common/inputFields'
 import {getDictionaryId, dictionaryNilSelectValue, dictionaryNilSelect} from 'helpers/commonHelper.jsx'
 import MultiSelect from 'components/common/multiSelect'
 import PropTypes from 'prop-types'
+import YesNoRadioComponent from 'components/common/yesNoFields'
 
 const othersUsingAddressMailing = Object.freeze({
   first_name: '',
@@ -44,37 +45,33 @@ export default class AboutThisResidenceCard extends React.Component {
               label={'Do you own, rent or lease the residence?'}
               onChange={(event) => this.props.setParentState('residence_ownership', dictionaryNilSelect(event.target.options))}
             />
-            <DropDownField id='weapons' gridClassName='col-md-7'
-              selectClassName={'reusable-select'}
-              text={aboutResidence.weapon_in_home}
-              value={(aboutResidence.weapon_in_home)}
-              optionList={yesNo.items}
-              label={'Weapons in home?'}
-              onChange={(event) => this.props.setParentState('weapon_in_home', dictionaryNilSelectValue(event.target.options))} />
-
-            <DropDownField id='body_of_water_exist' gridClassName='col-md-7'
-              selectClassName={'reusable-select'}
-              value={(aboutResidence.body_of_water_exist)}
-              text={aboutResidence.body_of_water_exist}
-              optionList={yesNo.items}
-              label={'Body of Water?'}
-              onChange={(event) => this.props.setParentState('body_of_water_exist', dictionaryNilSelectValue(event.target.options))} />
-
+            <div>
+              <YesNoRadioComponent
+                label='Weapons in home?'
+                idPrefix='weapons'
+                value={aboutResidence.weapon_in_home}
+                onFieldChange={(event) => this.props.setParentState('weapon_in_home', event.target.value)} />
+            </div>
+            <div>
+              <YesNoRadioComponent
+                label='Body of Water?'
+                idPrefix='body_of_water_exist'
+                value={aboutResidence.body_of_water_exist}
+                onFieldChange={(event) => this.props.setParentState('body_of_water_exist', event.target.value)} />
+            </div>
             <div className={hiddenBodyOfWater}>
               <TextAreaComponent gridClassName='col-md-12' id='body_of_water_description'
                 value={aboutResidence.body_of_water_description}
                 label='Please Describe the location of the body of water and its size.' placeholder=''
                 onChange={(event) => this.props.setParentState('body_of_water_description', event.target.value)} />
             </div>
-
-            <DropDownField id='others_using_residence_as_mailing' gridClassName='col-md-9'
-              selectClassName={'reusable-select'}
-              text={aboutResidence.others_using_residence_as_mailing}
-              value={(aboutResidence.others_using_residence_as_mailing)}
-              optionList={yesNo.items}
-              label={'Does any person not listed in this document use the residence as their mailing address?'}
-              onChange={(event) => this.props.setParentState('others_using_residence_as_mailing', dictionaryNilSelectValue(event.target.options))} />
-
+            <div>
+              <YesNoRadioComponent
+                label='Does any person not listed in this document use the residence as their mailing address?'
+                idPrefix='others_using_residence_as_mailing'
+                value={(aboutResidence.others_using_residence_as_mailing)}
+                onFieldChange={(event) => this.props.setParentState('others_using_residence_as_mailing', event.target.value)} />
+            </div>
             <div className={hiddenUseAsMailingAddress} >
               <InputComponent gridClassName='col-md-4' id='firstName' value={othersMailing[0]['first_name']}
                 label='First Name' placeholder='Enter First Name'

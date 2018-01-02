@@ -41,9 +41,8 @@ describe('Verify Child Desired Component', () => {
     expect(setFocusStateSpy).toHaveBeenCalledWith('ChildDesiredMain')
   })
   it('verify child component change State', () => {
-    let componentId = childDesiredComp.find('#child_identified').hostNodes()
-    componentId.simulate('change', {target: {options: {'2': {value: 'true', text: 'yes'}, selectedIndex: 2}}})
-    childDesired.child_identified = 'true'
-    expect(setParentStateSpy).toHaveBeenCalledWith('childDesired', childDesired)
+    let componentId = childDesiredComp.find('#child_identifiedtrue').hostNodes()
+    componentId.simulate('change', {target: {value: 'false'}})
+    expect(setParentStateSpy).toHaveBeenCalledWith('childDesired', Object({ child_identified: 'false', child_in_home: 'false', preferred_ages: [ ], preferred_sibling_group_up_to: Object({ id: '', value: '' }) }))
   })
 })

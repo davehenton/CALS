@@ -58,13 +58,6 @@ export default class ApplicantDetailsCard extends React.Component {
     this.props.setParentState('residence_address', residenceAddress.toJS())
   }
 
-  onSelection (autofillData) {
-    let residenceAddress = Immutable.fromJS(this.props.application.residence_address || residenceAddressValueDefaults)
-    autofillData.state = this.props.stateTypes.find(x => x.id === autofillData.state)
-    residenceAddress = residenceAddress.update(x => autofillData)
-    this.props.setParentState('residence_address', residenceAddress)
-  }
-
   render () {
     let application = this.props.application
     let residenceAddress = this.props.application.residence_address || residenceAddressValueDefaults
@@ -117,7 +110,7 @@ export default class ApplicantDetailsCard extends React.Component {
             addressTitle='Residence Address'
             id='street_address'
             addressFields={residenceAddressValues}
-            onSelection={(suggestionData) => this.onSelection(suggestionData)}
+            onSelection={(autofillData) => this.props.setParentState('residence_address', autofillData)}
             onChange={(key, value) => this.onAddressChange(key, value)}
           /></div>
         <div className='col-lg-12'>

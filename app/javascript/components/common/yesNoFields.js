@@ -5,29 +5,35 @@ import {yesNoMarginStyle} from 'constants/rfaText'
 const YesNoRadioComponent = ({
   idPrefix,
   value,
-  onFieldChange
+  onFieldChange,
+  label
 }) => (
   <div className='col-md-12' style={yesNoMarginStyle}>
+    <label className='col-md-12'>{label}</label>
     <BinarySelectorField
       gridClassName='col-md-4'
       id={idPrefix + 'true'}
+      labelId={idPrefix + 'Yes'}
       type='radio'
-      value={value}
-      checked={value === true}
+      value='true'
+      checked={value === true || value === 'true'}
       label='Yes'
       onChange={onFieldChange} />
     <BinarySelectorField
       gridClassName='col-md-4'
       id={idPrefix + 'false'}
+      labelId={idPrefix + 'No'}
       type='radio'
-      value={value}
-      checked={value === false}
+      value='false'
+      checked={value === false || value === 'false'}
       label='No'
       onChange={onFieldChange} />
   </div>
 )
 
 YesNoRadioComponent.propTypes = {
+  label: PropTypes.string,
+  onFieldChange: PropTypes.func,
   idPrefix: PropTypes.string,
   checked: PropTypes.bool,
   onClick: PropTypes.func

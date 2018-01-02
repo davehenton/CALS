@@ -4,34 +4,28 @@ require "selenium/webdriver"
 
 selenium_browser = ENV['SELENIUM_BROWSER'].downcase.to_sym
 
-case selenium_browser
-when :chrome, :headless_chrome
 
-  capability_options = selenium_browser == :headless_chrome ? %w[headless disable-gpu no-sandbox] : []
+def remote_capabilities(capybara_config)
+  # app host is used to test against the app deployed to a remote URL
+  # for example web.preint....
+  capybara_app_host = ENV['CAPYBARA_APP_HOST'] # || 'https://web.preint.cwds.io/cals'
+  if capybara_app_host.present?
+    capybara_config.app_host = "#{capybara_app_host}"
 
-  Capybara.register_driver selenium_browser do |app|
-    capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-      chromeOptions: {args: capability_options}
-    )
-    Capybara::Selenium::Driver.new app,
-      browser: :chrome,
-      desired_capabilities: capabilities
+    # for testing against deployed app, CAPYBARA_APP_PORT is not needed
+    # port is used for IE testing against code running on development machine
+    capybara_app_port = ENV['CAPYBARA_APP_PORT']
+    if capybara_app_port.present?
+      capybara_config.app_host =  "#{capybara_config.app_host}:#{capybara_app_port}"
+      capybara_config.server_port = capybara_app_port
+    end
   end
-  Capybara.javascript_driver = selenium_browser
+end
 
-when :internet_explorer
+def register_internet_explorer(capybara_config, selenium_browser)
+  selenium_server = ENV['SELENIUM_SERVER'] || 'localhost:4444'
 
-  SELENIUM_SERVER = ENV['SELENIUM_SERVER'] || 'localhost:4444'
-  CAPYBARA_APP_HOST = ENV['CAPYBARA_APP_HOST'] || 'https://web.preint.cwds.io/cals'
-  CAPYBARA_APP_PORT = (ENV['CAPYBARA_APP_PORT'] || '4448') unless ENV['TEST_END_TO_END']
-
-  Capybara.app_host = "#{CAPYBARA_APP_HOST}"
-  if defined? CAPYBARA_APP_PORT
-    Capybara.app_host =  "#{Capybara.app_host}:#{CAPYBARA_APP_PORT}"
-    Capybara.server_port = CAPYBARA_APP_PORT
-  end
-
-  Capybara.register_driver :internet_explorer do |app|
+  capybara_config.register_driver selenium_browser do |app|
 
     capabilities = Selenium::WebDriver::Remote::Capabilities.internet_explorer(
       native_events: false,
@@ -39,15 +33,44 @@ when :internet_explorer
       version: 11
     )
     Capybara::Selenium::Driver.new app,
-      browser: :internet_explorer,
-      url: "http://#{SELENIUM_SERVER}/wd/hub",
+      browser: selenium_browser,
+      url: "http://#{selenium_server}/wd/hub",
       desired_capabilities: capabilities
   end
   # Selenium::WebDriver.logger.level = :debug
-  Capybara.javascript_driver = selenium_browser
+  capybara_config.javascript_driver = selenium_browser
 
-else
-  Capybara.javascript_driver = :poltergeist
 end
 
-Capybara.app = Rack::Builder.parse_file(File.expand_path('../../../config.ru', __FILE__)).first
+def registar_chrome(capybara_config, selenium_browser)
+  capability_options = selenium_browser == :headless_chrome ? %w[headless disable-gpu no-sandbox] : []
+
+  capybara_config.register_driver selenium_browser do |app|
+    capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
+      chromeOptions: {args: capability_options}
+    )
+    Capybara::Selenium::Driver.new app,
+      browser: :chrome,
+      desired_capabilities: capabilities
+  end
+  capybara_config.javascript_driver = selenium_browser
+
+end
+
+Capybara.configure do |c|
+
+  remote_capabilities(c)
+
+  case selenium_browser
+  when :chrome, :headless_chrome
+    registar_chrome(c, selenium_browser)
+
+  when :internet_explorer
+    register_internet_explorer(c, selenium_browser)
+
+  else
+    c.javascript_driver = :poltergeist
+  end
+
+  c.app = Rack::Builder.parse_file(File.expand_path('../../../config.ru', __FILE__)).first
+end

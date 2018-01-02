@@ -64,8 +64,8 @@ describe('Verify MinorCardFields', function () {
   })
   it('verify date of birth', () => {
     let dateOfBirthField = minorChildCardComp.find('#date_of_birth')
-    dateOfBirthField.simulate('change', {target: {value: '01/01/2000'}})
-    expect(onFieldChangeSpy).toHaveBeenCalledWith(0, '2000-01-01', 'date_of_birth')
+    dateOfBirthField.simulate('change', {target: {value: '01/02/2000'}})
+    expect(onFieldChangeSpy).toHaveBeenCalledWith(0, '2000-01-02', 'date_of_birth')
   })
   it('verify child_financially_supported field', () => {
     let relationShipField = minorChildCardComp.find('#child_financially_supported')

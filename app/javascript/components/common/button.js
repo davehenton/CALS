@@ -4,9 +4,10 @@ import PropTypes from 'prop-types'
 const Button = ({
   buttonId,
   onClick,
-  label
+  label,
+  textAlignment
 }) => (
-  <div className='text-center'>
+  <div className={'text-' + textAlignment}>
     <button className='btn'
       id={buttonId}
       onClick={onClick}>
@@ -18,7 +19,11 @@ const Button = ({
 Button.propTypes = {
   buttonId: PropTypes.string,
   onClick: PropTypes.func,
-  label: PropTypes.string
+  label: PropTypes.string,
+  textAlignment: PropTypes.string
 }
 
+Button.defaultProps = {
+  textAlignment: 'center'
+}
 export default Button

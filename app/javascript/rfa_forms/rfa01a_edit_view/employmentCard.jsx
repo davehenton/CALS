@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Immutable from 'immutable'
 import {InputComponent} from 'components/common/inputFields'
 import {DropDownField} from 'components/common/dropDownField'
 import {getDictionaryId, dictionaryNilSelect} from 'helpers/commonHelper.jsx'
 import CurrencyInput from 'react-currency-input'
-
+import AddressComponent from 'components/rfa_forms/addressComponent.js'
 import Cleave from 'cleave.js/react'
 
 const blankEmploymentFields = Object.freeze({
@@ -25,19 +26,24 @@ const blankEmploymentFields = Object.freeze({
 
 export default class Employment extends React.Component {
   onEmploymentChange (key, value) {
-    let newData = Immutable.fromJS(this.props.employment || blankEmploymentFields)
+    let newData = Immutable.fromJS(this.props.employment)
     newData = newData.set(key, value)
     this.props.setParentState('employment', newData.toJS())
   }
   onPhysicalAddressChange (key, value) {
-    let newData = Immutable.fromJS(this.props.employment || blankEmploymentFields)
+    let newData = Immutable.fromJS(this.props.employment)
     // newData.physical_address[key] = value
     newData = newData.setIn(['physical_address', key], value)
     this.props.setParentState('employment', newData.toJS())
   }
 
+  onSelection (key, value) {
+    let newData = Immutable.fromJS(this.props.employment)
+    newData = newData.set(key, value)
+    this.props.setParentState('employment', newData.toJS())
+  }
   render () {
-    const employmentFields = this.props.employment || blankEmploymentFields
+    const employmentFields = this.props.employment
     return (
       <div className='card-body'>
         <div className='row'>
@@ -77,31 +83,25 @@ export default class Employment extends React.Component {
               label='Interval'
               disableNullVal
               onChange={(event) => this.onEmploymentChange('income_type', dictionaryNilSelect(event.target.options))} />
-
-            <InputComponent gridClassName='col-md-12' id='street_address'
-              value={employmentFields.physical_address.street_address}
-              label='Physical Address' placeholder=''
-              type='text' onChange={(event) => this.onPhysicalAddressChange('street_address', event.target.value)} />
-
-            <InputComponent gridClassName='col-md-4' id='zip'
-              value={employmentFields.physical_address.zip}
-              label='Zip' placeholder=''
-              type='text' onChange={(event) => this.onPhysicalAddressChange('zip', event.target.value)} />
-
-            <InputComponent gridClassName='col-md-4' id='city'
-              value={employmentFields.physical_address.city}
-              label='City' placeholder=''
-              type='text' onChange={(event) => this.onPhysicalAddressChange('city', event.target.value)} />
-
-            <DropDownField gridClassName='col-md-4' id='state_type'
-              selectClassName='reusable-select'
-              value={getDictionaryId(employmentFields.physical_address.state)}
-              optionList={this.props.stateTypes}
-              label='State'
-              onChange={(event) => this.onPhysicalAddressChange('state', dictionaryNilSelect(event.target.options))} />
+            <AddressComponent
+              index={this.props.index}
+              stateTypes={this.props.stateTypes}
+              addressTitle='Physical Address'
+              id="street_address"
+              addressFields={employmentFields.physical_address}
+              onSelection={(autofillData) => this.onSelection('physical_address', autofillData)}
+              onChange={(fieldId, event) => this.onPhysicalAddressChange(fieldId, event, this.props.index)} />
           </form>
         </div>
       </div>
     )
   }
+}
+
+Employment.PropTypes = {
+  employment: PropTypes.object.isRequired
+}
+
+Employment.defaultProps = {
+  employment: blankEmploymentFields
 }

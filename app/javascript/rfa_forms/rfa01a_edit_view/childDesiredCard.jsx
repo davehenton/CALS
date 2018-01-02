@@ -9,6 +9,7 @@ import {dictionaryNilSelect, getDictionaryId, dictionaryNilSelectValue} from 'he
 import {arrayLastToFirst} from 'helpers/cardsHelper.jsx'
 import {yesNo} from 'constants/constants'
 import {BinarySelectorField} from 'components/common/binarySelectorField'
+import YesNoRadioComponent from 'components/common/yesNoFields'
 
 export default class ChildDesiredCard extends React.Component {
   constructor (props) {
@@ -25,20 +26,19 @@ export default class ChildDesiredCard extends React.Component {
     const childCurrentlyInHomeVisible = this.props.desiredChildSection.child_identified === true || this.props.desiredChildSection.child_identified === 'true'
     return (
       <form>
-
-        <DropDownField id='child_identified' gridClassName='col-md-12'
-          selectClassName='reusable-select col-md-4'
-          value={(this.props.desiredChildSection.child_identified)}
-          optionList={yesNo.items}
-          label={'Has the child been identified?'}
-          onChange={(event) => this.props.setParentState('child_identified', dictionaryNilSelectValue(event.target.options))} />
-        {childCurrentlyInHomeVisible && <DropDownField id='child_in_home' gridClassName='col-md-12 '
-          selectClassName='reusable-select col-md-4'
-          value={(this.props.desiredChildSection.child_in_home)}
-          optionList={yesNo.items}
-          label={'Is the child currently in your home?'}
-          onChange={(event) => this.props.setParentState('child_in_home', dictionaryNilSelectValue(event.target.options))} />}
-
+        <div>
+          <YesNoRadioComponent
+            label='Has the child been identified?'
+            idPrefix='child_identified'
+            value={(this.props.desiredChildSection.child_identified)}
+            onFieldChange={(event) => this.props.setParentState('child_identified', event.target.value)} />
+        </div>
+        {childCurrentlyInHomeVisible &&
+          <YesNoRadioComponent
+            label='Is the child currently in your home?'
+            idPrefix='child_in_home'
+            value={(this.props.desiredChildSection.child_in_home)}
+            onFieldChange={(event) => this.props.setParentState('child_in_home', event.target.value)} />}
         <CheckboxGroup name='age'
           gridClassName='col-md-12 age'
           selectClassName='reusable-select'

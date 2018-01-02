@@ -59,8 +59,8 @@ describe('Verify other adultsFields', function () {
   })
   it('verifies date of birth', () => {
     let dateOfBirthField = otherAdultsCardComp.find('#date_of_birth')
-    dateOfBirthField.simulate('change', {target: {value: '01/01/2000'}})
-    expect(onFieldChangeSpy).toHaveBeenCalledWith(0, '2000-01-01', 'date_of_birth')
+    dateOfBirthField.simulate('change', {target: {value: '02/01/2000'}})
+    expect(onFieldChangeSpy).toHaveBeenCalledWith(0, '2000-02-01', 'date_of_birth')
   })
   it('verifies first name field', () => {
     let firstNameField = otherAdultsCardComp.find('#firstName')

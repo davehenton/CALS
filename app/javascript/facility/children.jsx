@@ -13,13 +13,13 @@ export default class Children extends React.Component {
       return (
         <tr key={child.id} >
           <td data-label='id'> {child.id} </td>
-          <td data-label='first name'> {child.first_name} </td>
-          <td data-label='last name'> {child.last_name} </td>
-          <td data-label='sex'> {child.sex} </td>
-          <td data-label='age'> {child.age} </td>
-          <td data-label='date of birth'> {child.date_of_birth} </td>
+          <td data-label='first name'> {child.person.first_name} </td>
+          <td data-label='last name'> {child.person.last_name} </td>
+          <td data-label='sex'> {child.person.gender} </td>
+          <td data-label='age'> {child.person.age} </td>
+          <td data-label='date of birth'> {child.person.date_of_birth} </td>
           <td data-label='date of placement'> {child.date_of_placement} </td>
-          <td data-label='assigned worker'> {child.assigned_worker} </td>
+          <td data-label='assigned worker'> {child.assigned_worker ? child.assigned_worker : 'N/A'} </td>
           <td data-label='county of origin'> {child.county_of_origin} </td>
         </tr>
       )
@@ -27,7 +27,7 @@ export default class Children extends React.Component {
 
     return (
       <div className='facility-children col-xs-12 col-sm-12 col-md-12 col-lg-12'>
-        <div className='facility-children-block col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+        <div className='facility-children-block'>
           <div className='children-title'> <h3> {title} </h3> </div>
           <table className='table'>
             <thead>

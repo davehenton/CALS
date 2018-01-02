@@ -62,7 +62,7 @@ export default class MinorCardsGroup extends React.Component {
                 if (!minor.to_delete) {
                   return (
                     <div key={index} className='row list-item' >
-                      <div> <span onClick={() => this.clickClose(index)} className='pull-right glyphicon glyphicon-remove' />
+                      <div> <a onClick={() => this.clickClose(index)} className='pull-right remove-btn'>Remove</a>
                       </div>
                       <MinorCardField
                         index={index}

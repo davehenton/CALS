@@ -95,7 +95,7 @@ describe('Verify ApplicantDetailsCard card', function () {
     it('onChange event on Date Of Birth', () => {
       let applicantDetails = componentMount.find('#date_of_birth')
       applicantDetails.simulate('change', {target: {value: '11/20/1990'}})
-      expect(setParentStateSpy).toHaveBeenCalledWith('date_of_birth', '1990-20-11')
+      expect(setParentStateSpy).toHaveBeenCalledWith('date_of_birth', '1990-11-20')
     })
 
     it('onChange event on driver_license', () => {

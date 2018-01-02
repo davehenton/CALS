@@ -16,10 +16,12 @@ RSpec.feature 'RFA01B', js: true do
     fill_in('middle_name', with: 'k', :match => :prefer_exact)
     fill_in('last_name', with: last_name, :match => :prefer_exact)
     click_button('Save Progress')
-    url = URI.parse(current_url)
-    packet_url = url.path.gsub('/edit', '') + '/packet'
-    visit page.driver.current_url
+
+    packet_url = current_url.gsub('/edit', '') + '/packet'
+
+    visit current_url
     visit packet_url
+
     page.find('#Rfa01BOverview').find('a.btn.btn').click
     fill_in('NameOfResourceFamily', with: 'test', :match => :prefer_exact)
     fill_in('ssn', with: '123-45-6789' , :match => :prefer_exact)

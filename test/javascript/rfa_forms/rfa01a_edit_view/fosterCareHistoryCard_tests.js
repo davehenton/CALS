@@ -65,12 +65,12 @@ describe('foster car card tests', function () {
     })
   })
 
-  describe('when "dropdown is changed', () => {
+  describe('when "radio button is changed', () => {
     it('expect set foster care nested state to be called', function () {
       const onChangeSpy = jasmine.createSpy('setFosterCareNestedState')
-      const wrapper = shallow(<FosterCareHistoryFields {...props} onChange={onChangeSpy('foster_care_licenses_q1', 'was_previously_licensed', true)} />)
-      wrapper.find('#q1-select-dropdown').simulate('change', selectedYes)
-
+      const wrapper = mount(<FosterCareHistoryFields {...props} onChange={onChangeSpy('foster_care_licenses_q1', 'was_previously_licensed', true)} />)
+      wrapper.find('#q1-select-dropdowntrue').hostNodes()
+      wrapper.simulate('change')
       expect(onChangeSpy.calls.count()).toEqual(1)
     })
 
@@ -229,23 +229,28 @@ describe('foster car card tests', function () {
         wrapper = shallow(<FosterCareHistoryFields {...props} onChange={onChangeSpy()} />)
       })
       it('is called when Q2 Adoption Field is changed', () => {
-        wrapper.find('#q2-select-dropdown').simulate('change', selectedYes)
+        wrapper.find('#q2-select-dropdowntrue').hostNodes()
+        wrapper.simulate('change')
         expect(onChangeSpy.calls.count()).toEqual(1)
       })
       it('is called when Q3 Adoption Field is changed', () => {
-        wrapper.find('#q3-select-dropdown').simulate('change', selectedYes)
+        wrapper.find('#q3-select-dropdowntrue').hostNodes()
+        wrapper.simulate('change')
         expect(onChangeSpy.calls.count()).toEqual(1)
       })
       it('is called when Q4 Adoption Field is changed', () => {
-        wrapper.find('#q4-select-dropdown').simulate('change', selectedYes)
+        wrapper.find('#q4-select-dropdowntrue').hostNodes()
+        wrapper.simulate('change')
         expect(onChangeSpy.calls.count()).toEqual(1)
       })
       it('is called when Q5 Adoption Field is changed', () => {
-        wrapper.find('#q5-select-dropdown').simulate('change', selectedYes)
+        wrapper.find('#q5-select-dropdowntrue').hostNodes()
+        wrapper.simulate('change')
         expect(onChangeSpy.calls.count()).toEqual(1)
       })
       it('is called when Q6 Adoption Field is changed', () => {
-        wrapper.find('#q6-select-dropdown').simulate('change', selectedYes)
+        wrapper.find('#q6-select-dropdowntrue').hostNodes()
+        wrapper.simulate('change')
         expect(onChangeSpy.calls.count()).toEqual(1)
       })
     })

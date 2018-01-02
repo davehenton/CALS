@@ -10,7 +10,7 @@ http_interactions:
       Content-type:
       - application/json
       Authorization:
-      - "..rzzG_oAdrQNbBH-t.t-q4Ol0Kb-9QnVK6hd3xQOgG_FEftbUYtrev-Gq--F84B0qu19jl2NCJOJ8TMfWPGjLD-mHj_Sp3LJMjls89DqJr5naM53u1VWOexTwbZrqFJ-XAq2mdcIY5optSr9sQWbEv79VESk4komskbNVecx18CaSx0r8t-PSs95CFenAysKlRoPcuLiubnExQW-Ujvl48juZ5APN-bpBzcuOZJrqHOi12L3hY84kW43ryXH--3_NqFQvW0VRUTnzcLa8QKGGiadxsusI1EEQtGpb9pQyrfR_dRDRrfIR1jjxIjBzAg4bLcSk5TpKVcdGWu53eN-7nUFlyU9PyWFfAISFmp2wL0xzKIfNSZpcotgZkHSg7w5LO2iQ9vl_RaPJXozl1V8mSzwA7b7ThngrvKTDOo9xYHBmC7lP7UYbUq0EahpRa5uudEmqghzZ3wHK-zjlhtCqUdWCzkN2HPz9Edp_omrg-cjKRyRs_HKwGy-mjr6Fz1IBvbf9w2FuQOfJSHMuNi9g2q63ceYo694Xtzxd3qBPuYdl22MZdwWBlrnX_2EZd0KGd2DKUtrr8Kv0tJR0Vcclqd6XHrnuR_YMTNNGYtZ7B7tAmrLBirKeOKzFnuYhVCOsQ3R2N9UBLR49g7ISmOH4ieG8DsbUnbHmvlC2KtB9RwHNWj2Tsp91hm4NPyZFVzZkghdcQIonDj0WY8jdMMLTXTbzwWXobJJp9aZHpxbaV8hk2fhVnJwxjv_ETw9AtzdKDejmx3Klh4xJXem7s4se7B2qBL6UUlitAHKFbRzY3hBh11RVAeeA6LMjYgcGg8Kz9Ex5ll8xkKDtlb_vX5mAgAgvTYVyAZQtr5WSszbMF8F55b0qfoDthTuBVm6ow0YzAq6ZQqPKkGLGxWuNuxxsWzw7WLaxVJiKznYMCRKVaJoaUuc8xZKm8ooFf2xXZAvS0sN1AhTzTNXlr4aUcEN0iZJXfTHuYOZiiFkX3IcDg6SwAL-evgqLJKu4n-g.wELgILBQfjiJ_a0l9Xpm2g"
+      - "..mNFA_drxU0e06_l0.o55hir7QsdyByrNWs9MO4Wr2R-YspsMOQSRSwLOrHSBTaAcZHbm1oz7vKk7Y5skWolyFlBvcXdL6ruvR8NaqSPhJ_kLyi1fMuFeehuIuY2U9BOnie67_LxiqctKmXb0b2z8EOv4HIf23bVn8bTj68EZcbtW7zbAs8JXfj0XbIr-LE6oJVPn3d9F6b3bg39RhnOqz4cfUiNPSmd-Q0GQ-LjSrz1aTaDKV0Gb4GWIhgRn_9nN3AUnpRMS8X00O-KfSWghlRq9MwspktrJ36VTxkccDTBgE3_b6hgjK3CMp9yAYgllPlbkcfgJ1QC-FzYBmpEK-kFWpmO8MouMuzQbjY9RKE75Qb0SSM2thOq8GJ5HsNsOjBR6xV-k_mNNjOgVWhNFrv75W_DNrY4dm6XJwPqWEZ70v9HAcVrrm3oLhznIwkDlEQlC4UNsvclaceY4ZLahYENzCC-EagRuuXVbLjfeVVV2Py72bnwgzkgekHBwJ3nkxuavRnUEZGfTycc0rUn850r3kfJpyWXInJ5s65cP4Zzfuc2f8JM0LEBei7bhXxivDEinnlp35BWcJYYr7vW41TzOXdIygZNFlxakbQthjSItOqQVTE3H1WgZx0XVvx8sfhsIOtJDcu5h08WaJlGZ918oJXNAguhSecq4T1qpdZbptmfxYgcyc1fQ6DVusg1dovB2k8IM4mq2TnTiJhY2UzXK8GDFv-qEsKL9BXPsZxLTx_adOLc70kwJxSeeo0jhaXZwnX1FARznyImc9K7MHB3599M4T2vUWuTPhiLMnnJWx8DA1ZAQ9PAJxdwQnrz2UKLJnxcE4W-pvl3GKQTYJhBAZ9NUObiVHKd6MSfrG5udhcgifkMCU7BJWLOabcxRry895fPAhB5Z__q-ndgrvvV6X5rpvuQYuZ4G3hbRAzOFQ7e3cRSDa_lFieHgZKsI9Xg-2muDTRjEAMapuGV3erSbMVeB8cMhDMm-Aiuf_XJzy5ANA8y5X2hdxiA.BUsezYm3cQdkMkZVFzj33g"
   response:
     status:
       code: 200
@@ -21,9 +21,9 @@ http_interactions:
       content-type:
       - application/json
       date:
-      - Wed, 08 Nov 2017 02:06:43 GMT
+      - Fri, 22 Dec 2017 18:21:13 GMT
       set-cookie:
-      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Tue, 07-Nov-2017 02:06:43
+      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Thu, 21-Dec-2017 18:21:13
         GMT
       vary:
       - Accept-Encoding
@@ -221,7 +221,7 @@ http_interactions:
           } ]
         }
     http_version: 
-  recorded_at: Wed, 08 Nov 2017 02:06:43 GMT
+  recorded_at: Fri, 22 Dec 2017 18:21:13 GMT
 - request:
     method: get
     uri: https://calsapi.preint.cwds.io/dictionaries/facility-types
@@ -232,7 +232,7 @@ http_interactions:
       Content-type:
       - application/json
       Authorization:
-      - "..rzzG_oAdrQNbBH-t.t-q4Ol0Kb-9QnVK6hd3xQOgG_FEftbUYtrev-Gq--F84B0qu19jl2NCJOJ8TMfWPGjLD-mHj_Sp3LJMjls89DqJr5naM53u1VWOexTwbZrqFJ-XAq2mdcIY5optSr9sQWbEv79VESk4komskbNVecx18CaSx0r8t-PSs95CFenAysKlRoPcuLiubnExQW-Ujvl48juZ5APN-bpBzcuOZJrqHOi12L3hY84kW43ryXH--3_NqFQvW0VRUTnzcLa8QKGGiadxsusI1EEQtGpb9pQyrfR_dRDRrfIR1jjxIjBzAg4bLcSk5TpKVcdGWu53eN-7nUFlyU9PyWFfAISFmp2wL0xzKIfNSZpcotgZkHSg7w5LO2iQ9vl_RaPJXozl1V8mSzwA7b7ThngrvKTDOo9xYHBmC7lP7UYbUq0EahpRa5uudEmqghzZ3wHK-zjlhtCqUdWCzkN2HPz9Edp_omrg-cjKRyRs_HKwGy-mjr6Fz1IBvbf9w2FuQOfJSHMuNi9g2q63ceYo694Xtzxd3qBPuYdl22MZdwWBlrnX_2EZd0KGd2DKUtrr8Kv0tJR0Vcclqd6XHrnuR_YMTNNGYtZ7B7tAmrLBirKeOKzFnuYhVCOsQ3R2N9UBLR49g7ISmOH4ieG8DsbUnbHmvlC2KtB9RwHNWj2Tsp91hm4NPyZFVzZkghdcQIonDj0WY8jdMMLTXTbzwWXobJJp9aZHpxbaV8hk2fhVnJwxjv_ETw9AtzdKDejmx3Klh4xJXem7s4se7B2qBL6UUlitAHKFbRzY3hBh11RVAeeA6LMjYgcGg8Kz9Ex5ll8xkKDtlb_vX5mAgAgvTYVyAZQtr5WSszbMF8F55b0qfoDthTuBVm6ow0YzAq6ZQqPKkGLGxWuNuxxsWzw7WLaxVJiKznYMCRKVaJoaUuc8xZKm8ooFf2xXZAvS0sN1AhTzTNXlr4aUcEN0iZJXfTHuYOZiiFkX3IcDg6SwAL-evgqLJKu4n-g.wELgILBQfjiJ_a0l9Xpm2g"
+      - "..mNFA_drxU0e06_l0.o55hir7QsdyByrNWs9MO4Wr2R-YspsMOQSRSwLOrHSBTaAcZHbm1oz7vKk7Y5skWolyFlBvcXdL6ruvR8NaqSPhJ_kLyi1fMuFeehuIuY2U9BOnie67_LxiqctKmXb0b2z8EOv4HIf23bVn8bTj68EZcbtW7zbAs8JXfj0XbIr-LE6oJVPn3d9F6b3bg39RhnOqz4cfUiNPSmd-Q0GQ-LjSrz1aTaDKV0Gb4GWIhgRn_9nN3AUnpRMS8X00O-KfSWghlRq9MwspktrJ36VTxkccDTBgE3_b6hgjK3CMp9yAYgllPlbkcfgJ1QC-FzYBmpEK-kFWpmO8MouMuzQbjY9RKE75Qb0SSM2thOq8GJ5HsNsOjBR6xV-k_mNNjOgVWhNFrv75W_DNrY4dm6XJwPqWEZ70v9HAcVrrm3oLhznIwkDlEQlC4UNsvclaceY4ZLahYENzCC-EagRuuXVbLjfeVVV2Py72bnwgzkgekHBwJ3nkxuavRnUEZGfTycc0rUn850r3kfJpyWXInJ5s65cP4Zzfuc2f8JM0LEBei7bhXxivDEinnlp35BWcJYYr7vW41TzOXdIygZNFlxakbQthjSItOqQVTE3H1WgZx0XVvx8sfhsIOtJDcu5h08WaJlGZ918oJXNAguhSecq4T1qpdZbptmfxYgcyc1fQ6DVusg1dovB2k8IM4mq2TnTiJhY2UzXK8GDFv-qEsKL9BXPsZxLTx_adOLc70kwJxSeeo0jhaXZwnX1FARznyImc9K7MHB3599M4T2vUWuTPhiLMnnJWx8DA1ZAQ9PAJxdwQnrz2UKLJnxcE4W-pvl3GKQTYJhBAZ9NUObiVHKd6MSfrG5udhcgifkMCU7BJWLOabcxRry895fPAhB5Z__q-ndgrvvV6X5rpvuQYuZ4G3hbRAzOFQ7e3cRSDa_lFieHgZKsI9Xg-2muDTRjEAMapuGV3erSbMVeB8cMhDMm-Aiuf_XJzy5ANA8y5X2hdxiA.BUsezYm3cQdkMkZVFzj33g"
   response:
     status:
       code: 200
@@ -243,9 +243,9 @@ http_interactions:
       content-type:
       - application/json
       date:
-      - Wed, 08 Nov 2017 02:06:43 GMT
+      - Fri, 22 Dec 2017 18:21:14 GMT
       set-cookie:
-      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Tue, 07-Nov-2017 02:06:43
+      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Thu, 21-Dec-2017 18:21:14
         GMT
       vary:
       - Accept-Encoding
@@ -389,7 +389,7 @@ http_interactions:
           } ]
         }
     http_version: 
-  recorded_at: Wed, 08 Nov 2017 02:06:43 GMT
+  recorded_at: Fri, 22 Dec 2017 18:21:14 GMT
 - request:
     method: post
     uri: https://dora.preint.cwds.io/dora/facilities/facility/_search
@@ -401,7 +401,7 @@ http_interactions:
       Content-type:
       - application/json
       Authorization:
-      - "..rzzG_oAdrQNbBH-t.t-q4Ol0Kb-9QnVK6hd3xQOgG_FEftbUYtrev-Gq--F84B0qu19jl2NCJOJ8TMfWPGjLD-mHj_Sp3LJMjls89DqJr5naM53u1VWOexTwbZrqFJ-XAq2mdcIY5optSr9sQWbEv79VESk4komskbNVecx18CaSx0r8t-PSs95CFenAysKlRoPcuLiubnExQW-Ujvl48juZ5APN-bpBzcuOZJrqHOi12L3hY84kW43ryXH--3_NqFQvW0VRUTnzcLa8QKGGiadxsusI1EEQtGpb9pQyrfR_dRDRrfIR1jjxIjBzAg4bLcSk5TpKVcdGWu53eN-7nUFlyU9PyWFfAISFmp2wL0xzKIfNSZpcotgZkHSg7w5LO2iQ9vl_RaPJXozl1V8mSzwA7b7ThngrvKTDOo9xYHBmC7lP7UYbUq0EahpRa5uudEmqghzZ3wHK-zjlhtCqUdWCzkN2HPz9Edp_omrg-cjKRyRs_HKwGy-mjr6Fz1IBvbf9w2FuQOfJSHMuNi9g2q63ceYo694Xtzxd3qBPuYdl22MZdwWBlrnX_2EZd0KGd2DKUtrr8Kv0tJR0Vcclqd6XHrnuR_YMTNNGYtZ7B7tAmrLBirKeOKzFnuYhVCOsQ3R2N9UBLR49g7ISmOH4ieG8DsbUnbHmvlC2KtB9RwHNWj2Tsp91hm4NPyZFVzZkghdcQIonDj0WY8jdMMLTXTbzwWXobJJp9aZHpxbaV8hk2fhVnJwxjv_ETw9AtzdKDejmx3Klh4xJXem7s4se7B2qBL6UUlitAHKFbRzY3hBh11RVAeeA6LMjYgcGg8Kz9Ex5ll8xkKDtlb_vX5mAgAgvTYVyAZQtr5WSszbMF8F55b0qfoDthTuBVm6ow0YzAq6ZQqPKkGLGxWuNuxxsWzw7WLaxVJiKznYMCRKVaJoaUuc8xZKm8ooFf2xXZAvS0sN1AhTzTNXlr4aUcEN0iZJXfTHuYOZiiFkX3IcDg6SwAL-evgqLJKu4n-g.wELgILBQfjiJ_a0l9Xpm2g"
+      - "..mNFA_drxU0e06_l0.o55hir7QsdyByrNWs9MO4Wr2R-YspsMOQSRSwLOrHSBTaAcZHbm1oz7vKk7Y5skWolyFlBvcXdL6ruvR8NaqSPhJ_kLyi1fMuFeehuIuY2U9BOnie67_LxiqctKmXb0b2z8EOv4HIf23bVn8bTj68EZcbtW7zbAs8JXfj0XbIr-LE6oJVPn3d9F6b3bg39RhnOqz4cfUiNPSmd-Q0GQ-LjSrz1aTaDKV0Gb4GWIhgRn_9nN3AUnpRMS8X00O-KfSWghlRq9MwspktrJ36VTxkccDTBgE3_b6hgjK3CMp9yAYgllPlbkcfgJ1QC-FzYBmpEK-kFWpmO8MouMuzQbjY9RKE75Qb0SSM2thOq8GJ5HsNsOjBR6xV-k_mNNjOgVWhNFrv75W_DNrY4dm6XJwPqWEZ70v9HAcVrrm3oLhznIwkDlEQlC4UNsvclaceY4ZLahYENzCC-EagRuuXVbLjfeVVV2Py72bnwgzkgekHBwJ3nkxuavRnUEZGfTycc0rUn850r3kfJpyWXInJ5s65cP4Zzfuc2f8JM0LEBei7bhXxivDEinnlp35BWcJYYr7vW41TzOXdIygZNFlxakbQthjSItOqQVTE3H1WgZx0XVvx8sfhsIOtJDcu5h08WaJlGZ918oJXNAguhSecq4T1qpdZbptmfxYgcyc1fQ6DVusg1dovB2k8IM4mq2TnTiJhY2UzXK8GDFv-qEsKL9BXPsZxLTx_adOLc70kwJxSeeo0jhaXZwnX1FARznyImc9K7MHB3599M4T2vUWuTPhiLMnnJWx8DA1ZAQ9PAJxdwQnrz2UKLJnxcE4W-pvl3GKQTYJhBAZ9NUObiVHKd6MSfrG5udhcgifkMCU7BJWLOabcxRry895fPAhB5Z__q-ndgrvvV6X5rpvuQYuZ4G3hbRAzOFQ7e3cRSDa_lFieHgZKsI9Xg-2muDTRjEAMapuGV3erSbMVeB8cMhDMm-Aiuf_XJzy5ANA8y5X2hdxiA.BUsezYm3cQdkMkZVFzj33g"
   response:
     status:
       code: 200
@@ -410,9 +410,9 @@ http_interactions:
       content-type:
       - application/json
       date:
-      - Wed, 08 Nov 2017 02:06:44 GMT
+      - Fri, 22 Dec 2017 18:21:14 GMT
       set-cookie:
-      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Tue, 07-Nov-2017 02:06:44
+      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Thu, 21-Dec-2017 18:21:14
         GMT
       content-length:
       - '7013'
@@ -420,37 +420,37 @@ http_interactions:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"took":1,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":1,"max_score":5.5096464,"hits":[{"_index":"facilities","_type":"facility","_id":"300665437","_score":5.5096464,"_source":{"href":null,"id":"300665437","type":{"id":"726","value":"TRANSITIONAL
+      string: '{"took":0,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":1,"max_score":6.5497246,"hits":[{"_index":"facilities","_type":"facility","_id":"300665437","_score":6.5497246,"_source":{"href":null,"id":"300665437","type":{"id":"726","value":"TRANSITIONAL
         HOUSING PLACEMENT PROGRAM"},"name":"Lederhouse Transitions","licensee_name":"Lederhouse
         Transitions Inc.","license_type":"A","assigned_worker":{"id":null,"value":null},"district_office":{"number":"19","name":"PACIFIC
         INLAND CR"},"license_number":"300665437","status":{"id":"5","value":"PROBATIONARY
-        LICENSE"},"capacity":10,"license_effective_date":{"year":2012,"month":"OCTOBER","era":"CE","dayOfMonth":1,"dayOfWeek":"MONDAY","dayOfYear":275,"leapYear":true,"monthValue":10,"chronology":{"calendarType":"iso8601","id":"ISO"}},"original_application_recieved_date":{"year":2012,"month":"JULY","era":"CE","dayOfMonth":18,"dayOfWeek":"WEDNESDAY","dayOfYear":200,"leapYear":true,"monthValue":7,"chronology":{"calendarType":"iso8601","id":"ISO"}},"last_visit_date":{"month":"APRIL","year":2017,"dayOfMonth":14,"dayOfWeek":"FRIDAY","dayOfYear":104,"monthValue":4,"hour":0,"minute":0,"nano":0,"second":0,"chronology":{"calendarType":"iso8601","id":"ISO"}},"last_deferred_visit_date":null,"email_address":null,"last_visit_reason":{"id":"10","value":"CASELOAD
+        LICENSE"},"capacity":10,"license_effective_date":{"year":2012,"month":"OCTOBER","era":"CE","dayOfMonth":1,"dayOfWeek":"MONDAY","dayOfYear":275,"leapYear":true,"monthValue":10,"chronology":{"calendarType":"iso8601","id":"ISO"}},"original_application_recieved_date":{"year":2012,"month":"JULY","era":"CE","dayOfMonth":18,"dayOfWeek":"WEDNESDAY","dayOfYear":200,"leapYear":true,"monthValue":7,"chronology":{"calendarType":"iso8601","id":"ISO"}},"last_visit_date":{"month":"APRIL","year":2017,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":14,"dayOfWeek":"FRIDAY","dayOfYear":104,"monthValue":4,"chronology":{"calendarType":"iso8601","id":"ISO"}},"last_deferred_visit_date":null,"email_address":null,"last_visit_reason":{"id":"10","value":"CASELOAD
         MANAGEMENT"},"last_deferred_visit_reason":null,"county":{"id":"30","value":"ORANGE","lis_code":null},"phones":[{"id":null,"relation":"primary","type":"Cell","number":"9494480118"}],"addresses":[{"id":null,"type":"Residential","address":{"id":null,"longitude":null,"lattitude":null,"deliverable":null,"street_address":"36
         Sequoia Dr","city":"Aliso Viejo","state":"CA","zip_code":"92656","zip_suffix_code":null}},{"id":null,"type":"Mailing","address":{"id":null,"longitude":null,"lattitude":null,"deliverable":null,"street_address":"36
         Sequoia Dr","city":"Aliso Viejo","state":"CA","zip_code":"92656","zip_suffix_code":null}}],"visits":[{"approval":"","visit_type":"Annual
-        10 month","visit_date":{"month":"OCTOBER","year":2011,"dayOfMonth":28,"dayOfWeek":"FRIDAY","dayOfYear":301,"monthValue":10,"hour":0,"minute":0,"nano":0,"second":0,"chronology":{"calendarType":"iso8601","id":"ISO"}},"visit_deferred_date":null},{"approval":"","visit_type":"Annual
+        10 month","visit_date":{"month":"OCTOBER","year":2011,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":28,"dayOfWeek":"FRIDAY","dayOfYear":301,"monthValue":10,"chronology":{"calendarType":"iso8601","id":"ISO"}},"visit_deferred_date":null},{"approval":"","visit_type":"Annual
         22 month","visit_date":null,"visit_deferred_date":null},{"approval":"","visit_type":"Post
-        Licensing","visit_date":null,"visit_deferred_date":{"month":"NOVEMBER","year":1991,"dayOfMonth":6,"dayOfWeek":"WEDNESDAY","dayOfYear":310,"monthValue":11,"hour":0,"minute":0,"nano":0,"second":0,"chronology":{"calendarType":"iso8601","id":"ISO"}}},{"approval":"","visit_type":"Renewal","visit_date":null,"visit_deferred_date":null}],"annual_visit_year":12,"prelicensing_visit_date":null,"children":[],"inspections":[],"complaints":[{"id":"9112","complaint_date":{"month":"SEPTEMBER","year":2016,"dayOfMonth":27,"dayOfWeek":"TUESDAY","dayOfYear":271,"monthValue":9,"hour":0,"minute":0,"nano":0,"second":0,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
-        Mahaboob","control_number":"19-CR-20160927081411","priority_level":"2","status":"Approved","approval_date":{"month":"DECEMBER","year":2016,"dayOfMonth":10,"dayOfWeek":"SATURDAY","dayOfYear":345,"monthValue":12,"hour":0,"minute":0,"nano":0,"second":0,"chronology":{"calendarType":"iso8601","id":"ISO"}},"pre_investigation_comments":"","post_investigation_comments":"See
+        Licensing","visit_date":null,"visit_deferred_date":{"month":"NOVEMBER","year":1991,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":6,"dayOfWeek":"WEDNESDAY","dayOfYear":310,"monthValue":11,"chronology":{"calendarType":"iso8601","id":"ISO"}}},{"approval":"","visit_type":"Renewal","visit_date":null,"visit_deferred_date":null}],"annual_visit_year":12,"prelicensing_visit_date":null,"children":[],"inspections":[],"complaints":[{"id":"9112","complaint_date":{"month":"SEPTEMBER","year":2016,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":27,"dayOfWeek":"TUESDAY","dayOfYear":271,"monthValue":9,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
+        Mahaboob","control_number":"19-CR-20160927081411","priority_level":"2","status":"Approved","approval_date":{"month":"DECEMBER","year":2016,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":10,"dayOfWeek":"SATURDAY","dayOfYear":345,"monthValue":12,"chronology":{"calendarType":"iso8601","id":"ISO"}},"pre_investigation_comments":"","post_investigation_comments":"See
         Attached letter.  Reiser is a supervisor for Fresno County CPS.","contact_summary":"LIC
         9099 dated 11/23/04, 1/3/05&#13;&#10;LIC 812 date of visit 11/23/04, 1/3/05","followup_comments":"","allegations":[{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""},{"complaint_code":"3","allegation":"Client
         Miguel Delatorre (8-28-88)    Miguel was beat up by an older and bigger child
         at GH. (name unknown) Staff did nothing to stop this.  Staff told Miguel not
-        to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]},{"id":"9112","complaint_date":{"month":"SEPTEMBER","year":2016,"dayOfMonth":27,"dayOfWeek":"TUESDAY","dayOfYear":271,"monthValue":9,"hour":0,"minute":0,"nano":0,"second":0,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
-        Mahaboob","control_number":"19-CR-20160927081411","priority_level":"2","status":"Approved","approval_date":{"month":"DECEMBER","year":2016,"dayOfMonth":10,"dayOfWeek":"SATURDAY","dayOfYear":345,"monthValue":12,"hour":0,"minute":0,"nano":0,"second":0,"chronology":{"calendarType":"iso8601","id":"ISO"}},"pre_investigation_comments":"","post_investigation_comments":"See
+        to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]},{"id":"9112","complaint_date":{"month":"SEPTEMBER","year":2016,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":27,"dayOfWeek":"TUESDAY","dayOfYear":271,"monthValue":9,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
+        Mahaboob","control_number":"19-CR-20160927081411","priority_level":"2","status":"Approved","approval_date":{"month":"DECEMBER","year":2016,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":10,"dayOfWeek":"SATURDAY","dayOfYear":345,"monthValue":12,"chronology":{"calendarType":"iso8601","id":"ISO"}},"pre_investigation_comments":"","post_investigation_comments":"See
         Attached letter.  Reiser is a supervisor for Fresno County CPS.","contact_summary":"LIC
         9099 dated 11/23/04, 1/3/05&#13;&#10;LIC 812 date of visit 11/23/04, 1/3/05","followup_comments":"","allegations":[{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""},{"complaint_code":"3","allegation":"Client
         Miguel Delatorre (8-28-88)    Miguel was beat up by an older and bigger child
         at GH. (name unknown) Staff did nothing to stop this.  Staff told Miguel not
-        to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]},{"id":"9112","complaint_date":{"month":"SEPTEMBER","year":2016,"dayOfMonth":27,"dayOfWeek":"TUESDAY","dayOfYear":271,"monthValue":9,"hour":0,"minute":0,"nano":0,"second":0,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
-        Mahaboob","control_number":"19-CR-20160927081411","priority_level":"2","status":"Approved","approval_date":{"month":"DECEMBER","year":2016,"dayOfMonth":10,"dayOfWeek":"SATURDAY","dayOfYear":345,"monthValue":12,"hour":0,"minute":0,"nano":0,"second":0,"chronology":{"calendarType":"iso8601","id":"ISO"}},"pre_investigation_comments":"","post_investigation_comments":"See
+        to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]},{"id":"9112","complaint_date":{"month":"SEPTEMBER","year":2016,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":27,"dayOfWeek":"TUESDAY","dayOfYear":271,"monthValue":9,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
+        Mahaboob","control_number":"19-CR-20160927081411","priority_level":"2","status":"Approved","approval_date":{"month":"DECEMBER","year":2016,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":10,"dayOfWeek":"SATURDAY","dayOfYear":345,"monthValue":12,"chronology":{"calendarType":"iso8601","id":"ISO"}},"pre_investigation_comments":"","post_investigation_comments":"See
         Attached letter.  Reiser is a supervisor for Fresno County CPS.","contact_summary":"LIC
         9099 dated 11/23/04, 1/3/05&#13;&#10;LIC 812 date of visit 11/23/04, 1/3/05","followup_comments":"","allegations":[{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""},{"complaint_code":"3","allegation":"Client
         Miguel Delatorre (8-28-88)    Miguel was beat up by an older and bigger child
         at GH. (name unknown) Staff did nothing to stop this.  Staff told Miguel not
         to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]}]}}]}}'
     http_version: 
-  recorded_at: Wed, 08 Nov 2017 02:06:44 GMT
+  recorded_at: Fri, 22 Dec 2017 18:21:14 GMT
 - request:
     method: get
     uri: https://calsapi.preint.cwds.io/facilities/300665437
@@ -461,7 +461,7 @@ http_interactions:
       Content-type:
       - application/json
       Authorization:
-      - "..rzzG_oAdrQNbBH-t.t-q4Ol0Kb-9QnVK6hd3xQOgG_FEftbUYtrev-Gq--F84B0qu19jl2NCJOJ8TMfWPGjLD-mHj_Sp3LJMjls89DqJr5naM53u1VWOexTwbZrqFJ-XAq2mdcIY5optSr9sQWbEv79VESk4komskbNVecx18CaSx0r8t-PSs95CFenAysKlRoPcuLiubnExQW-Ujvl48juZ5APN-bpBzcuOZJrqHOi12L3hY84kW43ryXH--3_NqFQvW0VRUTnzcLa8QKGGiadxsusI1EEQtGpb9pQyrfR_dRDRrfIR1jjxIjBzAg4bLcSk5TpKVcdGWu53eN-7nUFlyU9PyWFfAISFmp2wL0xzKIfNSZpcotgZkHSg7w5LO2iQ9vl_RaPJXozl1V8mSzwA7b7ThngrvKTDOo9xYHBmC7lP7UYbUq0EahpRa5uudEmqghzZ3wHK-zjlhtCqUdWCzkN2HPz9Edp_omrg-cjKRyRs_HKwGy-mjr6Fz1IBvbf9w2FuQOfJSHMuNi9g2q63ceYo694Xtzxd3qBPuYdl22MZdwWBlrnX_2EZd0KGd2DKUtrr8Kv0tJR0Vcclqd6XHrnuR_YMTNNGYtZ7B7tAmrLBirKeOKzFnuYhVCOsQ3R2N9UBLR49g7ISmOH4ieG8DsbUnbHmvlC2KtB9RwHNWj2Tsp91hm4NPyZFVzZkghdcQIonDj0WY8jdMMLTXTbzwWXobJJp9aZHpxbaV8hk2fhVnJwxjv_ETw9AtzdKDejmx3Klh4xJXem7s4se7B2qBL6UUlitAHKFbRzY3hBh11RVAeeA6LMjYgcGg8Kz9Ex5ll8xkKDtlb_vX5mAgAgvTYVyAZQtr5WSszbMF8F55b0qfoDthTuBVm6ow0YzAq6ZQqPKkGLGxWuNuxxsWzw7WLaxVJiKznYMCRKVaJoaUuc8xZKm8ooFf2xXZAvS0sN1AhTzTNXlr4aUcEN0iZJXfTHuYOZiiFkX3IcDg6SwAL-evgqLJKu4n-g.wELgILBQfjiJ_a0l9Xpm2g"
+      - "..mNFA_drxU0e06_l0.o55hir7QsdyByrNWs9MO4Wr2R-YspsMOQSRSwLOrHSBTaAcZHbm1oz7vKk7Y5skWolyFlBvcXdL6ruvR8NaqSPhJ_kLyi1fMuFeehuIuY2U9BOnie67_LxiqctKmXb0b2z8EOv4HIf23bVn8bTj68EZcbtW7zbAs8JXfj0XbIr-LE6oJVPn3d9F6b3bg39RhnOqz4cfUiNPSmd-Q0GQ-LjSrz1aTaDKV0Gb4GWIhgRn_9nN3AUnpRMS8X00O-KfSWghlRq9MwspktrJ36VTxkccDTBgE3_b6hgjK3CMp9yAYgllPlbkcfgJ1QC-FzYBmpEK-kFWpmO8MouMuzQbjY9RKE75Qb0SSM2thOq8GJ5HsNsOjBR6xV-k_mNNjOgVWhNFrv75W_DNrY4dm6XJwPqWEZ70v9HAcVrrm3oLhznIwkDlEQlC4UNsvclaceY4ZLahYENzCC-EagRuuXVbLjfeVVV2Py72bnwgzkgekHBwJ3nkxuavRnUEZGfTycc0rUn850r3kfJpyWXInJ5s65cP4Zzfuc2f8JM0LEBei7bhXxivDEinnlp35BWcJYYr7vW41TzOXdIygZNFlxakbQthjSItOqQVTE3H1WgZx0XVvx8sfhsIOtJDcu5h08WaJlGZ918oJXNAguhSecq4T1qpdZbptmfxYgcyc1fQ6DVusg1dovB2k8IM4mq2TnTiJhY2UzXK8GDFv-qEsKL9BXPsZxLTx_adOLc70kwJxSeeo0jhaXZwnX1FARznyImc9K7MHB3599M4T2vUWuTPhiLMnnJWx8DA1ZAQ9PAJxdwQnrz2UKLJnxcE4W-pvl3GKQTYJhBAZ9NUObiVHKd6MSfrG5udhcgifkMCU7BJWLOabcxRry895fPAhB5Z__q-ndgrvvV6X5rpvuQYuZ4G3hbRAzOFQ7e3cRSDa_lFieHgZKsI9Xg-2muDTRjEAMapuGV3erSbMVeB8cMhDMm-Aiuf_XJzy5ANA8y5X2hdxiA.BUsezYm3cQdkMkZVFzj33g"
   response:
     status:
       code: 200
@@ -472,9 +472,9 @@ http_interactions:
       content-type:
       - application/json
       date:
-      - Wed, 08 Nov 2017 02:06:44 GMT
+      - Fri, 22 Dec 2017 18:21:14 GMT
       set-cookie:
-      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Tue, 07-Nov-2017 02:06:44
+      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Thu, 21-Dec-2017 18:21:14
         GMT
       vary:
       - Accept-Encoding
@@ -563,10 +563,10 @@ http_interactions:
           "annual_visit_year" : 12
         }
     http_version: 
-  recorded_at: Wed, 08 Nov 2017 02:06:44 GMT
+  recorded_at: Fri, 22 Dec 2017 18:21:14 GMT
 - request:
     method: get
-    uri: https://calsapi.preint.cwds.io/facilities/300665437/complaints
+    uri: https://calsapi.preint.cwds.io/facilities/300665437/children
     body:
       encoding: US-ASCII
       string: ''
@@ -574,7 +574,7 @@ http_interactions:
       Content-type:
       - application/json
       Authorization:
-      - "..rzzG_oAdrQNbBH-t.t-q4Ol0Kb-9QnVK6hd3xQOgG_FEftbUYtrev-Gq--F84B0qu19jl2NCJOJ8TMfWPGjLD-mHj_Sp3LJMjls89DqJr5naM53u1VWOexTwbZrqFJ-XAq2mdcIY5optSr9sQWbEv79VESk4komskbNVecx18CaSx0r8t-PSs95CFenAysKlRoPcuLiubnExQW-Ujvl48juZ5APN-bpBzcuOZJrqHOi12L3hY84kW43ryXH--3_NqFQvW0VRUTnzcLa8QKGGiadxsusI1EEQtGpb9pQyrfR_dRDRrfIR1jjxIjBzAg4bLcSk5TpKVcdGWu53eN-7nUFlyU9PyWFfAISFmp2wL0xzKIfNSZpcotgZkHSg7w5LO2iQ9vl_RaPJXozl1V8mSzwA7b7ThngrvKTDOo9xYHBmC7lP7UYbUq0EahpRa5uudEmqghzZ3wHK-zjlhtCqUdWCzkN2HPz9Edp_omrg-cjKRyRs_HKwGy-mjr6Fz1IBvbf9w2FuQOfJSHMuNi9g2q63ceYo694Xtzxd3qBPuYdl22MZdwWBlrnX_2EZd0KGd2DKUtrr8Kv0tJR0Vcclqd6XHrnuR_YMTNNGYtZ7B7tAmrLBirKeOKzFnuYhVCOsQ3R2N9UBLR49g7ISmOH4ieG8DsbUnbHmvlC2KtB9RwHNWj2Tsp91hm4NPyZFVzZkghdcQIonDj0WY8jdMMLTXTbzwWXobJJp9aZHpxbaV8hk2fhVnJwxjv_ETw9AtzdKDejmx3Klh4xJXem7s4se7B2qBL6UUlitAHKFbRzY3hBh11RVAeeA6LMjYgcGg8Kz9Ex5ll8xkKDtlb_vX5mAgAgvTYVyAZQtr5WSszbMF8F55b0qfoDthTuBVm6ow0YzAq6ZQqPKkGLGxWuNuxxsWzw7WLaxVJiKznYMCRKVaJoaUuc8xZKm8ooFf2xXZAvS0sN1AhTzTNXlr4aUcEN0iZJXfTHuYOZiiFkX3IcDg6SwAL-evgqLJKu4n-g.wELgILBQfjiJ_a0l9Xpm2g"
+      - "..mNFA_drxU0e06_l0.o55hir7QsdyByrNWs9MO4Wr2R-YspsMOQSRSwLOrHSBTaAcZHbm1oz7vKk7Y5skWolyFlBvcXdL6ruvR8NaqSPhJ_kLyi1fMuFeehuIuY2U9BOnie67_LxiqctKmXb0b2z8EOv4HIf23bVn8bTj68EZcbtW7zbAs8JXfj0XbIr-LE6oJVPn3d9F6b3bg39RhnOqz4cfUiNPSmd-Q0GQ-LjSrz1aTaDKV0Gb4GWIhgRn_9nN3AUnpRMS8X00O-KfSWghlRq9MwspktrJ36VTxkccDTBgE3_b6hgjK3CMp9yAYgllPlbkcfgJ1QC-FzYBmpEK-kFWpmO8MouMuzQbjY9RKE75Qb0SSM2thOq8GJ5HsNsOjBR6xV-k_mNNjOgVWhNFrv75W_DNrY4dm6XJwPqWEZ70v9HAcVrrm3oLhznIwkDlEQlC4UNsvclaceY4ZLahYENzCC-EagRuuXVbLjfeVVV2Py72bnwgzkgekHBwJ3nkxuavRnUEZGfTycc0rUn850r3kfJpyWXInJ5s65cP4Zzfuc2f8JM0LEBei7bhXxivDEinnlp35BWcJYYr7vW41TzOXdIygZNFlxakbQthjSItOqQVTE3H1WgZx0XVvx8sfhsIOtJDcu5h08WaJlGZ918oJXNAguhSecq4T1qpdZbptmfxYgcyc1fQ6DVusg1dovB2k8IM4mq2TnTiJhY2UzXK8GDFv-qEsKL9BXPsZxLTx_adOLc70kwJxSeeo0jhaXZwnX1FARznyImc9K7MHB3599M4T2vUWuTPhiLMnnJWx8DA1ZAQ9PAJxdwQnrz2UKLJnxcE4W-pvl3GKQTYJhBAZ9NUObiVHKd6MSfrG5udhcgifkMCU7BJWLOabcxRry895fPAhB5Z__q-ndgrvvV6X5rpvuQYuZ4G3hbRAzOFQ7e3cRSDa_lFieHgZKsI9Xg-2muDTRjEAMapuGV3erSbMVeB8cMhDMm-Aiuf_XJzy5ANA8y5X2hdxiA.BUsezYm3cQdkMkZVFzj33g"
   response:
     status:
       code: 200
@@ -585,9 +585,109 @@ http_interactions:
       content-type:
       - application/json
       date:
-      - Wed, 08 Nov 2017 02:06:44 GMT
+      - Fri, 22 Dec 2017 18:21:14 GMT
       set-cookie:
-      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Tue, 07-Nov-2017 02:06:44
+      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Thu, 21-Dec-2017 18:21:14
+        GMT
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      x-xss-protection:
+      - 1; mode=block
+      content-length:
+      - '320'
+      connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "children" : [ {
+            "id" : "541770099 ",
+            "person" : {
+              "gender" : "F",
+              "age" : 17,
+              "first_name" : "Mei",
+              "last_name" : "Takahashi",
+              "date_of_birth" : "2000-05-28"
+            },
+            "date_of_placement" : "2002-06-19",
+            "county_of_origin" : "State of California"
+          }, {
+            "id" : "541770103 ",
+            "person" : {
+              "gender" : "M",
+              "age" : 17,
+              "first_name" : "Daniel",
+              "last_name" : "Ordonez",
+              "date_of_birth" : "2000-09-26"
+            },
+            "date_of_placement" : "2002-06-19",
+            "county_of_origin" : "State of California"
+          }, {
+            "id" : "541770115 ",
+            "person" : {
+              "gender" : "M",
+              "age" : 17,
+              "first_name" : "Das",
+              "last_name" : "Kular",
+              "date_of_birth" : "2000-01-19"
+            },
+            "date_of_placement" : "2002-06-19",
+            "county_of_origin" : "State of California"
+          }, {
+            "id" : "541770117 ",
+            "person" : {
+              "gender" : "F",
+              "age" : 16,
+              "first_name" : "Shaneka",
+              "last_name" : "Quilling",
+              "date_of_birth" : "2001-03-28"
+            },
+            "date_of_placement" : "2002-06-19",
+            "county_of_origin" : "State of California"
+          }, {
+            "id" : "541770119 ",
+            "person" : {
+              "gender" : "F",
+              "age" : 17,
+              "first_name" : "Francisca",
+              "last_name" : "Esquivel",
+              "date_of_birth" : "2000-11-17"
+            },
+            "date_of_placement" : "2002-06-19",
+            "county_of_origin" : "State of California"
+          } ]
+        }
+    http_version: 
+  recorded_at: Fri, 22 Dec 2017 18:21:14 GMT
+- request:
+    method: get
+    uri: https://calsapi.preint.cwds.io/facilities/300665437/complaints
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-type:
+      - application/json
+      Authorization:
+      - "..mNFA_drxU0e06_l0.o55hir7QsdyByrNWs9MO4Wr2R-YspsMOQSRSwLOrHSBTaAcZHbm1oz7vKk7Y5skWolyFlBvcXdL6ruvR8NaqSPhJ_kLyi1fMuFeehuIuY2U9BOnie67_LxiqctKmXb0b2z8EOv4HIf23bVn8bTj68EZcbtW7zbAs8JXfj0XbIr-LE6oJVPn3d9F6b3bg39RhnOqz4cfUiNPSmd-Q0GQ-LjSrz1aTaDKV0Gb4GWIhgRn_9nN3AUnpRMS8X00O-KfSWghlRq9MwspktrJ36VTxkccDTBgE3_b6hgjK3CMp9yAYgllPlbkcfgJ1QC-FzYBmpEK-kFWpmO8MouMuzQbjY9RKE75Qb0SSM2thOq8GJ5HsNsOjBR6xV-k_mNNjOgVWhNFrv75W_DNrY4dm6XJwPqWEZ70v9HAcVrrm3oLhznIwkDlEQlC4UNsvclaceY4ZLahYENzCC-EagRuuXVbLjfeVVV2Py72bnwgzkgekHBwJ3nkxuavRnUEZGfTycc0rUn850r3kfJpyWXInJ5s65cP4Zzfuc2f8JM0LEBei7bhXxivDEinnlp35BWcJYYr7vW41TzOXdIygZNFlxakbQthjSItOqQVTE3H1WgZx0XVvx8sfhsIOtJDcu5h08WaJlGZ918oJXNAguhSecq4T1qpdZbptmfxYgcyc1fQ6DVusg1dovB2k8IM4mq2TnTiJhY2UzXK8GDFv-qEsKL9BXPsZxLTx_adOLc70kwJxSeeo0jhaXZwnX1FARznyImc9K7MHB3599M4T2vUWuTPhiLMnnJWx8DA1ZAQ9PAJxdwQnrz2UKLJnxcE4W-pvl3GKQTYJhBAZ9NUObiVHKd6MSfrG5udhcgifkMCU7BJWLOabcxRry895fPAhB5Z__q-ndgrvvV6X5rpvuQYuZ4G3hbRAzOFQ7e3cRSDa_lFieHgZKsI9Xg-2muDTRjEAMapuGV3erSbMVeB8cMhDMm-Aiuf_XJzy5ANA8y5X2hdxiA.BUsezYm3cQdkMkZVFzj33g"
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      content-security-policy:
+      - default-src 'self' 'unsafe-inline';
+      content-type:
+      - application/json
+      date:
+      - Fri, 22 Dec 2017 18:21:15 GMT
+      set-cookie:
+      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Thu, 21-Dec-2017 18:21:15
         GMT
       vary:
       - Accept-Encoding
@@ -639,7 +739,7 @@ http_interactions:
           } ]
         }
     http_version: 
-  recorded_at: Wed, 08 Nov 2017 02:06:44 GMT
+  recorded_at: Fri, 22 Dec 2017 18:21:15 GMT
 - request:
     method: get
     uri: https://calsapi.preint.cwds.io/facilities/300665437
@@ -650,7 +750,7 @@ http_interactions:
       Content-type:
       - application/json
       Authorization:
-      - "..rzzG_oAdrQNbBH-t.t-q4Ol0Kb-9QnVK6hd3xQOgG_FEftbUYtrev-Gq--F84B0qu19jl2NCJOJ8TMfWPGjLD-mHj_Sp3LJMjls89DqJr5naM53u1VWOexTwbZrqFJ-XAq2mdcIY5optSr9sQWbEv79VESk4komskbNVecx18CaSx0r8t-PSs95CFenAysKlRoPcuLiubnExQW-Ujvl48juZ5APN-bpBzcuOZJrqHOi12L3hY84kW43ryXH--3_NqFQvW0VRUTnzcLa8QKGGiadxsusI1EEQtGpb9pQyrfR_dRDRrfIR1jjxIjBzAg4bLcSk5TpKVcdGWu53eN-7nUFlyU9PyWFfAISFmp2wL0xzKIfNSZpcotgZkHSg7w5LO2iQ9vl_RaPJXozl1V8mSzwA7b7ThngrvKTDOo9xYHBmC7lP7UYbUq0EahpRa5uudEmqghzZ3wHK-zjlhtCqUdWCzkN2HPz9Edp_omrg-cjKRyRs_HKwGy-mjr6Fz1IBvbf9w2FuQOfJSHMuNi9g2q63ceYo694Xtzxd3qBPuYdl22MZdwWBlrnX_2EZd0KGd2DKUtrr8Kv0tJR0Vcclqd6XHrnuR_YMTNNGYtZ7B7tAmrLBirKeOKzFnuYhVCOsQ3R2N9UBLR49g7ISmOH4ieG8DsbUnbHmvlC2KtB9RwHNWj2Tsp91hm4NPyZFVzZkghdcQIonDj0WY8jdMMLTXTbzwWXobJJp9aZHpxbaV8hk2fhVnJwxjv_ETw9AtzdKDejmx3Klh4xJXem7s4se7B2qBL6UUlitAHKFbRzY3hBh11RVAeeA6LMjYgcGg8Kz9Ex5ll8xkKDtlb_vX5mAgAgvTYVyAZQtr5WSszbMF8F55b0qfoDthTuBVm6ow0YzAq6ZQqPKkGLGxWuNuxxsWzw7WLaxVJiKznYMCRKVaJoaUuc8xZKm8ooFf2xXZAvS0sN1AhTzTNXlr4aUcEN0iZJXfTHuYOZiiFkX3IcDg6SwAL-evgqLJKu4n-g.wELgILBQfjiJ_a0l9Xpm2g"
+      - "..mNFA_drxU0e06_l0.o55hir7QsdyByrNWs9MO4Wr2R-YspsMOQSRSwLOrHSBTaAcZHbm1oz7vKk7Y5skWolyFlBvcXdL6ruvR8NaqSPhJ_kLyi1fMuFeehuIuY2U9BOnie67_LxiqctKmXb0b2z8EOv4HIf23bVn8bTj68EZcbtW7zbAs8JXfj0XbIr-LE6oJVPn3d9F6b3bg39RhnOqz4cfUiNPSmd-Q0GQ-LjSrz1aTaDKV0Gb4GWIhgRn_9nN3AUnpRMS8X00O-KfSWghlRq9MwspktrJ36VTxkccDTBgE3_b6hgjK3CMp9yAYgllPlbkcfgJ1QC-FzYBmpEK-kFWpmO8MouMuzQbjY9RKE75Qb0SSM2thOq8GJ5HsNsOjBR6xV-k_mNNjOgVWhNFrv75W_DNrY4dm6XJwPqWEZ70v9HAcVrrm3oLhznIwkDlEQlC4UNsvclaceY4ZLahYENzCC-EagRuuXVbLjfeVVV2Py72bnwgzkgekHBwJ3nkxuavRnUEZGfTycc0rUn850r3kfJpyWXInJ5s65cP4Zzfuc2f8JM0LEBei7bhXxivDEinnlp35BWcJYYr7vW41TzOXdIygZNFlxakbQthjSItOqQVTE3H1WgZx0XVvx8sfhsIOtJDcu5h08WaJlGZ918oJXNAguhSecq4T1qpdZbptmfxYgcyc1fQ6DVusg1dovB2k8IM4mq2TnTiJhY2UzXK8GDFv-qEsKL9BXPsZxLTx_adOLc70kwJxSeeo0jhaXZwnX1FARznyImc9K7MHB3599M4T2vUWuTPhiLMnnJWx8DA1ZAQ9PAJxdwQnrz2UKLJnxcE4W-pvl3GKQTYJhBAZ9NUObiVHKd6MSfrG5udhcgifkMCU7BJWLOabcxRry895fPAhB5Z__q-ndgrvvV6X5rpvuQYuZ4G3hbRAzOFQ7e3cRSDa_lFieHgZKsI9Xg-2muDTRjEAMapuGV3erSbMVeB8cMhDMm-Aiuf_XJzy5ANA8y5X2hdxiA.BUsezYm3cQdkMkZVFzj33g"
   response:
     status:
       code: 200
@@ -661,9 +761,9 @@ http_interactions:
       content-type:
       - application/json
       date:
-      - Wed, 08 Nov 2017 02:06:45 GMT
+      - Fri, 22 Dec 2017 18:21:15 GMT
       set-cookie:
-      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Tue, 07-Nov-2017 02:06:45
+      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Thu, 21-Dec-2017 18:21:15
         GMT
       vary:
       - Accept-Encoding
@@ -752,10 +852,10 @@ http_interactions:
           "annual_visit_year" : 12
         }
     http_version: 
-  recorded_at: Wed, 08 Nov 2017 02:06:45 GMT
+  recorded_at: Fri, 22 Dec 2017 18:21:15 GMT
 - request:
     method: get
-    uri: https://calsapi.preint.cwds.io/facilities/300665437/complaints
+    uri: https://calsapi.preint.cwds.io/facilities/300665437/children
     body:
       encoding: US-ASCII
       string: ''
@@ -763,7 +863,7 @@ http_interactions:
       Content-type:
       - application/json
       Authorization:
-      - "..rzzG_oAdrQNbBH-t.t-q4Ol0Kb-9QnVK6hd3xQOgG_FEftbUYtrev-Gq--F84B0qu19jl2NCJOJ8TMfWPGjLD-mHj_Sp3LJMjls89DqJr5naM53u1VWOexTwbZrqFJ-XAq2mdcIY5optSr9sQWbEv79VESk4komskbNVecx18CaSx0r8t-PSs95CFenAysKlRoPcuLiubnExQW-Ujvl48juZ5APN-bpBzcuOZJrqHOi12L3hY84kW43ryXH--3_NqFQvW0VRUTnzcLa8QKGGiadxsusI1EEQtGpb9pQyrfR_dRDRrfIR1jjxIjBzAg4bLcSk5TpKVcdGWu53eN-7nUFlyU9PyWFfAISFmp2wL0xzKIfNSZpcotgZkHSg7w5LO2iQ9vl_RaPJXozl1V8mSzwA7b7ThngrvKTDOo9xYHBmC7lP7UYbUq0EahpRa5uudEmqghzZ3wHK-zjlhtCqUdWCzkN2HPz9Edp_omrg-cjKRyRs_HKwGy-mjr6Fz1IBvbf9w2FuQOfJSHMuNi9g2q63ceYo694Xtzxd3qBPuYdl22MZdwWBlrnX_2EZd0KGd2DKUtrr8Kv0tJR0Vcclqd6XHrnuR_YMTNNGYtZ7B7tAmrLBirKeOKzFnuYhVCOsQ3R2N9UBLR49g7ISmOH4ieG8DsbUnbHmvlC2KtB9RwHNWj2Tsp91hm4NPyZFVzZkghdcQIonDj0WY8jdMMLTXTbzwWXobJJp9aZHpxbaV8hk2fhVnJwxjv_ETw9AtzdKDejmx3Klh4xJXem7s4se7B2qBL6UUlitAHKFbRzY3hBh11RVAeeA6LMjYgcGg8Kz9Ex5ll8xkKDtlb_vX5mAgAgvTYVyAZQtr5WSszbMF8F55b0qfoDthTuBVm6ow0YzAq6ZQqPKkGLGxWuNuxxsWzw7WLaxVJiKznYMCRKVaJoaUuc8xZKm8ooFf2xXZAvS0sN1AhTzTNXlr4aUcEN0iZJXfTHuYOZiiFkX3IcDg6SwAL-evgqLJKu4n-g.wELgILBQfjiJ_a0l9Xpm2g"
+      - "..mNFA_drxU0e06_l0.o55hir7QsdyByrNWs9MO4Wr2R-YspsMOQSRSwLOrHSBTaAcZHbm1oz7vKk7Y5skWolyFlBvcXdL6ruvR8NaqSPhJ_kLyi1fMuFeehuIuY2U9BOnie67_LxiqctKmXb0b2z8EOv4HIf23bVn8bTj68EZcbtW7zbAs8JXfj0XbIr-LE6oJVPn3d9F6b3bg39RhnOqz4cfUiNPSmd-Q0GQ-LjSrz1aTaDKV0Gb4GWIhgRn_9nN3AUnpRMS8X00O-KfSWghlRq9MwspktrJ36VTxkccDTBgE3_b6hgjK3CMp9yAYgllPlbkcfgJ1QC-FzYBmpEK-kFWpmO8MouMuzQbjY9RKE75Qb0SSM2thOq8GJ5HsNsOjBR6xV-k_mNNjOgVWhNFrv75W_DNrY4dm6XJwPqWEZ70v9HAcVrrm3oLhznIwkDlEQlC4UNsvclaceY4ZLahYENzCC-EagRuuXVbLjfeVVV2Py72bnwgzkgekHBwJ3nkxuavRnUEZGfTycc0rUn850r3kfJpyWXInJ5s65cP4Zzfuc2f8JM0LEBei7bhXxivDEinnlp35BWcJYYr7vW41TzOXdIygZNFlxakbQthjSItOqQVTE3H1WgZx0XVvx8sfhsIOtJDcu5h08WaJlGZ918oJXNAguhSecq4T1qpdZbptmfxYgcyc1fQ6DVusg1dovB2k8IM4mq2TnTiJhY2UzXK8GDFv-qEsKL9BXPsZxLTx_adOLc70kwJxSeeo0jhaXZwnX1FARznyImc9K7MHB3599M4T2vUWuTPhiLMnnJWx8DA1ZAQ9PAJxdwQnrz2UKLJnxcE4W-pvl3GKQTYJhBAZ9NUObiVHKd6MSfrG5udhcgifkMCU7BJWLOabcxRry895fPAhB5Z__q-ndgrvvV6X5rpvuQYuZ4G3hbRAzOFQ7e3cRSDa_lFieHgZKsI9Xg-2muDTRjEAMapuGV3erSbMVeB8cMhDMm-Aiuf_XJzy5ANA8y5X2hdxiA.BUsezYm3cQdkMkZVFzj33g"
   response:
     status:
       code: 200
@@ -774,9 +874,109 @@ http_interactions:
       content-type:
       - application/json
       date:
-      - Wed, 08 Nov 2017 02:06:45 GMT
+      - Fri, 22 Dec 2017 18:21:15 GMT
       set-cookie:
-      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Tue, 07-Nov-2017 02:06:45
+      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Thu, 21-Dec-2017 18:21:15
+        GMT
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      x-xss-protection:
+      - 1; mode=block
+      content-length:
+      - '320'
+      connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "children" : [ {
+            "id" : "541770099 ",
+            "person" : {
+              "gender" : "F",
+              "age" : 17,
+              "first_name" : "Mei",
+              "last_name" : "Takahashi",
+              "date_of_birth" : "2000-05-28"
+            },
+            "date_of_placement" : "2002-06-19",
+            "county_of_origin" : "State of California"
+          }, {
+            "id" : "541770103 ",
+            "person" : {
+              "gender" : "M",
+              "age" : 17,
+              "first_name" : "Daniel",
+              "last_name" : "Ordonez",
+              "date_of_birth" : "2000-09-26"
+            },
+            "date_of_placement" : "2002-06-19",
+            "county_of_origin" : "State of California"
+          }, {
+            "id" : "541770115 ",
+            "person" : {
+              "gender" : "M",
+              "age" : 17,
+              "first_name" : "Das",
+              "last_name" : "Kular",
+              "date_of_birth" : "2000-01-19"
+            },
+            "date_of_placement" : "2002-06-19",
+            "county_of_origin" : "State of California"
+          }, {
+            "id" : "541770117 ",
+            "person" : {
+              "gender" : "F",
+              "age" : 16,
+              "first_name" : "Shaneka",
+              "last_name" : "Quilling",
+              "date_of_birth" : "2001-03-28"
+            },
+            "date_of_placement" : "2002-06-19",
+            "county_of_origin" : "State of California"
+          }, {
+            "id" : "541770119 ",
+            "person" : {
+              "gender" : "F",
+              "age" : 17,
+              "first_name" : "Francisca",
+              "last_name" : "Esquivel",
+              "date_of_birth" : "2000-11-17"
+            },
+            "date_of_placement" : "2002-06-19",
+            "county_of_origin" : "State of California"
+          } ]
+        }
+    http_version: 
+  recorded_at: Fri, 22 Dec 2017 18:21:15 GMT
+- request:
+    method: get
+    uri: https://calsapi.preint.cwds.io/facilities/300665437/complaints
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-type:
+      - application/json
+      Authorization:
+      - "..mNFA_drxU0e06_l0.o55hir7QsdyByrNWs9MO4Wr2R-YspsMOQSRSwLOrHSBTaAcZHbm1oz7vKk7Y5skWolyFlBvcXdL6ruvR8NaqSPhJ_kLyi1fMuFeehuIuY2U9BOnie67_LxiqctKmXb0b2z8EOv4HIf23bVn8bTj68EZcbtW7zbAs8JXfj0XbIr-LE6oJVPn3d9F6b3bg39RhnOqz4cfUiNPSmd-Q0GQ-LjSrz1aTaDKV0Gb4GWIhgRn_9nN3AUnpRMS8X00O-KfSWghlRq9MwspktrJ36VTxkccDTBgE3_b6hgjK3CMp9yAYgllPlbkcfgJ1QC-FzYBmpEK-kFWpmO8MouMuzQbjY9RKE75Qb0SSM2thOq8GJ5HsNsOjBR6xV-k_mNNjOgVWhNFrv75W_DNrY4dm6XJwPqWEZ70v9HAcVrrm3oLhznIwkDlEQlC4UNsvclaceY4ZLahYENzCC-EagRuuXVbLjfeVVV2Py72bnwgzkgekHBwJ3nkxuavRnUEZGfTycc0rUn850r3kfJpyWXInJ5s65cP4Zzfuc2f8JM0LEBei7bhXxivDEinnlp35BWcJYYr7vW41TzOXdIygZNFlxakbQthjSItOqQVTE3H1WgZx0XVvx8sfhsIOtJDcu5h08WaJlGZ918oJXNAguhSecq4T1qpdZbptmfxYgcyc1fQ6DVusg1dovB2k8IM4mq2TnTiJhY2UzXK8GDFv-qEsKL9BXPsZxLTx_adOLc70kwJxSeeo0jhaXZwnX1FARznyImc9K7MHB3599M4T2vUWuTPhiLMnnJWx8DA1ZAQ9PAJxdwQnrz2UKLJnxcE4W-pvl3GKQTYJhBAZ9NUObiVHKd6MSfrG5udhcgifkMCU7BJWLOabcxRry895fPAhB5Z__q-ndgrvvV6X5rpvuQYuZ4G3hbRAzOFQ7e3cRSDa_lFieHgZKsI9Xg-2muDTRjEAMapuGV3erSbMVeB8cMhDMm-Aiuf_XJzy5ANA8y5X2hdxiA.BUsezYm3cQdkMkZVFzj33g"
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      content-security-policy:
+      - default-src 'self' 'unsafe-inline';
+      content-type:
+      - application/json
+      date:
+      - Fri, 22 Dec 2017 18:21:15 GMT
+      set-cookie:
+      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Thu, 21-Dec-2017 18:21:15
         GMT
       vary:
       - Accept-Encoding
@@ -828,5 +1028,5 @@ http_interactions:
           } ]
         }
     http_version: 
-  recorded_at: Wed, 08 Nov 2017 02:06:45 GMT
+  recorded_at: Fri, 22 Dec 2017 18:21:15 GMT
 recorded_with: VCR 3.0.3

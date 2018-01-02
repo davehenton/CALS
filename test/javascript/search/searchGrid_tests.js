@@ -3,6 +3,7 @@ import SearchGrid from '../../../app/javascript/search/search_grid'
 import ShallowRenderer from 'react-test-renderer/shallow'
 
 describe('Render Search results to Grid', function () {
+  let indexValue = '0'
   const prop = {
     searchResults: [
       {
@@ -75,7 +76,7 @@ describe('Render Search results to Grid', function () {
     expect(gridElement[0].props.className).toBe('grid_view_inner col-xs-12 col-sm-12 col-md-12 col-lg-12')
   })
   it('verify loaded Facility ID', function () {
-    expect(gridElement[0].key).toEqual(prop.searchResults[0].license_number.toString())
+    expect(gridElement[0].key).toEqual(indexValue)
   })
   const gridObjects = gridElement[0].props.children
   const gridArrayChildElem = gridObjects[0].props.children

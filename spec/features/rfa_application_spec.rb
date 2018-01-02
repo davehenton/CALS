@@ -88,17 +88,17 @@ RSpec.feature 'RFA', js: true do
     expect(page).to have_content 'IV. Minor Children Residing in the Home'
     fill_in('street_address', with: '2870 something else', :match => :prefer_exact)
     fill_in('Zip', with: '12345', :match => :prefer_exact)
-    find(:select, 'mailing_similar').first(:option, 'No').select_option
+    find('#mailing_similarYes').click
     fill_in('street_address', with: 'maing address here', :match => :prefer_exact)
     fill_in('zip', with: '12345', :match => :prefer_exact)
     fill_in('city', with: 'secondary city', :match => :prefer_exact)
     #find(:select, 'Residentialstate_type').first(:option, 'Alaska').select_option
     expect(page).to have_content 'About This Residence'
-    find(:select, 'residenceTypes').first(:option, 'Own').select_option
-    find(:select, 'weapons').first(:option, 'Yes').select_option
-    find(:select, 'body_of_water_exist').first(:option, 'Yes').select_option
-    fill_in('body_of_water_description', with: 'body of water goes here', :match => :prefer_exact)
-    find(:select, 'others_using_residence_as_mailing').first(:option, 'Yes').select_option
+    #find(:select, 'residenceTypes').first(:option, 'Own').select_option
+    find('#weaponsYes').click
+
+    find('#body_of_water_existYes').click
+    find('#others_using_residence_as_mailingYes').click
     fill_in('directions', with: 'directions goes here', :match => :prefer_exact)
     page.find(:css, '.languages').click
     page.find(:css, "#react-select-2--option-0").click
@@ -106,11 +106,14 @@ RSpec.feature 'RFA', js: true do
     page.find(:css, "#react-select-2--option-1").click
     expect(page).to have_css(:span, text: 'American Sign Language')
     expect(page).to have_css(:span, text: 'Armenian')
-    #find(:select, 'languagesSpoken').first(:option, 'Arabic').select_option
     click_button('Save Progress')
     visit page.driver.current_url
 
     expect(find_field('residenceTypes').value).to eq '1'
+    expect(find_field('mailing_similartrue').value).to eq 'true'
+    expect(find_field('weaponstrue').value).to eq 'true'
+    expect(find_field('body_of_water_existtrue').value).to eq 'true'
+    expect(find_field('others_using_residence_as_mailingtrue').value).to eq 'true'
   end
 
   scenario 'validate Minor Children card', set_auth_header: true do
@@ -163,12 +166,12 @@ RSpec.feature 'RFA', js: true do
     fill_in('middle_name', with: 'k', :match => :prefer_exact)
     fill_in('last_name', with: Faker::Name.name, :match => :prefer_exact)
     expect(page).to have_content 'VIII. Foster Care / Adoption / Licensure History'
-    find(:select, 'q1-select-dropdown').first(:option, 'No').select_option
+    find('#q1-select-dropdownYes').click
 
     click_button('Save Progress')
     visit page.driver.current_url
 
-    expect(find_field('q1-select-dropdown').value).to eq 'false'
+    expect(find_field('q1-select-dropdowntrue').value).to eq 'true'
   end
 
   scenario 'validate references card', set_auth_header: true do

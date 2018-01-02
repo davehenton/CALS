@@ -42,34 +42,44 @@ describe('Verify Physical Address', function () {
     relationShipField.simulate('change', {target: {value: 'gate way oaks'}})
     expect(setParentStateSpy).toHaveBeenCalledWith('directions_to_home', 'gate way oaks')
   })
+  describe('#YesNoRadioComponent', () => {
+    let setParentStateSpy
+    beforeEach(() => {
+      setParentStateSpy = jasmine.createSpy('setParentState')
+      residenceCardComp = mount(<AboutThisResidenceCard
 
-  it('verify body of water exists change', () => {
-    let relationShipField = residenceCardComp.find('#body_of_water_exist')
-    relationShipField.simulate('change', selectedYes)
-    expect(setParentStateSpy).toHaveBeenCalledWith('body_of_water_exist', '2')
+        languageTypes={languageTypes.items}
+        residenceTypes={residenceTypes.items}
+        aboutResidence={blankAboutThisResidenceFields}
+        setParentState={setParentStateSpy}
+      />)
+    })
+    it('verify body of water exists change', () => {
+      let relationShipField = residenceCardComp.find('#body_of_water_existtrue').hostNodes()
+      relationShipField.simulate('change', {target: {value: 'false'}})
+      expect(setParentStateSpy).toHaveBeenCalledWith('body_of_water_exist', 'false')
+    })
+    it('verify weapons address change', () => {
+      let relationShipField = residenceCardComp.find('#weaponstrue').hostNodes()
+      relationShipField.simulate('change', {target: {value: 'false'}})
+      expect(setParentStateSpy).toHaveBeenCalledWith('weapon_in_home', 'false')
+    })
+    it('verify other using residence as mailing change', () => {
+      let relationShipField = residenceCardComp.find('#others_using_residence_as_mailingtrue').hostNodes()
+      relationShipField.simulate('change', {target: {value: 'false'}})
+      expect(setParentStateSpy).toHaveBeenCalledWith('others_using_residence_as_mailing', 'false')
+    })
   })
-
   it('verify body of water description', () => {
     let relationShipField = residenceCardComp.find('#body_of_water_description')
     relationShipField.simulate('change', {target: {value: 'Text'}})
     expect(setParentStateSpy).toHaveBeenCalledWith('body_of_water_description', 'Text')
   })
 
-  it('verify other using residence as mailing change', () => {
-    let relationShipField = residenceCardComp.find('#others_using_residence_as_mailing')
-    relationShipField.simulate('change', selectedYes)
-    expect(setParentStateSpy).toHaveBeenCalledWith('others_using_residence_as_mailing', '2')
-  })
-
   it('verify residence types address change', () => {
     let relationShipField = residenceCardComp.find('#residenceTypes')
     relationShipField.simulate('change', {target: {options: {'1': {value: '1', text: 'Own'}, selectedIndex: 1}}})
     expect(setParentStateSpy).toHaveBeenCalledWith('residence_ownership', {id: '1', value: 'Own'})
-  })
-  it('verify weapons address change', () => {
-    let relationShipField = residenceCardComp.find('#weapons')
-    relationShipField.simulate('change', selectedYes)
-    expect(setParentStateSpy).toHaveBeenCalledWith('weapon_in_home', '2')
   })
 
   it('verify first name', () => {

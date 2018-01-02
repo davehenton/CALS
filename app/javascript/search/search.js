@@ -14,8 +14,7 @@ export default class Search extends React.Component {
       landingPageUrl: props.landingUrl,
       isToggled: true,
       inputData: ' ',
-      fromResponse: false,
-      searchData: []
+      searchData: undefined
     }
     this.handleToggle = this.handleToggle.bind(this)
     this.getCsrfToken = this.getCsrfToken.bind(this)
@@ -39,17 +38,13 @@ export default class Search extends React.Component {
     this.setState({isToggled: !this.state.isToggled})
   }
 
-  getInitialState () {
-    this.state.isToggled = false
-  }
-
   addSearchInput (DataSearch) {
     var query = DataSearch.split(',')
     var addressData = this.addressQuery(query)
 
     var params = {
-      'county.id': [query[0]],
-      'type.id': [query[1]],
+      'county.value': [query[0]],
+      'type.value': [query[1]],
       id: [query[2]],
       name: [query[3]],
       'addresses.address.street_address': addressData
@@ -69,14 +64,15 @@ export default class Search extends React.Component {
       .catch(error => {
         console.log(error)
         return this.setState({
-          searchData: [],
-          fromResponse: true
+          searchData: []
         })
       })
   }
 
   render () {
-    let searchArray = this.state.searchData[0] ? this.state.searchData : false
+    const initialLoad = this.state.searchData === undefined
+    const searchResponseHasValues = this.state.searchData && this.state.searchData.length > 0
+
     return (
       <div className='search_page'>
         <div className='search-section col-xs-12 col-sm-12 col-md-12 col-lg-12'>
@@ -86,11 +82,11 @@ export default class Search extends React.Component {
             facilityTypes={this.props.facilityTypes}
           />
         </div>
-        {searchArray && <SearchDetails sendSearchInput={this.addSearchInput.bind(this)} {...this} />}
+        {searchResponseHasValues && <SearchDetails sendSearchInput={this.addSearchInput.bind(this)} {...this} />}
         <div className='result-section col-xs-12 col-sm-12 col-md-12 col-lg-12'>
           {this.state.isToggled && <SearchGrid searchResults={this.state.searchData} />}
           {!this.state.isToggled && <SearchList searchResults={this.state.searchData} />}
-          {(this.state.fromResponse && !searchArray) && <SearchNotFound />}
+          {(!searchResponseHasValues && !initialLoad) && <SearchNotFound />}
         </div>
       </div>
     )

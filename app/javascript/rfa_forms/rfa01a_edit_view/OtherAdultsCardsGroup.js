@@ -58,7 +58,7 @@ export default class OtherAdultsCardsGroup extends React.Component {
                 if (!otherAdultsFields.to_delete) {
                   return (
                     <div key={index} className='row list-item' >
-                      <div > <span onClick={() => this.clickClose(index)} className='pull-right glyphicon glyphicon-remove' />
+                      <div > <a onClick={() => this.clickClose(index)} className='pull-right remove-btn'>Remove</a>
                       </div>
                       <OtherAdultsCardField
                         index={index}

@@ -51,7 +51,7 @@ export default class ApplicantCardsGroup extends React.Component {
                 return (
                   <div key={index}>
                     <h3>I. Applicant {String(index + 1)} - <span>Information</span></h3>
-                    {(index > 0) && <span onClick={() => this.onApplicantClickClose(index)} className='pull-right glyphicon glyphicon-remove' />}
+                    {(index > 0) && <a onClick={() => this.onApplicantClickClose(index)} className='pull-right applicant-list-remove-btn'>Remove</a>}
                     <ApplicantCard
                       index={index}
                       nameTypes={this.props.nameTypes}

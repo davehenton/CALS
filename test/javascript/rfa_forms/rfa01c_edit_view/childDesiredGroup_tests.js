@@ -1,6 +1,6 @@
 import React from 'react'
 import {shallow, mount} from 'enzyme'
-import ChildDesiredGroup from 'rfa_forms/rfa01c_edit_view/childDesiredGroup.jsx'
+import DesiredChildCardGroup from 'rfa_forms/rfa01c_edit_view/desiredChildCardGroup'
 import {schoolGrades, countyTypes, suffixTypes, genderTypes, stateTypes} from './../../helpers/constants'
 import Validator from 'helpers/validator'
 
@@ -41,7 +41,7 @@ describe('Verify Child Desired Comp', () => {
     getFocusClassNameSpy = jasmine.createSpy('getFocusClassName')
     setFocusStateSpy = jasmine.createSpy('setFocusState')
 
-    childDesiredComp = mount(<ChildDesiredGroup
+    childDesiredComp = mount(<DesiredChildCardGroup
       focusComponentName={'ChildDesiredMain'}
       identified_children={identifiedChildren}
       desiredChild={identifiedChildren}
@@ -56,14 +56,25 @@ describe('Verify Child Desired Comp', () => {
       validator={validator}
     />)
   })
+
   it('verify component load', () => {
-    let componentId = childDesiredComp.find('#DesiredChildSection')
-    expect(componentId.length).toBe(1)
+    expect(childDesiredComp.length).toBe(1)
   })
 
   it('verify focus component', () => {
-    let componentId = childDesiredComp.find('#DesiredChildSection')
-    componentId.simulate('click')
+    let cardComponent = childDesiredComp.find('#DesiredChildSection').hostNodes()
+    cardComponent.simulate('click')
     expect(setFocusStateSpy).toHaveBeenCalledWith('ChildDesiredMain')
+  })
+
+  it('adds a card', () => {
+    spyOn(childDesiredComp.instance(), 'addCard').and.callThrough()
+    childDesiredComp.instance().addCard()
+    expect(childDesiredComp.instance().addCard).toHaveBeenCalled()
+  })
+  it('removes a card', () => {
+    spyOn(childDesiredComp.instance(), 'clickClose').and.callThrough()
+    childDesiredComp.instance().clickClose()
+    expect(childDesiredComp.instance().clickClose).toHaveBeenCalled()
   })
 })

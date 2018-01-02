@@ -1,22 +1,23 @@
 import React from 'react'
 import InputDataBlock from './common/inputDataBlock.js'
+import {dictionaryNilSelectValue} from 'helpers/commonHelper.jsx'
 
 export default class SearchInput extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
       searchId: {
-        countyId: '',
-        facilityTypeId: ''
+        countyValue: '',
+        facilityTypeValue: ''
       }
     }
     this.handleChange = this.handleChange.bind(this)
   }
 
   handleChange (value, event) {
-    let selectedValue = event.target.selectedOptions[0]
+    let selectedValue = dictionaryNilSelectValue(event.target.options)
     let newSearchId = this.state.searchId
-    newSearchId[value] = selectedValue.id
+    newSearchId[value] = selectedValue
     this.setState({
       searchId: newSearchId
     })
@@ -24,7 +25,7 @@ export default class SearchInput extends React.Component {
 
   sendSearchInput (event) {
     event.preventDefault()
-    const finalQuery = (this.state.searchId.countyId + ',' + this.state.searchId.facilityTypeId + ',' + this.refs.facilityId.value + ',' + this.refs.facilityName.value + ',' + this.refs.facilityAddress.value)
+    const finalQuery = (this.state.searchId.countyValue + ',' + this.state.searchId.facilityTypeValue + ',' + this.refs.facilityId.value + ',' + this.refs.facilityName.value + ',' + this.refs.facilityAddress.value)
     this.props.sendSearchInput(finalQuery)
   }
   render () {
@@ -46,7 +47,7 @@ export default class SearchInput extends React.Component {
                 <span>County</span>
               </div>
               <div>
-                <select className='searchSelect' ref={this.state.county} value={this.state.county} onChange={(event) => this.handleChange('countyId', event)}>
+                <select className='searchSelect' id='county_select' ref={this.state.county} value={this.state.county} onChange={(event) => this.handleChange('countyValue', event)}>
                   <option value=' ' />
                   {countyIterate}
                 </select>
@@ -58,7 +59,7 @@ export default class SearchInput extends React.Component {
                 <span>Facility Type</span>
               </div>
               <div>
-                <select className='searchSelect' ref={this.state.facility} value={this.state.facility} onChange={(event) => this.handleChange('facilityTypeId', event)}>
+                <select className='searchSelect' id='facility_select' ref={this.state.facility} value={this.state.facility} onChange={(event) => this.handleChange('facilityTypeValue', event)}>
                   <option value='' />
                   {facilityIterate}
                 </select>

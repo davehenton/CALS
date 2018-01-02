@@ -58,7 +58,6 @@ export default class ApplicantMaritalHistoryCardGroup extends React.Component {
     super(props)
     this.addMaritalHistoryCard = this.addMaritalHistoryCard.bind(this)
     this.addAdultChildCard = this.addAdultChildCard.bind(this)
-
     this.changeMaritalHistory = this.changeMaritalHistory.bind(this)
     this.changeAdultChild = this.changeAdultChild.bind(this)
     this.changeAdultHistoryAddress = this.changeAdultHistoryAddress.bind(this)
@@ -153,7 +152,7 @@ export default class ApplicantMaritalHistoryCardGroup extends React.Component {
               applicantMaritalHistories.map((applicantMaritalHistory, index) => {
                 return (
                   <div key={'formerSpouse' + '[' + index + ']'} className='row list-item' >
-                    <div> <span onClick={(event) => this.onMaritalHistoryClickClose(index)} className='pull-right glyphicon glyphicon-remove' />
+                    <div> <a onClick={(event) => this.onMaritalHistoryClickClose(index)} className='pull-right remove-btn'>Remove</a>
                     </div>
                     { <ApplicantMaritalHistoryCard
                       index={index}
@@ -188,8 +187,8 @@ export default class ApplicantMaritalHistoryCardGroup extends React.Component {
                 return (
 
                   <div key={'adultChild' + '[' + index + ']'} className='row list-item' >
-                    <div> <span onClick={() => this.onAdultChildClickClose(index)} className='pull-right glyphicon glyphicon-remove' />
-                    </div>
+                    <a onClick={() => this.onAdultChildClickClose(index)} className='pull-right remove-btn'>Remove</a>
+
                     { <AdultChildrenFields
                       index={index}
                       idPrefix={'applicantsHistory.adult_children' + '[' + index + '].'}
@@ -204,7 +203,8 @@ export default class ApplicantMaritalHistoryCardGroup extends React.Component {
                       suffixTypes={this.props.suffixTypes}
                       prefixTypes={this.props.prefixTypes}
                       nameTypes={this.props.nameTypes}
-                      stateTypes={this.props.stateTypes} />}
+                      stateTypes={this.props.stateTypes}
+                    />}
                   </div>
 
                 )

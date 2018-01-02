@@ -54,8 +54,8 @@ describe('Verify More About Applican', () => {
   })
   it('Date Of Birth Change', () => {
     let dateOfBirthField = aboutApplicantComp.find('#applicant0date_of_birth')
-    dateOfBirthField.simulate('change', {target: {value: '01/01/2000'}})
-    expect(setCardState).toHaveBeenCalledWith('date_of_birth', '2000-01-01')
+    dateOfBirthField.simulate('change', {target: {value: '01/03/2000'}})
+    expect(setCardState).toHaveBeenCalledWith('date_of_birth', '2000-01-03')
   })
   it('Gender DropDown Change', () => {
     let genderField = aboutApplicantComp.find('#gender')

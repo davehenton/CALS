@@ -6,6 +6,7 @@ import {AgencyComponent} from 'components/rfa_forms/agencyComponentFields'
 import {FacilityComponent} from 'components/rfa_forms/fosterFacilityComponent'
 import {checkArrayObjectPresence, dictionaryNilSelectValue} from 'helpers/commonHelper.jsx'
 import {addCardAsJS, removeCard} from 'helpers/cardsHelper.jsx'
+import YesNoRadioComponent from 'components/common/yesNoFields'
 
 export const blankFosterCareFields = Object.freeze(
   {
@@ -190,14 +191,11 @@ export class FosterCareHistoryFields extends React.Component {
               {
               // Question 1
               }
-              <DropDownField
-                id='q1-select-dropdown'
-                gridClassName='col-md-7'
-                selectClassName={'reusable-select'}
-                value={q1History.was_previously_licensed}
-                optionList={this.props.yesNo.items}
+              <YesNoRadioComponent
                 label='Have you been previously licensed, certified, or approved to provide foster care?'
-                onChange={(event) => this.setFosterCareNestedState('foster_care_licenses_q1', 'was_previously_licensed', dictionaryNilSelectValue(event.target.options))} />
+                idPrefix='q1-select-dropdown'
+                value={q1History.was_previously_licensed}
+                onFieldChange={(event) => this.setFosterCareNestedState('foster_care_licenses_q1', 'was_previously_licensed', event.target.value)} />
             </div>
             <div className={hiddenQ1}>
               {
@@ -239,13 +237,11 @@ export class FosterCareHistoryFields extends React.Component {
               {
               // Question 2
               }
-              <DropDownField gridClassName='col-md-7'
-                id='q2-select-dropdown'
-                selectClassName={'reusable-select'}
-                value={q2History.have_applied_for_adoption}
-                optionList={this.props.yesNo.items}
+              <YesNoRadioComponent
                 label='Have you previously applied for adoption?'
-                onChange={(event) => this.setFosterCareNestedState('applications_for_adoption_q2', 'have_applied_for_adoption', dictionaryNilSelectValue(event.target.options))} />
+                idPrefix='q2-select-dropdown'
+                value={q2History.have_applied_for_adoption}
+                onFieldChange={(event) => this.setFosterCareNestedState('applications_for_adoption_q2', 'have_applied_for_adoption', event.target.value)} />
             </div>
 
             <div className={hiddenQ2}>
@@ -280,15 +276,12 @@ export class FosterCareHistoryFields extends React.Component {
               {
               // Question 3
               }
-              <DropDownField
-                gridClassName='col-md-7'
-                id='q3-select-dropdown'
-                selectClassName={'reusable-select'}
-                value={q3History.was_previously_licensed}
-                optionList={this.props.yesNo.items}
+              <YesNoRadioComponent
                 label='Have you previously been licensed to operate a non-foster care community care facility, child care center, family child
                 care home, or residential care facility for the elderly or chronically ill?'
-                onChange={(event) => this.setFosterCareNestedState('facility_operation_licenses_q3', 'was_previously_licensed', dictionaryNilSelectValue(event.target.options))} />
+                idPrefix='q3-select-dropdown'
+                value={q3History.was_previously_licensed}
+                onFieldChange={(event) => this.setFosterCareNestedState('facility_operation_licenses_q3', 'was_previously_licensed', event.target.value)} />
             </div>
 
             <div className={hiddenQ3}>
@@ -329,14 +322,14 @@ export class FosterCareHistoryFields extends React.Component {
               {
               // Question 4
               }
-              <DropDownField gridClassName='col-md-7'
-                id='q4-select-dropdown'
-                selectClassName={'reusable-select'}
-                optionList={this.props.yesNo.items}
-                value={q4History.was_employed_or_volunteered}
+
+              <YesNoRadioComponent
                 label='Have you previously been employed by or volunteered at a community care facility, child care center, family child care
                     home, or residential care facility for the elderly or chromincally ill?'
-                onChange={(event) => this.setFosterCareNestedState('employment_in_facilities_q4', 'was_employed_or_volunteered', dictionaryNilSelectValue(event.target.options))} />
+                idPrefix='q4-select-dropdown'
+                value={q4History.was_employed_or_volunteered}
+                onFieldChange={(event) => this.setFosterCareNestedState('employment_in_facilities_q4', 'was_employed_or_volunteered', event.target.value)} />
+
             </div>
 
             <div className={hiddenQ4}>
@@ -371,14 +364,13 @@ export class FosterCareHistoryFields extends React.Component {
               {
               // Question 5
               }
-              <DropDownField gridClassName='col-md-7'
-                id='q5-select-dropdown'
-                selectClassName={'reusable-select'}
-                optionList={this.props.yesNo.items}
-                value={q5History.had_denials}
+              <YesNoRadioComponent
                 label='Have you had a previous license, certification, relative or nonrelative extended family member approval, or resource
                       family approval application denial?'
-                onChange={(event) => this.setFosterCareNestedState('denial_history_q5', 'had_denials', dictionaryNilSelectValue(event.target.options))} />
+                idPrefix='q5-select-dropdown'
+                value={q5History.had_denials}
+                onFieldChange={(event) => this.setFosterCareNestedState('denial_history_q5', 'had_denials', event.target.value)} />
+
             </div>
 
             <div className={hiddenQ5}>
@@ -419,13 +411,11 @@ export class FosterCareHistoryFields extends React.Component {
               {
               // Question 6
               }
-              <DropDownField gridClassName='col-md-7'
-                id='q6-select-dropdown'
-                selectClassName={'reusable-select'}
-                optionList={this.props.yesNo.items}
-                value={q6History.had_suspensions_revocations}
+              <YesNoRadioComponent
                 label='Have you had a license, certification, or approval suspended, revoked, or rescinded?'
-                onChange={(event) => this.setFosterCareNestedState('suspension_revocation_history_q6', 'had_suspensions_revocations', dictionaryNilSelectValue(event.target.options))} />
+                idPrefix='q6-select-dropdown'
+                value={q6History.had_suspensions_revocations}
+                onFieldChange={(event) => this.setFosterCareNestedState('suspension_revocation_history_q6', 'had_suspensions_revocations', event.target.value)} />
             </div>
 
             <div className={hiddenQ6}>
@@ -466,12 +456,11 @@ export class FosterCareHistoryFields extends React.Component {
               {
               // Question 7
               }
-              <DropDownField gridClassName='col-md-7'
-                selectClassName={'reusable-select'}
-                optionList={this.props.yesNo.items}
-                value={q7History}
+              <YesNoRadioComponent
                 label='Have you been subject to an exclusion order?'
-                onChange={(event) => this.setFosterCareHistoryState('was_subject_for_exclusion_order_q7', dictionaryNilSelectValue(event.target.options))} />
+                idPrefix='q7-select-dropdown'
+                value={q7History}
+                onFieldChange={(event) => this.setFosterCareHistoryState('was_subject_for_exclusion_order_q7', event.target.value)} />
             </div>
           </form>
         </div>

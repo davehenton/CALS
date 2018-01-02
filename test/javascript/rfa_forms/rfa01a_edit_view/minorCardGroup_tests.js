@@ -102,7 +102,7 @@ describe('Verify minor children Component View', function () {
     describe('when close minor card is clicked', () => {
       it('Clears data when 1 phone number is present', () => {
         spyOn(component.instance(), 'clickClose').and.callThrough()
-        component.find('.glyphicon-remove').simulate('click')
+        component.find('.remove-btn').simulate('click')
         let newData = []
         newData[0] = minorCardChild
         newData[1] = minorDefaults
@@ -119,7 +119,7 @@ describe('Verify minor children Component View', function () {
 
         spyOn(component.instance(), 'clickClose').and.callThrough()
 
-        component.find('.glyphicon-remove').at(0).simulate('click')
+        component.find('.remove-btn').at(0).simulate('click')
         component.update()
         expect(component.instance().clickClose).toHaveBeenCalledWith(0)
 

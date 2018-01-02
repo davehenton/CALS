@@ -45,7 +45,7 @@
   margin-right: 20px;
 }
 .phone-section input[type='checkbox'] + label{
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 //input[type='checkbox'], input[type='radio'] {
 //  width: 10%;
@@ -122,13 +122,44 @@
     padding-left: 0px;
   }
 }
+.remove-btn {
+  padding: 1.5rem 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.applicant-list-remove-btn {
+  padding-top: 3rem !important;
+  padding: 1.5rem 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.field-label {
+  display: block;
+  text-align: left;
+  width: 100%;
+  margin: 5px 0;
+  float: left;
+  margin-top:3rem;
+  float: left;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding-top: 0.75rem;
+  color: #707070;
+}
+.facility-remove-btn {
+  line-height: 0.5rem !important;
+}
 
 .preferred-age-desc {
   color: #767676;
   margin-top: 4rem;
   font-size: 1.5rem;
   margin-bottom: -15px;
+  font-weight: 700;
 }
 .remove-padding {
   padding: 0px;
+  margin-top: -2.3rem;
 }

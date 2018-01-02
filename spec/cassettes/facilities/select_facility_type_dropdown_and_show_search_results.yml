@@ -1,0 +1,564 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://calsapi.preint.cwds.io/dictionaries/counties
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-type:
+      - application/json
+      Authorization:
+      - "..pERathInCR61oFnP.onOwE4N2fU2y3WsnMGD5M3ZdTGCl8-FKhI1qHm-pjLMeT0JimSpu-QIG0DscMDLyHzMLH1lDfUGf0QBMOEBvCKBnPBoRezC8hxQqC3wm-44VHH01zMltuQn47YczDFm62-M9RbqeK-sgS_eLqsUOTXjzpJhqJRMABNmtkDs-r6het-3w_ZyxM1gk6k42lUBQVZvu8HWF8-8sOwUV1geM4Ju5VpNZ19lH-p4Wl-4DwnJEUyB4DC5ySgrtjSuvMoletnAsbDRVWi3OJM3ExepPnHsyU_NoyrDE4PF1ZZnDMp-gAT4Khl2JvfCqYfcn40VmuBCgaJ7XMiDn1evS9_Uuj-zgZxPeAfAowVPK6usGPTaPovux3SeEom_uIDq7-4YAmZWJf3rxZSqoQZkIuZpzAMeBAy0Vr3SVFK9OTA7ZCjgkS2_UnINcvP810nu46cnjnAeaM7zYN8eN9u5ASY99eNuJkVR_aX4rpVADgev8YFik8Qolb1Z6X-jUjCba12z7An3HalefEb-QY9-8F9aMw-QjacxZG821bDpkYv-iLSHV3JZVls2rPaYeTFG-JibPtGDM1nfTIbmhOx21TY6RYOgD9dIc81Wsce6D8m-YutlPfGCXsHlUhfVSdZSnllqtcBqn8qju_OksRgo7477yqmNsNUiQpvmDRnS3eVmOeJNCRDgNh2aUE1DrPN38cWuJeVAeP7R-rg2gWu2jMv_RACZz1AeI-VifgkTsMsX97PZ-_kmAGAisP-Nll2hNE1Ci10m4HJdgWS7Ea5WEdUviXma8YxceLWYyiRNExlQO1nSDU47ich-5QiPU_50s9JIZ3exeCcXQYjtqsUDfljLJbXN_BgfP6Dhg4hL98YG1_UsMNx7JCSMAw1LC1QrUjneHsWBwzbQdQEpDjuLi1SBDfvDXV13vzTlF0jO5uwiFiN1w4t7K7MWNokNQYPDrAtlbRRmPDV83H8lC58VSm-bZysxyJpO-4mBrVz2BMIhgyQ.uqhDy9uYUVP5NCtvEEVHdw"
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      content-security-policy:
+      - default-src 'self' 'unsafe-inline';
+      content-type:
+      - application/json
+      date:
+      - Thu, 28 Dec 2017 21:38:46 GMT
+      set-cookie:
+      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Wed, 27-Dec-2017 21:38:46
+        GMT
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      x-xss-protection:
+      - 1; mode=block
+      content-length:
+      - '591'
+      connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "items" : [ {
+            "value" : "Alameda",
+            "id" : 1
+          }, {
+            "value" : "Alpine",
+            "id" : 2
+          }, {
+            "value" : "Amador",
+            "id" : 3
+          }, {
+            "value" : "Butte",
+            "id" : 4
+          }, {
+            "value" : "Calaveras",
+            "id" : 5
+          }, {
+            "value" : "Colusa",
+            "id" : 6
+          }, {
+            "value" : "Contra Costa",
+            "id" : 7
+          }, {
+            "value" : "Del Norte",
+            "id" : 8
+          }, {
+            "value" : "El Dorado",
+            "id" : 9
+          }, {
+            "value" : "Fresno",
+            "id" : 10
+          }, {
+            "value" : "Glenn",
+            "id" : 11
+          }, {
+            "value" : "Humboldt",
+            "id" : 12
+          }, {
+            "value" : "Imperial",
+            "id" : 13
+          }, {
+            "value" : "Inyo",
+            "id" : 14
+          }, {
+            "value" : "Kern",
+            "id" : 15
+          }, {
+            "value" : "Kings",
+            "id" : 16
+          }, {
+            "value" : "Lake",
+            "id" : 17
+          }, {
+            "value" : "Lassen",
+            "id" : 18
+          }, {
+            "value" : "Los Angeles",
+            "id" : 19
+          }, {
+            "value" : "Madera",
+            "id" : 20
+          }, {
+            "value" : "Marin",
+            "id" : 21
+          }, {
+            "value" : "Mariposa",
+            "id" : 22
+          }, {
+            "value" : "Mendocino",
+            "id" : 23
+          }, {
+            "value" : "Merced",
+            "id" : 24
+          }, {
+            "value" : "Modoc",
+            "id" : 25
+          }, {
+            "value" : "Mono",
+            "id" : 26
+          }, {
+            "value" : "Monterey",
+            "id" : 27
+          }, {
+            "value" : "Napa",
+            "id" : 28
+          }, {
+            "value" : "Nevada",
+            "id" : 29
+          }, {
+            "value" : "Orange",
+            "id" : 30
+          }, {
+            "value" : "Placer",
+            "id" : 31
+          }, {
+            "value" : "Plumas",
+            "id" : 32
+          }, {
+            "value" : "Riverside",
+            "id" : 33
+          }, {
+            "value" : "Sacramento",
+            "id" : 34
+          }, {
+            "value" : "San Benito",
+            "id" : 35
+          }, {
+            "value" : "San Bernardino",
+            "id" : 36
+          }, {
+            "value" : "San Diego",
+            "id" : 37
+          }, {
+            "value" : "San Francisco",
+            "id" : 38
+          }, {
+            "value" : "San Joaquin",
+            "id" : 39
+          }, {
+            "value" : "San Luis Obispo",
+            "id" : 40
+          }, {
+            "value" : "San Mateo",
+            "id" : 41
+          }, {
+            "value" : "Santa Barbara",
+            "id" : 42
+          }, {
+            "value" : "Santa Clara",
+            "id" : 43
+          }, {
+            "value" : "Santa Cruz",
+            "id" : 44
+          }, {
+            "value" : "Shasta",
+            "id" : 45
+          }, {
+            "value" : "Sierra",
+            "id" : 46
+          }, {
+            "value" : "Siskiyou",
+            "id" : 47
+          }, {
+            "value" : "Solano",
+            "id" : 48
+          }, {
+            "value" : "Sonoma",
+            "id" : 49
+          }, {
+            "value" : "Stanislaus",
+            "id" : 50
+          }, {
+            "value" : "Sutter",
+            "id" : 51
+          }, {
+            "value" : "Tehama",
+            "id" : 52
+          }, {
+            "value" : "Trinity",
+            "id" : 53
+          }, {
+            "value" : "Tulare",
+            "id" : 54
+          }, {
+            "value" : "Tuolumne",
+            "id" : 55
+          }, {
+            "value" : "Ventura",
+            "id" : 56
+          }, {
+            "value" : "Yolo",
+            "id" : 57
+          }, {
+            "value" : "Yuba",
+            "id" : 58
+          }, {
+            "value" : "State of California",
+            "id" : 59
+          } ]
+        }
+    http_version: 
+  recorded_at: Thu, 28 Dec 2017 21:38:44 GMT
+- request:
+    method: get
+    uri: https://calsapi.preint.cwds.io/dictionaries/facility-types
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-type:
+      - application/json
+      Authorization:
+      - "..pERathInCR61oFnP.onOwE4N2fU2y3WsnMGD5M3ZdTGCl8-FKhI1qHm-pjLMeT0JimSpu-QIG0DscMDLyHzMLH1lDfUGf0QBMOEBvCKBnPBoRezC8hxQqC3wm-44VHH01zMltuQn47YczDFm62-M9RbqeK-sgS_eLqsUOTXjzpJhqJRMABNmtkDs-r6het-3w_ZyxM1gk6k42lUBQVZvu8HWF8-8sOwUV1geM4Ju5VpNZ19lH-p4Wl-4DwnJEUyB4DC5ySgrtjSuvMoletnAsbDRVWi3OJM3ExepPnHsyU_NoyrDE4PF1ZZnDMp-gAT4Khl2JvfCqYfcn40VmuBCgaJ7XMiDn1evS9_Uuj-zgZxPeAfAowVPK6usGPTaPovux3SeEom_uIDq7-4YAmZWJf3rxZSqoQZkIuZpzAMeBAy0Vr3SVFK9OTA7ZCjgkS2_UnINcvP810nu46cnjnAeaM7zYN8eN9u5ASY99eNuJkVR_aX4rpVADgev8YFik8Qolb1Z6X-jUjCba12z7An3HalefEb-QY9-8F9aMw-QjacxZG821bDpkYv-iLSHV3JZVls2rPaYeTFG-JibPtGDM1nfTIbmhOx21TY6RYOgD9dIc81Wsce6D8m-YutlPfGCXsHlUhfVSdZSnllqtcBqn8qju_OksRgo7477yqmNsNUiQpvmDRnS3eVmOeJNCRDgNh2aUE1DrPN38cWuJeVAeP7R-rg2gWu2jMv_RACZz1AeI-VifgkTsMsX97PZ-_kmAGAisP-Nll2hNE1Ci10m4HJdgWS7Ea5WEdUviXma8YxceLWYyiRNExlQO1nSDU47ich-5QiPU_50s9JIZ3exeCcXQYjtqsUDfljLJbXN_BgfP6Dhg4hL98YG1_UsMNx7JCSMAw1LC1QrUjneHsWBwzbQdQEpDjuLi1SBDfvDXV13vzTlF0jO5uwiFiN1w4t7K7MWNokNQYPDrAtlbRRmPDV83H8lC58VSm-bZysxyJpO-4mBrVz2BMIhgyQ.uqhDy9uYUVP5NCtvEEVHdw"
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      content-security-policy:
+      - default-src 'self' 'unsafe-inline';
+      content-type:
+      - application/json
+      date:
+      - Thu, 28 Dec 2017 21:38:47 GMT
+      set-cookie:
+      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Wed, 27-Dec-2017 21:38:47
+        GMT
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      x-xss-protection:
+      - 1; mode=block
+      content-length:
+      - '686'
+      connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "items" : [ {
+            "value" : "Home Care Organization",
+            "id" : 300
+          }, {
+            "value" : "Adoption Agency",
+            "id" : 400
+          }, {
+            "value" : "Resource Family Home",
+            "id" : 403
+          }, {
+            "value" : "Foster Family Agency",
+            "id" : 430
+          }, {
+            "value" : "Foster Family AG-Sub",
+            "id" : 431
+          }, {
+            "value" : "FFA Certified Home",
+            "id" : 433
+          }, {
+            "value" : "Small Family Home",
+            "id" : 710
+          }, {
+            "value" : "Foster Family Home",
+            "id" : 711
+          }, {
+            "value" : "Crisis Nursery",
+            "id" : 720
+          }, {
+            "value" : "Temporary Shelter Care Facility",
+            "id" : 721
+          }, {
+            "value" : "Transitional Shelter Care",
+            "id" : 722
+          }, {
+            "value" : "Transitional Housing Placement Program",
+            "id" : 726
+          }, {
+            "value" : "Community Treatment Facility",
+            "id" : 728
+          }, {
+            "value" : "GH-Enhanced Behavioral Supports Home",
+            "id" : 729
+          }, {
+            "value" : "Group Home",
+            "id" : 730
+          }, {
+            "value" : "Out Of State GH",
+            "id" : 731
+          }, {
+            "value" : "Runaway And Homeless Youth Shelter-GH",
+            "id" : 732
+          }, {
+            "value" : "Short Term Residential Therapeutic Program",
+            "id" : 733
+          }, {
+            "value" : "ARFPSHN",
+            "id" : 734
+          }, {
+            "value" : "Adult Residential",
+            "id" : 735
+          }, {
+            "value" : "Resid FAC Chron Ill",
+            "id" : 736
+          }, {
+            "value" : "ARF-Enhanced Behavioral Supports Home",
+            "id" : 737
+          }, {
+            "value" : "Community Crisis Home-ARF",
+            "id" : 738
+          }, {
+            "value" : "Residential-Elderly",
+            "id" : 740
+          }, {
+            "value" : "Residential Elderly-Continuing Care",
+            "id" : 741
+          }, {
+            "value" : "Rehab Facility",
+            "id" : 771
+          }, {
+            "value" : "Social Rehabilitation Facility",
+            "id" : 772
+          }, {
+            "value" : "Adult Day Care",
+            "id" : 775
+          }, {
+            "value" : "County Shelter/Recving Home(Non EA/AFDC)",
+            "id" : 790
+          }, {
+            "value" : "Court Specified Home",
+            "id" : 791
+          }, {
+            "value" : "Medical Facility",
+            "id" : 792
+          }, {
+            "value" : "Relative/NREFM Home",
+            "id" : 793
+          }, {
+            "value" : "Tribe Specified Home",
+            "id" : 795
+          }, {
+            "value" : "Guardian Home",
+            "id" : 796
+          }, {
+            "value" : "Supervised Independent Living Placement",
+            "id" : 800
+          }, {
+            "value" : "Family Day Care",
+            "id" : 810
+          }, {
+            "value" : "Infant Center",
+            "id" : 830
+          }, {
+            "value" : "School-Age DC Center",
+            "id" : 840
+          }, {
+            "value" : "DC Center - Ill Child",
+            "id" : 845
+          }, {
+            "value" : "Day Care Center",
+            "id" : 850
+          }, {
+            "value" : "Dummy Facility",
+            "id" : 999
+          } ]
+        }
+    http_version: 
+  recorded_at: Thu, 28 Dec 2017 21:38:44 GMT
+- request:
+    method: post
+    uri: https://dora.preint.cwds.io/dora/facilities/facility/_search
+    body:
+      encoding: UTF-8
+      string: '{"query":{"bool":{"should":[{"bool":{"must":[{"match_phrase":{"type.value":"Adoption
+        Agency"}}]}}]}}}'
+    headers:
+      Content-type:
+      - application/json
+      Authorization:
+      - "..pERathInCR61oFnP.onOwE4N2fU2y3WsnMGD5M3ZdTGCl8-FKhI1qHm-pjLMeT0JimSpu-QIG0DscMDLyHzMLH1lDfUGf0QBMOEBvCKBnPBoRezC8hxQqC3wm-44VHH01zMltuQn47YczDFm62-M9RbqeK-sgS_eLqsUOTXjzpJhqJRMABNmtkDs-r6het-3w_ZyxM1gk6k42lUBQVZvu8HWF8-8sOwUV1geM4Ju5VpNZ19lH-p4Wl-4DwnJEUyB4DC5ySgrtjSuvMoletnAsbDRVWi3OJM3ExepPnHsyU_NoyrDE4PF1ZZnDMp-gAT4Khl2JvfCqYfcn40VmuBCgaJ7XMiDn1evS9_Uuj-zgZxPeAfAowVPK6usGPTaPovux3SeEom_uIDq7-4YAmZWJf3rxZSqoQZkIuZpzAMeBAy0Vr3SVFK9OTA7ZCjgkS2_UnINcvP810nu46cnjnAeaM7zYN8eN9u5ASY99eNuJkVR_aX4rpVADgev8YFik8Qolb1Z6X-jUjCba12z7An3HalefEb-QY9-8F9aMw-QjacxZG821bDpkYv-iLSHV3JZVls2rPaYeTFG-JibPtGDM1nfTIbmhOx21TY6RYOgD9dIc81Wsce6D8m-YutlPfGCXsHlUhfVSdZSnllqtcBqn8qju_OksRgo7477yqmNsNUiQpvmDRnS3eVmOeJNCRDgNh2aUE1DrPN38cWuJeVAeP7R-rg2gWu2jMv_RACZz1AeI-VifgkTsMsX97PZ-_kmAGAisP-Nll2hNE1Ci10m4HJdgWS7Ea5WEdUviXma8YxceLWYyiRNExlQO1nSDU47ich-5QiPU_50s9JIZ3exeCcXQYjtqsUDfljLJbXN_BgfP6Dhg4hL98YG1_UsMNx7JCSMAw1LC1QrUjneHsWBwzbQdQEpDjuLi1SBDfvDXV13vzTlF0jO5uwiFiN1w4t7K7MWNokNQYPDrAtlbRRmPDV83H8lC58VSm-bZysxyJpO-4mBrVz2BMIhgyQ.uqhDy9uYUVP5NCtvEEVHdw"
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      content-type:
+      - application/json
+      date:
+      - Thu, 28 Dec 2017 21:38:47 GMT
+      set-cookie:
+      - rememberMe=deleteMe; Path=/; Max-Age=0; Expires=Wed, 27-Dec-2017 21:38:47
+        GMT
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"took":1,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":6,"max_score":6.5534096,"hits":[{"_index":"facilities","_type":"facility","_id":"380506694","_score":6.5534096,"_source":{"href":null,"id":"380506694","type":{"id":"400","value":"ADOPTION
+        AGENCY"},"name":"Friendly Family Adoption","licensee_name":"Friendly Family
+        Inc.","license_type":"A","assigned_worker":{"id":null,"value":null},"district_office":{"number":"26","name":"CENTRAL
+        COAST CR/RES"},"license_number":"380506694","status":{"id":"3","value":"LICENSED"},"capacity":10,"license_effective_date":{"year":2009,"month":"FEBRUARY","era":"CE","dayOfMonth":12,"dayOfWeek":"THURSDAY","dayOfYear":43,"leapYear":false,"monthValue":2,"chronology":{"calendarType":"iso8601","id":"ISO"}},"original_application_recieved_date":{"year":2008,"month":"NOVEMBER","era":"CE","dayOfMonth":8,"dayOfWeek":"SATURDAY","dayOfYear":313,"leapYear":true,"monthValue":11,"chronology":{"calendarType":"iso8601","id":"ISO"}},"last_visit_date":{"month":"SEPTEMBER","year":2015,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":19,"dayOfWeek":"SATURDAY","dayOfYear":262,"monthValue":9,"chronology":{"calendarType":"iso8601","id":"ISO"}},"last_deferred_visit_date":null,"email_address":null,"last_visit_reason":{"id":"9","value":"PLAN
+        OF CORRECTION"},"last_deferred_visit_reason":null,"county":{"id":"38","value":"SAN
+        FRANCISCO","lis_code":null},"phones":[{"id":null,"relation":"primary","type":"Cell","number":"4157592306"}],"addresses":[{"id":null,"type":"Residential","address":{"id":null,"longitude":null,"lattitude":null,"deliverable":null,"street_address":"1786
+        24th Ave","city":"San Francisco","state":"CA","zip_code":"94116","zip_suffix_code":null}},{"id":null,"type":"Mailing","address":{"id":null,"longitude":null,"lattitude":null,"deliverable":null,"street_address":"PO
+        Box 12099","city":"San Francisco","state":"CA","zip_code":"94116","zip_suffix_code":null}}],"visits":[{"approval":"","visit_type":"Annual
+        10 month","visit_date":{"month":"OCTOBER","year":2011,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":28,"dayOfWeek":"FRIDAY","dayOfYear":301,"monthValue":10,"chronology":{"calendarType":"iso8601","id":"ISO"}},"visit_deferred_date":null},{"approval":"","visit_type":"Annual
+        22 month","visit_date":null,"visit_deferred_date":null},{"approval":"","visit_type":"Post
+        Licensing","visit_date":null,"visit_deferred_date":{"month":"NOVEMBER","year":1991,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":6,"dayOfWeek":"WEDNESDAY","dayOfYear":310,"monthValue":11,"chronology":{"calendarType":"iso8601","id":"ISO"}}},{"approval":"","visit_type":"Renewal","visit_date":null,"visit_deferred_date":null}],"annual_visit_year":12,"prelicensing_visit_date":null,"children":[],"inspections":[],"complaints":[{"id":"9035","complaint_date":{"month":"JULY","year":2015,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":26,"dayOfWeek":"SUNDAY","dayOfYear":207,"monthValue":7,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
+        Mahaboob","control_number":"26-CR-20150726123209","priority_level":"3","status":"Approved","approval_date":{"month":"DECEMBER","year":2015,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":14,"dayOfWeek":"MONDAY","dayOfYear":348,"monthValue":12,"chronology":{"calendarType":"iso8601","id":"ISO"}},"pre_investigation_comments":"","post_investigation_comments":"See
+        Attached letter.  Reiser is a supervisor for Fresno County CPS.","contact_summary":"LIC
+        9099 dated 11/23/04, 1/3/05&#13;&#10;LIC 812 date of visit 11/23/04, 1/3/05","followup_comments":"","allegations":[{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""},{"complaint_code":"3","allegation":"Client
+        Miguel Delatorre (8-28-88)    Miguel was beat up by an older and bigger child
+        at GH. (name unknown) Staff did nothing to stop this.  Staff told Miguel not
+        to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]},{"id":"9035","complaint_date":{"month":"JULY","year":2015,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":26,"dayOfWeek":"SUNDAY","dayOfYear":207,"monthValue":7,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
+        Mahaboob","control_number":"26-CR-20150726123209","priority_level":"3","status":"Approved","approval_date":{"month":"DECEMBER","year":2015,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":14,"dayOfWeek":"MONDAY","dayOfYear":348,"monthValue":12,"chronology":{"calendarType":"iso8601","id":"ISO"}},"pre_investigation_comments":"","post_investigation_comments":"See
+        Attached letter.  Reiser is a supervisor for Fresno County CPS.","contact_summary":"LIC
+        9099 dated 11/23/04, 1/3/05&#13;&#10;LIC 812 date of visit 11/23/04, 1/3/05","followup_comments":"","allegations":[{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""},{"complaint_code":"3","allegation":"Client
+        Miguel Delatorre (8-28-88)    Miguel was beat up by an older and bigger child
+        at GH. (name unknown) Staff did nothing to stop this.  Staff told Miguel not
+        to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]},{"id":"9035","complaint_date":{"month":"JULY","year":2015,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":26,"dayOfWeek":"SUNDAY","dayOfYear":207,"monthValue":7,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
+        Mahaboob","control_number":"26-CR-20150726123209","priority_level":"3","status":"Approved","approval_date":{"month":"DECEMBER","year":2015,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":14,"dayOfWeek":"MONDAY","dayOfYear":348,"monthValue":12,"chronology":{"calendarType":"iso8601","id":"ISO"}},"pre_investigation_comments":"","post_investigation_comments":"See
+        Attached letter.  Reiser is a supervisor for Fresno County CPS.","contact_summary":"LIC
+        9099 dated 11/23/04, 1/3/05&#13;&#10;LIC 812 date of visit 11/23/04, 1/3/05","followup_comments":"","allegations":[{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""},{"complaint_code":"3","allegation":"Client
+        Miguel Delatorre (8-28-88)    Miguel was beat up by an older and bigger child
+        at GH. (name unknown) Staff did nothing to stop this.  Staff told Miguel not
+        to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]},{"id":"9035","complaint_date":{"month":"JULY","year":2015,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":26,"dayOfWeek":"SUNDAY","dayOfYear":207,"monthValue":7,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
+        Mahaboob","control_number":"26-CR-20150726123209","priority_level":"3","status":"Approved","approval_date":{"month":"DECEMBER","year":2015,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":14,"dayOfWeek":"MONDAY","dayOfYear":348,"monthValue":12,"chronology":{"calendarType":"iso8601","id":"ISO"}},"pre_investigation_comments":"","post_investigation_comments":"See
+        Attached letter.  Reiser is a supervisor for Fresno County CPS.","contact_summary":"LIC
+        9099 dated 11/23/04, 1/3/05&#13;&#10;LIC 812 date of visit 11/23/04, 1/3/05","followup_comments":"","allegations":[{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""},{"complaint_code":"3","allegation":"Client
+        Miguel Delatorre (8-28-88)    Miguel was beat up by an older and bigger child
+        at GH. (name unknown) Staff did nothing to stop this.  Staff told Miguel not
+        to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]},{"id":"9035","complaint_date":{"month":"JULY","year":2015,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":26,"dayOfWeek":"SUNDAY","dayOfYear":207,"monthValue":7,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
+        Mahaboob","control_number":"26-CR-20150726123209","priority_level":"3","status":"Approved","approval_date":{"month":"DECEMBER","year":2015,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":14,"dayOfWeek":"MONDAY","dayOfYear":348,"monthValue":12,"chronology":{"calendarType":"iso8601","id":"ISO"}},"pre_investigation_comments":"","post_investigation_comments":"See
+        Attached letter.  Reiser is a supervisor for Fresno County CPS.","contact_summary":"LIC
+        9099 dated 11/23/04, 1/3/05&#13;&#10;LIC 812 date of visit 11/23/04, 1/3/05","followup_comments":"","allegations":[{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""},{"complaint_code":"3","allegation":"Client
+        Miguel Delatorre (8-28-88)    Miguel was beat up by an older and bigger child
+        at GH. (name unknown) Staff did nothing to stop this.  Staff told Miguel not
+        to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]}]}},{"_index":"facilities","_type":"facility","_id":"411408542","_score":5.2238483,"_source":{"href":null,"id":"411408542","type":{"id":"400","value":"ADOPTION
+        AGENCY"},"name":"Ica Family Services","licensee_name":"Independent California
+        Inc.","license_type":"A","assigned_worker":{"id":null,"value":null},"district_office":{"number":"26","name":"CENTRAL
+        COAST CR/RES"},"license_number":"411408542","status":{"id":"3","value":"LICENSED"},"capacity":10,"license_effective_date":{"year":1993,"month":"FEBRUARY","era":"CE","dayOfMonth":3,"dayOfWeek":"WEDNESDAY","dayOfYear":34,"leapYear":false,"monthValue":2,"chronology":{"calendarType":"iso8601","id":"ISO"}},"original_application_recieved_date":{"year":1992,"month":"DECEMBER","era":"CE","dayOfMonth":15,"dayOfWeek":"TUESDAY","dayOfYear":350,"leapYear":true,"monthValue":12,"chronology":{"calendarType":"iso8601","id":"ISO"}},"last_visit_date":{"month":"MAY","year":2017,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":5,"dayOfWeek":"FRIDAY","dayOfYear":125,"monthValue":5,"chronology":{"calendarType":"iso8601","id":"ISO"}},"last_deferred_visit_date":null,"email_address":null,"last_visit_reason":{"id":"8","value":"COMPLAINT"},"last_deferred_visit_reason":null,"county":{"id":"41","value":"SAN
+        MATEO","lis_code":null},"phones":[{"id":null,"relation":"primary","type":"Cell","number":"6503232004"}],"addresses":[{"id":null,"type":"Residential","address":{"id":null,"longitude":null,"lattitude":null,"deliverable":null,"street_address":"521
+        Menlo Ave","city":"Menlo Park","state":"CA","zip_code":"94025","zip_suffix_code":null}},{"id":null,"type":"Mailing","address":{"id":null,"longitude":null,"lattitude":null,"deliverable":null,"street_address":"77
+        B St","city":"San Mateo","state":"CA","zip_code":"94401","zip_suffix_code":null}}],"visits":[{"approval":"","visit_type":"Annual
+        10 month","visit_date":{"month":"OCTOBER","year":2011,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":28,"dayOfWeek":"FRIDAY","dayOfYear":301,"monthValue":10,"chronology":{"calendarType":"iso8601","id":"ISO"}},"visit_deferred_date":null},{"approval":"","visit_type":"Annual
+        22 month","visit_date":null,"visit_deferred_date":null},{"approval":"","visit_type":"Post
+        Licensing","visit_date":null,"visit_deferred_date":{"month":"NOVEMBER","year":1991,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":6,"dayOfWeek":"WEDNESDAY","dayOfYear":310,"monthValue":11,"chronology":{"calendarType":"iso8601","id":"ISO"}}},{"approval":"","visit_type":"Renewal","visit_date":null,"visit_deferred_date":null}],"annual_visit_year":12,"prelicensing_visit_date":null,"children":[],"inspections":[],"complaints":[{"id":"9037","complaint_date":{"month":"APRIL","year":2017,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":29,"dayOfWeek":"SATURDAY","dayOfYear":119,"monthValue":4,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
+        Mahaboob","control_number":"26-CR-20170429022709","priority_level":"3","status":"Pending","approval_date":null,"pre_investigation_comments":"","post_investigation_comments":"See
+        Attached letter.  Reiser is a supervisor for Fresno County CPS.","contact_summary":"LIC
+        9099 dated 11/23/04, 1/3/05&#13;&#10;LIC 812 date of visit 11/23/04, 1/3/05","followup_comments":"","allegations":[{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""},{"complaint_code":"3","allegation":"Client
+        Miguel Delatorre (8-28-88)    Miguel was beat up by an older and bigger child
+        at GH. (name unknown) Staff did nothing to stop this.  Staff told Miguel not
+        to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]},{"id":"9037","complaint_date":{"month":"APRIL","year":2017,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":29,"dayOfWeek":"SATURDAY","dayOfYear":119,"monthValue":4,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
+        Mahaboob","control_number":"26-CR-20170429022709","priority_level":"3","status":"Pending","approval_date":null,"pre_investigation_comments":"","post_investigation_comments":"See
+        Attached letter.  Reiser is a supervisor for Fresno County CPS.","contact_summary":"LIC
+        9099 dated 11/23/04, 1/3/05&#13;&#10;LIC 812 date of visit 11/23/04, 1/3/05","followup_comments":"","allegations":[{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""},{"complaint_code":"3","allegation":"Client
+        Miguel Delatorre (8-28-88)    Miguel was beat up by an older and bigger child
+        at GH. (name unknown) Staff did nothing to stop this.  Staff told Miguel not
+        to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]},{"id":"9037","complaint_date":{"month":"APRIL","year":2017,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":29,"dayOfWeek":"SATURDAY","dayOfYear":119,"monthValue":4,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
+        Mahaboob","control_number":"26-CR-20170429022709","priority_level":"3","status":"Pending","approval_date":null,"pre_investigation_comments":"","post_investigation_comments":"See
+        Attached letter.  Reiser is a supervisor for Fresno County CPS.","contact_summary":"LIC
+        9099 dated 11/23/04, 1/3/05&#13;&#10;LIC 812 date of visit 11/23/04, 1/3/05","followup_comments":"","allegations":[{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""},{"complaint_code":"3","allegation":"Client
+        Miguel Delatorre (8-28-88)    Miguel was beat up by an older and bigger child
+        at GH. (name unknown) Staff did nothing to stop this.  Staff told Miguel not
+        to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]},{"id":"9037","complaint_date":{"month":"APRIL","year":2017,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":29,"dayOfWeek":"SATURDAY","dayOfYear":119,"monthValue":4,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
+        Mahaboob","control_number":"26-CR-20170429022709","priority_level":"3","status":"Pending","approval_date":null,"pre_investigation_comments":"","post_investigation_comments":"See
+        Attached letter.  Reiser is a supervisor for Fresno County CPS.","contact_summary":"LIC
+        9099 dated 11/23/04, 1/3/05&#13;&#10;LIC 812 date of visit 11/23/04, 1/3/05","followup_comments":"","allegations":[{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""},{"complaint_code":"3","allegation":"Client
+        Miguel Delatorre (8-28-88)    Miguel was beat up by an older and bigger child
+        at GH. (name unknown) Staff did nothing to stop this.  Staff told Miguel not
+        to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]},{"id":"9037","complaint_date":{"month":"APRIL","year":2017,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":29,"dayOfWeek":"SATURDAY","dayOfYear":119,"monthValue":4,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
+        Mahaboob","control_number":"26-CR-20170429022709","priority_level":"3","status":"Pending","approval_date":null,"pre_investigation_comments":"","post_investigation_comments":"See
+        Attached letter.  Reiser is a supervisor for Fresno County CPS.","contact_summary":"LIC
+        9099 dated 11/23/04, 1/3/05&#13;&#10;LIC 812 date of visit 11/23/04, 1/3/05","followup_comments":"","allegations":[{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""},{"complaint_code":"3","allegation":"Client
+        Miguel Delatorre (8-28-88)    Miguel was beat up by an older and bigger child
+        at GH. (name unknown) Staff did nothing to stop this.  Staff told Miguel not
+        to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]}]}},{"_index":"facilities","_type":"facility","_id":"198204205","_score":5.2238483,"_source":{"href":null,"id":"198204205","type":{"id":"400","value":"ADOPTION
+        AGENCY"},"name":"Adventures in Family","licensee_name":"AF Inc.","license_type":"A","assigned_worker":{"id":null,"value":null},"district_office":{"number":"32","name":"LA
+        & TRI-COASTAL CR"},"license_number":"198204205","status":{"id":"15","value":"CLOSED,
+        CHG LOCATION"},"capacity":10,"license_effective_date":{"year":2005,"month":"JUNE","era":"CE","dayOfMonth":7,"dayOfWeek":"TUESDAY","dayOfYear":158,"leapYear":false,"monthValue":6,"chronology":{"calendarType":"iso8601","id":"ISO"}},"original_application_recieved_date":{"year":2005,"month":"APRIL","era":"CE","dayOfMonth":21,"dayOfWeek":"THURSDAY","dayOfYear":111,"leapYear":false,"monthValue":4,"chronology":{"calendarType":"iso8601","id":"ISO"}},"last_visit_date":{"month":"NOVEMBER","year":2016,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":2,"dayOfWeek":"WEDNESDAY","dayOfYear":307,"monthValue":11,"chronology":{"calendarType":"iso8601","id":"ISO"}},"last_deferred_visit_date":null,"email_address":null,"last_visit_reason":{"id":"10","value":"CASELOAD
+        MANAGEMENT"},"last_deferred_visit_reason":null,"county":{"id":"19","value":"LOS
+        ANGELES","lis_code":null},"phones":[{"id":null,"relation":"primary","type":"Cell","number":"3104573211"}],"addresses":[{"id":null,"type":"Residential","address":{"id":null,"longitude":null,"lattitude":null,"deliverable":null,"street_address":"26743
+        Pacific Coast Hwy","city":"Malibu","state":"CA","zip_code":"90265","zip_suffix_code":null}},{"id":null,"type":"Mailing","address":{"id":null,"longitude":null,"lattitude":null,"deliverable":null,"street_address":"26743
+        Pacific Coast Hwy","city":"Malibu","state":"CA","zip_code":"90265","zip_suffix_code":null}}],"visits":[{"approval":"","visit_type":"Annual
+        10 month","visit_date":{"month":"OCTOBER","year":2011,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":28,"dayOfWeek":"FRIDAY","dayOfYear":301,"monthValue":10,"chronology":{"calendarType":"iso8601","id":"ISO"}},"visit_deferred_date":null},{"approval":"","visit_type":"Annual
+        22 month","visit_date":null,"visit_deferred_date":null},{"approval":"","visit_type":"Post
+        Licensing","visit_date":null,"visit_deferred_date":{"month":"NOVEMBER","year":1991,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":6,"dayOfWeek":"WEDNESDAY","dayOfYear":310,"monthValue":11,"chronology":{"calendarType":"iso8601","id":"ISO"}}},{"approval":"","visit_type":"Renewal","visit_date":null,"visit_deferred_date":null}],"annual_visit_year":12,"prelicensing_visit_date":null,"children":[],"inspections":[],"complaints":[{"id":"9038","complaint_date":{"month":"NOVEMBER","year":2015,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":14,"dayOfWeek":"SATURDAY","dayOfYear":318,"monthValue":11,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
+        Mahaboob","control_number":"32-CR-20151114155023","priority_level":"2","status":"Approved","approval_date":{"month":"APRIL","year":2015,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":29,"dayOfWeek":"WEDNESDAY","dayOfYear":119,"monthValue":4,"chronology":{"calendarType":"iso8601","id":"ISO"}},"pre_investigation_comments":"","post_investigation_comments":"See
+        Attached letter.  Reiser is a supervisor for Fresno County CPS.","contact_summary":"LIC
+        9099 dated 11/23/04, 1/3/05&#13;&#10;LIC 812 date of visit 11/23/04, 1/3/05","followup_comments":"","allegations":[{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""},{"complaint_code":"3","allegation":"Client
+        Miguel Delatorre (8-28-88)    Miguel was beat up by an older and bigger child
+        at GH. (name unknown) Staff did nothing to stop this.  Staff told Miguel not
+        to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]},{"id":"9038","complaint_date":{"month":"NOVEMBER","year":2015,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":14,"dayOfWeek":"SATURDAY","dayOfYear":318,"monthValue":11,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
+        Mahaboob","control_number":"32-CR-20151114155023","priority_level":"2","status":"Approved","approval_date":{"month":"APRIL","year":2015,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":29,"dayOfWeek":"WEDNESDAY","dayOfYear":119,"monthValue":4,"chronology":{"calendarType":"iso8601","id":"ISO"}},"pre_investigation_comments":"","post_investigation_comments":"See
+        Attached letter.  Reiser is a supervisor for Fresno County CPS.","contact_summary":"LIC
+        9099 dated 11/23/04, 1/3/05&#13;&#10;LIC 812 date of visit 11/23/04, 1/3/05","followup_comments":"","allegations":[{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""},{"complaint_code":"3","allegation":"Client
+        Miguel Delatorre (8-28-88)    Miguel was beat up by an older and bigger child
+        at GH. (name unknown) Staff did nothing to stop this.  Staff told Miguel not
+        to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]}]}},{"_index":"facilities","_type":"facility","_id":"306008452","_score":4.8346763,"_source":{"href":null,"id":"306008452","type":{"id":"400","value":"ADOPTION
+        AGENCY"},"name":"Open Door Adoption","licensee_name":"ODA Inc.","license_type":"A","assigned_worker":{"id":null,"value":null},"district_office":{"number":"19","name":"PACIFIC
+        INLAND CR"},"license_number":"306008452","status":{"id":"2","value":"APPLICATION
+        PENDING"},"capacity":10,"license_effective_date":null,"original_application_recieved_date":{"year":2017,"month":"MARCH","era":"CE","dayOfMonth":17,"dayOfWeek":"FRIDAY","dayOfYear":76,"leapYear":false,"monthValue":3,"chronology":{"calendarType":"iso8601","id":"ISO"}},"last_visit_date":null,"last_deferred_visit_date":null,"email_address":null,"last_visit_reason":null,"last_deferred_visit_reason":null,"county":{"id":"30","value":"ORANGE","lis_code":null},"phones":[{"id":null,"relation":"primary","type":"Cell","number":"9493870001"}],"addresses":[{"id":null,"type":"Residential","address":{"id":null,"longitude":null,"lattitude":null,"deliverable":null,"street_address":"1001
+        Barranca Pkwy","city":"Irvine","state":"CA","zip_code":"92606","zip_suffix_code":null}},{"id":null,"type":"Mailing","address":{"id":null,"longitude":null,"lattitude":null,"deliverable":null,"street_address":"1001
+        Barranca Pkwy","city":"Irvine","state":"CA","zip_code":"92606","zip_suffix_code":null}}],"visits":[{"approval":"","visit_type":"Annual
+        10 month","visit_date":{"month":"OCTOBER","year":2011,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":28,"dayOfWeek":"FRIDAY","dayOfYear":301,"monthValue":10,"chronology":{"calendarType":"iso8601","id":"ISO"}},"visit_deferred_date":null},{"approval":"","visit_type":"Annual
+        22 month","visit_date":null,"visit_deferred_date":null},{"approval":"","visit_type":"Post
+        Licensing","visit_date":null,"visit_deferred_date":{"month":"NOVEMBER","year":1991,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":6,"dayOfWeek":"WEDNESDAY","dayOfYear":310,"monthValue":11,"chronology":{"calendarType":"iso8601","id":"ISO"}}},{"approval":"","visit_type":"Renewal","visit_date":null,"visit_deferred_date":null}],"annual_visit_year":12,"prelicensing_visit_date":null,"children":[],"inspections":[],"complaints":[]}},{"_index":"facilities","_type":"facility","_id":"430707335","_score":4.8346763,"_source":{"href":null,"id":"430707335","type":{"id":"400","value":"ADOPTION
+        AGENCY"},"name":"Forever Homes Adoption","licensee_name":"Forever Inc.","license_type":"A","assigned_worker":{"id":null,"value":null},"district_office":{"number":"26","name":"CENTRAL
+        COAST CR/RES"},"license_number":"430707335","status":{"id":"3","value":"LICENSED"},"capacity":10,"license_effective_date":{"year":2012,"month":"MAY","era":"CE","dayOfMonth":30,"dayOfWeek":"WEDNESDAY","dayOfYear":151,"leapYear":true,"monthValue":5,"chronology":{"calendarType":"iso8601","id":"ISO"}},"original_application_recieved_date":{"year":2012,"month":"FEBRUARY","era":"CE","dayOfMonth":22,"dayOfWeek":"WEDNESDAY","dayOfYear":53,"leapYear":true,"monthValue":2,"chronology":{"calendarType":"iso8601","id":"ISO"}},"last_visit_date":{"month":"JULY","year":2016,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":28,"dayOfWeek":"THURSDAY","dayOfYear":210,"monthValue":7,"chronology":{"calendarType":"iso8601","id":"ISO"}},"last_deferred_visit_date":null,"email_address":null,"last_visit_reason":{"id":"8","value":"COMPLAINT"},"last_deferred_visit_reason":null,"county":{"id":"43","value":"SANTA
+        CLARA","lis_code":null},"phones":[{"id":null,"relation":"primary","type":"Cell","number":"4087769084"}],"addresses":[{"id":null,"type":"Residential","address":{"id":null,"longitude":null,"lattitude":null,"deliverable":null,"street_address":"15012
+        Monterey Rd","city":"Morgan Hill","state":"CA","zip_code":"95037","zip_suffix_code":null}},{"id":null,"type":"Mailing","address":{"id":null,"longitude":null,"lattitude":null,"deliverable":null,"street_address":"15012
+        Monterey Rd","city":"Morgan Hill","state":"CA","zip_code":"95037","zip_suffix_code":null}}],"visits":[{"approval":"","visit_type":"Annual
+        10 month","visit_date":{"month":"OCTOBER","year":2011,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":28,"dayOfWeek":"FRIDAY","dayOfYear":301,"monthValue":10,"chronology":{"calendarType":"iso8601","id":"ISO"}},"visit_deferred_date":null},{"approval":"","visit_type":"Annual
+        22 month","visit_date":null,"visit_deferred_date":null},{"approval":"","visit_type":"Post
+        Licensing","visit_date":null,"visit_deferred_date":{"month":"NOVEMBER","year":1991,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":6,"dayOfWeek":"WEDNESDAY","dayOfYear":310,"monthValue":11,"chronology":{"calendarType":"iso8601","id":"ISO"}}},{"approval":"","visit_type":"Renewal","visit_date":null,"visit_deferred_date":null}],"annual_visit_year":12,"prelicensing_visit_date":null,"children":[],"inspections":[],"complaints":[{"id":"9036","complaint_date":{"month":"JULY","year":2016,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":29,"dayOfWeek":"FRIDAY","dayOfYear":211,"monthValue":7,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
+        Mahaboob","control_number":"26-CR-20160729160944","priority_level":"3","status":"Approved","approval_date":{"month":"AUGUST","year":2016,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":4,"dayOfWeek":"THURSDAY","dayOfYear":217,"monthValue":8,"chronology":{"calendarType":"iso8601","id":"ISO"}},"pre_investigation_comments":"","post_investigation_comments":"See
+        Attached letter.  Reiser is a supervisor for Fresno County CPS.","contact_summary":"LIC
+        9099 dated 11/23/04, 1/3/05&#13;&#10;LIC 812 date of visit 11/23/04, 1/3/05","followup_comments":"","allegations":[{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""},{"complaint_code":"3","allegation":"Client
+        Miguel Delatorre (8-28-88)    Miguel was beat up by an older and bigger child
+        at GH. (name unknown) Staff did nothing to stop this.  Staff told Miguel not
+        to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]},{"id":"9036","complaint_date":{"month":"JULY","year":2016,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":29,"dayOfWeek":"FRIDAY","dayOfYear":211,"monthValue":7,"chronology":{"calendarType":"iso8601","id":"ISO"}},"assigned_worker":"Mullah
+        Mahaboob","control_number":"26-CR-20160729160944","priority_level":"3","status":"Approved","approval_date":{"month":"AUGUST","year":2016,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":4,"dayOfWeek":"THURSDAY","dayOfYear":217,"monthValue":8,"chronology":{"calendarType":"iso8601","id":"ISO"}},"pre_investigation_comments":"","post_investigation_comments":"See
+        Attached letter.  Reiser is a supervisor for Fresno County CPS.","contact_summary":"LIC
+        9099 dated 11/23/04, 1/3/05&#13;&#10;LIC 812 date of visit 11/23/04, 1/3/05","followup_comments":"","allegations":[{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""},{"complaint_code":"3","allegation":"Client
+        Miguel Delatorre (8-28-88)    Miguel was beat up by an older and bigger child
+        at GH. (name unknown) Staff did nothing to stop this.  Staff told Miguel not
+        to say anything. Miguel called his mother and told her this.","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":"U"},{"complaint_code":"3","allegation":"","resolution_code_sub":"","resolution_code_insub":"","resolution_code_unsub":""}]}]}},{"_index":"facilities","_type":"facility","_id":"197808113","_score":4.8346763,"_source":{"href":null,"id":"197808113","type":{"id":"400","value":"ADOPTION
+        AGENCY"},"name":"Adventures in Family - Santa Monica","licensee_name":"AF
+        Inc.","license_type":"A","assigned_worker":{"id":null,"value":null},"district_office":{"number":"32","name":"LA
+        & TRI-COASTAL CR"},"license_number":"197808113","status":{"id":"3","value":"LICENSED"},"capacity":10,"license_effective_date":{"year":2017,"month":"MAY","era":"CE","dayOfMonth":29,"dayOfWeek":"MONDAY","dayOfYear":149,"leapYear":false,"monthValue":5,"chronology":{"calendarType":"iso8601","id":"ISO"}},"original_application_recieved_date":{"year":2017,"month":"MARCH","era":"CE","dayOfMonth":17,"dayOfWeek":"FRIDAY","dayOfYear":76,"leapYear":false,"monthValue":3,"chronology":{"calendarType":"iso8601","id":"ISO"}},"last_visit_date":{"month":"MAY","year":2017,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":15,"dayOfWeek":"MONDAY","dayOfYear":135,"monthValue":5,"chronology":{"calendarType":"iso8601","id":"ISO"}},"last_deferred_visit_date":null,"email_address":null,"last_visit_reason":{"id":"1","value":"PRELICENSING"},"last_deferred_visit_reason":null,"county":{"id":"19","value":"LOS
+        ANGELES","lis_code":null},"phones":[{"id":null,"relation":"primary","type":"Cell","number":"3104573211"}],"addresses":[{"id":null,"type":"Residential","address":{"id":null,"longitude":null,"lattitude":null,"deliverable":null,"street_address":"1105
+        Wilshire Blvd","city":"Santa Monica","state":"CA","zip_code":"90403","zip_suffix_code":null}},{"id":null,"type":"Mailing","address":{"id":null,"longitude":null,"lattitude":null,"deliverable":null,"street_address":"1105
+        Wilshire Blvd","city":"Santa Monica","state":"CA","zip_code":"90403","zip_suffix_code":null}}],"visits":[{"approval":"","visit_type":"Annual
+        10 month","visit_date":{"month":"OCTOBER","year":2011,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":28,"dayOfWeek":"FRIDAY","dayOfYear":301,"monthValue":10,"chronology":{"calendarType":"iso8601","id":"ISO"}},"visit_deferred_date":null},{"approval":"","visit_type":"Annual
+        22 month","visit_date":null,"visit_deferred_date":null},{"approval":"","visit_type":"Post
+        Licensing","visit_date":null,"visit_deferred_date":{"month":"NOVEMBER","year":1991,"hour":0,"minute":0,"nano":0,"second":0,"dayOfMonth":6,"dayOfWeek":"WEDNESDAY","dayOfYear":310,"monthValue":11,"chronology":{"calendarType":"iso8601","id":"ISO"}}},{"approval":"","visit_type":"Renewal","visit_date":null,"visit_deferred_date":null}],"annual_visit_year":12,"prelicensing_visit_date":null,"children":[],"inspections":[],"complaints":[]}}]}}'
+    http_version: 
+  recorded_at: Thu, 28 Dec 2017 21:38:45 GMT
+recorded_with: VCR 3.0.3

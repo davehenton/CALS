@@ -3,27 +3,17 @@ import PropTypes from 'prop-types'
 import {urlPrefixHelper} from '../helpers/url_prefix_helper.js.erb'
 import GridInnerLayout from './common/gridInnerLayout.js'
 import GridOuterLayout from './common/gridOuterLayout.js'
-import {addressDefaults, phoneDefaults, defaultValue} from '../facility/address.jsx'
-
-export const searchDataDefaults = Object.freeze({
-  county: defaultValue,
-  facilityType: defaultValue,
-  status: defaultValue,
-  addresses: [addressDefaults],
-  phones: [phoneDefaults]
-})
+import {checkForNA, addressStringValueOrNa, phoneNumberOrNa} from './common/commonUtils'
 
 export default class SearchGrid extends React.Component {
   render () {
     const searchResults = this.props.searchResults
-    const gridResult = searchResults.map((result) => {
-      // let displayAddress = result.addresses[0] !== undefined && result.addresses[0].address.street_address !== undefined
-      let address = result.addresses[0].address.street_address + ',' + result.addresses[0].address.city +
-        ',' + result.addresses[0].address.state + ' ' + result.addresses[0].address.zip_code
-      let phone = result.phones[0].number.replace(/(\d{3})(\d{3})(\d{4})/, '($1)-$2-$3')
+    const gridResult = searchResults.map((result, index) => {
+      const fullAddress = addressStringValueOrNa(result.addresses)
+      const phoneNo = phoneNumberOrNa(result.phones)
 
       return (
-        <div key={result.license_number} className='grid_view_inner col-xs-12 col-sm-12 col-md-12 col-lg-12' >
+        <div key={index} className='grid_view_inner col-xs-12 col-sm-12 col-md-12 col-lg-12' >
           <div className='col-xs-12 col-sm-1 col-md-1 col-lg-1'>
             <a href={urlPrefixHelper('/facilities/' + result.license_number)}><div className='home-icon' /></a>
           </div>
@@ -40,10 +30,10 @@ export default class SearchGrid extends React.Component {
                 value={result.license_number} />
               <GridInnerLayout
                 title={'Facility Type'}
-                value={result.type.value} />
+                value={checkForNA(result.type)} />
               <GridInnerLayout
                 title={'Status'}
-                value={result.status.value} />
+                value={checkForNA(result.status)} />
               <GridInnerLayout
                 title={'Licensee Name'}
                 value={result.name} />
@@ -51,24 +41,24 @@ export default class SearchGrid extends React.Component {
             <GridOuterLayout>
               <GridInnerLayout
                 title={'Facility Address'}
-                value={address} />
+                value = {fullAddress} />
               <GridInnerLayout
                 title={'County'}
-                value={result.county.value} />
+                value={checkForNA(result.county)} />
               <GridInnerLayout
                 title={'Facility Phone Number'}
-                value={phone} />
+                value={phoneNo} />
               <GridInnerLayout
                 title={'Facility Email'}
-                value={result.email_address ? result.email_address : 'N/A'} />
+                value={checkForNA(result.email_address)} />
             </GridOuterLayout>
             <GridOuterLayout>
               <GridInnerLayout
                 title={'Assigned Worker'}
-                value={result.assigned_worker.value ? result.assigned_worker.value : 'N/A'} />
+                value={checkForNA(result.assigned_worker)} />
               <GridInnerLayout
                 title={'Assigned Worker'}
-                value={phone} />
+                value={phoneNo} />
             </GridOuterLayout>
           </div>
         </div>
@@ -87,5 +77,5 @@ SearchGrid.propTypes = {
 }
 
 SearchGrid.defaultProps = {
-  searchResults: [searchDataDefaults]
+  searchResults: []
 }

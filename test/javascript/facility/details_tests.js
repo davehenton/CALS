@@ -93,11 +93,11 @@ describe('Verify Facility Details', function () {
     expect(detailsCompShallow.find('.grid_view').length).toEqual(1)
   })
   it('Assigned Worker Value', function () {
-    let assignedWorkerValue = detailsCompShallow.props().children.props.children[2].props.children[0].props.children.props.children[1].props.value
+    let assignedWorkerValue = detailsCompShallow.props().children[2].props.children[0].props.children.props.children[1].props.value
     expect(assignedWorkerValue).toBe('Something')
   })
   it('Original Application Recieved Date', function () {
-    let originalApplicationRecievedDate = detailsCompShallow.props().children.props.children[2].props.children[2].props.children.props.children[1].props.value
+    let originalApplicationRecievedDate = detailsCompShallow.props().children[2].props.children[2].props.children.props.children[1].props.value
     expect(originalApplicationRecievedDate).toBe('2012-07-18')
   })
 })
@@ -191,11 +191,11 @@ describe('Verify Facility Details Null Value', function () {
     expect(detailsCompShallow.find('.grid_view').length).toEqual(1)
   })
   it('Assigned Worker Value', function () {
-    let assignedWorkerValue = detailsCompShallow.props().children.props.children[2].props.children[0].props.children.props.children[1].props.value
+    let assignedWorkerValue = detailsCompShallow.props().children[2].props.children[0].props.children.props.children[1].props.value
     expect(assignedWorkerValue).toBe('N/A')
   })
   it('Original Application Recieved Date', function () {
-    let originalApplicationRecievedDate = detailsCompShallow.props().children.props.children[2].props.children[2].props.children.props.children[1].props.value
+    let originalApplicationRecievedDate = detailsCompShallow.props().children[2].props.children[2].props.children.props.children[1].props.value
     expect(originalApplicationRecievedDate).toBe('N/A')
   })
 })

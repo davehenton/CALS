@@ -1,0 +1,10 @@
+version: '2.1'
+services:
+  cals_acceptance_test:
+    build: .
+    command: bash -c 'yarn run spec-end2end-features'
+    environment:
+      CAPYBARA_APP_HOST: "${CAPYBARA_APP_HOST}"
+      USERNAME: "${USERNAME}"
+    stdin_open: true
+    tty: true
