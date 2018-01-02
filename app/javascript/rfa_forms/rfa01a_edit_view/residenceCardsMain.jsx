@@ -19,6 +19,7 @@ export default class ResidenceCards extends React.Component {
   constructor (props) {
     super(props)
     this.setResidenceState = this.setResidenceState.bind(this)
+    this.handleClearOnConditionalChange = this.handleClearOnConditionalChange.bind(this)
     this.getFocusClassName = this.getFocusClassName.bind(this)
   }
 
@@ -30,6 +31,19 @@ export default class ResidenceCards extends React.Component {
     let newData = Immutable.fromJS(this.props.residence || blankResidenceFields)
     newData = newData.set(key, value)
     this.props.setParentState('residence', newData.toJS())
+  }
+
+  handleClearOnConditionalChange (key, hiddenKey, value, hiddenDefaultValue) {
+    if (value === 'false') {
+    // if value is false, we want to clear the data
+    // for the field the conditonal question hides
+      let newData = Immutable.fromJS(this.props.residence)
+      newData = newData.set(key, value)
+      newData = newData.set(hiddenKey, hiddenDefaultValue)
+      this.props.setParentState('residence', newData.toJS())
+    } else {
+      this.setResidenceState(key, value)
+    }
   }
 
   render () {
@@ -46,6 +60,7 @@ export default class ResidenceCards extends React.Component {
             addresses={residenceData.addresses}
             physicalMailingSimilar={residenceData.physical_mailing_similar}
             setParentState={this.setResidenceState}
+            handleClearOnConditionalChange={this.handleClearOnConditionalChange}
           />
 
         </div>
@@ -59,6 +74,7 @@ export default class ResidenceCards extends React.Component {
             languageTypes={this.props.languageTypes}
             aboutResidence={residenceData}
             setParentState={this.setResidenceState}
+            handleClearOnConditionalChange={this.handleClearOnConditionalChange}
           />
         </div>
       </div>

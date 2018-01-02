@@ -40,6 +40,7 @@ export default class AddressCard extends React.Component {
       suggestions: []
     }
     this.checkAddressType = this.checkAddressType.bind(this)
+    this.handleClearOnConditionalChange = this.handleClearOnConditionalChange.bind(this)
   }
   checkAddressType (addressType) {
     const blankAddressFields = (addressType === physicalAddressType) ? blankPhysicalAddress : blankMailingAddress
@@ -60,6 +61,19 @@ export default class AddressCard extends React.Component {
     data = data.update(addressData.index, x => x.set(key, value))
     this.props.setParentState('addresses', data.toJS())
   }
+
+  handleClearOnConditionalChange (typeString, key, value, hiddenKey, hiddenDefaultValue) {
+    if (value === 'false') {
+      let addressData = this.checkAddressType(typeString)
+      let data = addressData.data
+      data = data.update(addressData.index, x => x.set(key, value))
+      data = data.update(addressData.index, x => x.set(hiddenKey, hiddenDefaultValue))
+      this.props.setParentState('addresses', data.toJS())
+    } else {
+      this.props.setParentState(key, value)
+    }
+  }
+
   onSelection (autoFillData, typeString) {
     let addressData = this.checkAddressType(typeString)
     autoFillData.type = addressData.blankAddressFields.type
@@ -93,7 +107,7 @@ export default class AddressCard extends React.Component {
                 label='Mailing address the same as Physical Address?'
                 idPrefix='mailing_similar'
                 value={mailingAddress}
-                onFieldChange={(event) => this.props.setParentState('physical_mailing_similar', event.target.value)} />
+                onFieldChange={(event) => this.handleClearOnConditionalChange(mailingAddressType, 'physical_mailing_similar', event.target.value, 'addresses', [blankMailingAddress])} />
             </div>
             <div className={hiddenMailingSameAsPhysical}>
               <AddressComponent

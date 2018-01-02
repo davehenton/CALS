@@ -15,6 +15,7 @@ export default class ChildDesiredCard extends React.Component {
   constructor (props) {
     super(props)
     this.onChange = this.onChange.bind(this)
+    this.handleClearOnConditionalChange = this.handleClearOnConditionalChange.bind(this)
   }
 
   onChange (key, value, index) {
@@ -22,6 +23,16 @@ export default class ChildDesiredCard extends React.Component {
     newData = newData.set(key, value)
     this.props.setParentState(key, newData.toJS()[key])
   }
+
+  handleClearOnConditionalChange (key, value, hiddenKey, hiddenValue) {
+    let newData = Immutable.fromJS(this.props.desiredChildSection.childDesired)
+    newData = newData.set(key, value)
+    if (value === 'false') {
+      newData = newData.set(hiddenKey, hiddenValue)
+    }
+    this.props.setParentState('childDesired', newData.toJS())
+  }
+
   render () {
     const childCurrentlyInHomeVisible = this.props.desiredChildSection.child_identified === true || this.props.desiredChildSection.child_identified === 'true'
     return (

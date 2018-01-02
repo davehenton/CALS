@@ -54,3 +54,43 @@ export const blankIdentifiedChild = Object.freeze({
     }
   }
 })
+
+export const relationshipToAdultsDefaults = Object.freeze({
+  applicant_id: '',
+  relationship_to_applicant: null
+})
+
+export const adultChildrenDefaults = Object.freeze({
+  name_prefix: null,
+  first_name: '',
+  middle_name: '',
+  last_name: '',
+  name_suffix: null,
+  relationship_to_applicants: [
+    relationshipToAdultsDefaults
+  ],
+  lives_in_home: '',
+  address: addressDefaults
+})
+
+export const formerSpousesDefaults = Object.freeze({
+  relationship_type: null,
+  applicant_id: '',
+  name_prefix: null,
+  first_name: '',
+  middle_name: '',
+  last_name: '',
+  name_suffix: null,
+  date_of_marriage: '',
+  place_of_marriage_city: '',
+  place_of_marriage_state: null,
+  marriage_termination_reason: null,
+  date_of_marriage_end: '',
+  place_of_marriage_end_city: '',
+  place_of_marriage_end_state: null
+})
+
+export const applicantsHistoryDefaults = Object.freeze({
+  former_spouses: [formerSpousesDefaults],
+  adult_children: [adultChildrenDefaults]
+})

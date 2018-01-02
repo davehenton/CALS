@@ -66,6 +66,7 @@ export default class ApplicantMaritalHistoryCardGroup extends React.Component {
     this.onMaritalHistoryClickClose = this.onMaritalHistoryClickClose.bind(this)
     this.onAdultChildClickClose = this.onAdultChildClickClose.bind(this)
     this.updateNestedCards = this.updateNestedCards.bind(this)
+    this.handleClearOnConditionalChange = this.handleClearOnConditionalChange.bind(this)
   }
 
   updateNestedCards (newCardFields, type) {
@@ -135,6 +136,19 @@ export default class ApplicantMaritalHistoryCardGroup extends React.Component {
     this.props.setParentState('applicantsHistory', updatedMaritalHistory.toJS())
   }
 
+  handleClearOnConditionalChange (key, hiddenKey, value, hiddenDefaultValue, index) {
+    if (value === 'false') {
+      let maritalHistory = Immutable.fromJS(this.props.applicantsHistory)
+      let newData = Immutable.fromJS(this.props.applicantsHistory.adult_children)
+      newData = newData.update(index, x => x.set(key, value))
+      newData = newData.update(index, x => x.set(hiddenKey, hiddenDefaultValue))
+      let updatedMaritalHistory = maritalHistory.set('adult_children', newData)
+      this.props.setParentState('applicantsHistory', updatedMaritalHistory.toJS())
+    } else {
+      this.changeAdultChild(key, value, index)
+    }
+  }
+
   render () {
     let applicantsHistory = this.props.applicantsHistory
     let applicantMaritalHistories = applicantsHistory && applicantsHistory.former_spouses
@@ -197,6 +211,7 @@ export default class ApplicantMaritalHistoryCardGroup extends React.Component {
                       validator={this.props.validator}
                       changeAdultChild={this.changeAdultChild}
                       setParentState={this.props.setParentState}
+                      handleClearOnConditionalChange={this.handleClearOnConditionalChange}
                       changeAdultHistoryAddress={this.changeAdultHistoryAddress}
                       handleRelationshipTypeToApplicant={this.handleRelationshipTypeToApplicantAdultChild}
                       relationshipToApplicantTypes={this.props.relationshipToApplicantTypes}

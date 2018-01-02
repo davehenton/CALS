@@ -21,7 +21,7 @@ export default class ChildDesiredMain extends React.Component {
     let newData = Immutable.fromJS(this.props.childDesired)
     newData = newData.set(key, value)
     if (newData.toJS().child_identified === 'false') {
-      newData = newData.set('child_in_home', 'false')
+      newData = newData.set('child_in_home', '')
     }
     this.props.setParentState('childDesired', newData.toJS())
   }
