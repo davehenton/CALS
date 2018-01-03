@@ -33,7 +33,7 @@ const DropDownFormField = ({
     </select>
   </FormField>
 )
-DropDownFormField.PropTypes = {
+DropDownFormField.propTypes = {
   value: PropTypes.string
 }
 export {DropDownFormField}
