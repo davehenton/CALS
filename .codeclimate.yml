@@ -4,7 +4,7 @@ plugins:
     enabled: true
     config:
       languages:
-      - javascript:
+      - ruby
   brakeman:
     enabled: true
   bundler-audit:
