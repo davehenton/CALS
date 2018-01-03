@@ -87,6 +87,17 @@ export class FosterCareHistoryFields extends React.Component {
     this.props.setParentState('fosterCareHistory', newerData.toJS())
   }
 
+  handleClearOnConditionalChange (key, subKey, value, hiddenKey, hiddenDefaultValue) {
+    if (value === 'false') {
+      let newData = Immutable.fromJS((Object.keys(this.props.fosterCareHistory).length !== 0) ? this.props.fosterCareHistory : blankFosterCareFields)
+      let newerData = newData.update(key, data => data.set(subKey, value))
+      newerData = newerData.update(key, data => data.set(hiddenKey, hiddenDefaultValue))
+      this.props.setParentState('fosterCareHistory', newerData.toJS())
+    } else {
+      this.setFosterCareNestedState(key, subKey, value)
+    }
+  }
+
   setFosterCareHistoryState (key, value) {
     let newData = Immutable.fromJS((Object.keys(this.props.fosterCareHistory).length !== 0) ? this.props.fosterCareHistory : blankFosterCareFields)
     let newerData = newData.set(key, value)
@@ -195,7 +206,7 @@ export class FosterCareHistoryFields extends React.Component {
                 label='Have you been previously licensed, certified, or approved to provide foster care?'
                 idPrefix='q1-select-dropdown'
                 value={q1History.was_previously_licensed}
-                onFieldChange={(event) => this.setFosterCareNestedState('foster_care_licenses_q1', 'was_previously_licensed', event.target.value)} />
+                onFieldChange={(event) => this.handleClearOnConditionalChange('foster_care_licenses_q1', 'was_previously_licensed', event.target.value, 'agencies', [blankAgencyFields])} />
             </div>
             <div className={hiddenQ1}>
               {
@@ -228,7 +239,7 @@ export class FosterCareHistoryFields extends React.Component {
                   <Button
                     buttonId='addAgency_q1'
                     label='Add Another Agency +'
-                    onClick={(event) => this.addAgencyCard(event, q1History.agencies, 'foster_care_licenses_q1', 'agencies') } />
+                    onClick={(event) => this.addAgencyCard(event, q1History.agencies, 'foster_care_licenses_q1', 'agencies')} />
                 </div>
               </div>
             </div>
@@ -241,7 +252,7 @@ export class FosterCareHistoryFields extends React.Component {
                 label='Have you previously applied for adoption?'
                 idPrefix='q2-select-dropdown'
                 value={q2History.have_applied_for_adoption}
-                onFieldChange={(event) => this.setFosterCareNestedState('applications_for_adoption_q2', 'have_applied_for_adoption', event.target.value)} />
+                onFieldChange={(event) => this.handleClearOnConditionalChange('applications_for_adoption_q2', 'have_applied_for_adoption', event.target.value, 'facilities', [''])} />
             </div>
 
             <div className={hiddenQ2}>
@@ -266,7 +277,7 @@ export class FosterCareHistoryFields extends React.Component {
                   <Button
                     buttonId='addFacility_q2'
                     label='Add Another Facility +'
-                    onClick={(event) => this.addFacilityCard(event, q2History.facilities, 'applications_for_adoption_q2', 'facilities') } />
+                    onClick={(event) => this.addFacilityCard(event, q2History.facilities, 'applications_for_adoption_q2', 'facilities')} />
                 </div>
               </div>
 
@@ -281,7 +292,7 @@ export class FosterCareHistoryFields extends React.Component {
                 care home, or residential care facility for the elderly or chronically ill?'
                 idPrefix='q3-select-dropdown'
                 value={q3History.was_previously_licensed}
-                onFieldChange={(event) => this.setFosterCareNestedState('facility_operation_licenses_q3', 'was_previously_licensed', event.target.value)} />
+                onFieldChange={(event) => this.handleClearOnConditionalChange('facility_operation_licenses_q3', 'was_previously_licensed', event.target.value, 'agencies', [blankAgencyFields])} />
             </div>
 
             <div className={hiddenQ3}>
@@ -313,7 +324,7 @@ export class FosterCareHistoryFields extends React.Component {
                   <Button
                     buttonId='addFacility_q3'
                     label='Add Another Agency +'
-                    onClick={(event) => this.addAgencyCard(event, q3History.agencies, 'facility_operation_licenses_q3', 'agencies') } />
+                    onClick={(event) => this.addAgencyCard(event, q3History.agencies, 'facility_operation_licenses_q3', 'agencies')} />
                 </div>
               </div>
             </div>
@@ -328,8 +339,7 @@ export class FosterCareHistoryFields extends React.Component {
                     home, or residential care facility for the elderly or chromincally ill?'
                 idPrefix='q4-select-dropdown'
                 value={q4History.was_employed_or_volunteered}
-                onFieldChange={(event) => this.setFosterCareNestedState('employment_in_facilities_q4', 'was_employed_or_volunteered', event.target.value)} />
-
+                onFieldChange={(event) => this.handleClearOnConditionalChange('employment_in_facilities_q4', 'was_employed_or_volunteered', event.target.value, 'facilities', [''])} />
             </div>
 
             <div className={hiddenQ4}>
@@ -354,7 +364,7 @@ export class FosterCareHistoryFields extends React.Component {
                   <Button
                     buttonId='addAgency_q4'
                     label='Add Another Facility +'
-                    onClick={(event) => this.addFacilityCard(event, q4History.facilities, 'employment_in_facilities_q4', 'facilities') } />
+                    onClick={(event) => this.addFacilityCard(event, q4History.facilities, 'employment_in_facilities_q4', 'facilities')} />
                 </div>
               </div>
 
@@ -369,8 +379,7 @@ export class FosterCareHistoryFields extends React.Component {
                       family approval application denial?'
                 idPrefix='q5-select-dropdown'
                 value={q5History.had_denials}
-                onFieldChange={(event) => this.setFosterCareNestedState('denial_history_q5', 'had_denials', event.target.value)} />
-
+                onFieldChange={(event) => this.handleClearOnConditionalChange('denial_history_q5', 'had_denials', event.target.value, 'agencies', [blankAgencyFields])} />
             </div>
 
             <div className={hiddenQ5}>
@@ -402,7 +411,7 @@ export class FosterCareHistoryFields extends React.Component {
                   <Button
                     buttonId='denial_history_q5'
                     label='Add Another Agency +'
-                    onClick={(event) => this.addAgencyCard(event, q5History.agencies, 'denial_history_q5', 'agencies') } />
+                    onClick={(event) => this.addAgencyCard(event, q5History.agencies, 'denial_history_q5', 'agencies')} />
                 </div>
               </div>
             </div>
@@ -415,7 +424,7 @@ export class FosterCareHistoryFields extends React.Component {
                 label='Have you had a license, certification, or approval suspended, revoked, or rescinded?'
                 idPrefix='q6-select-dropdown'
                 value={q6History.had_suspensions_revocations}
-                onFieldChange={(event) => this.setFosterCareNestedState('suspension_revocation_history_q6', 'had_suspensions_revocations', event.target.value)} />
+                onFieldChange={(event) => this.handleClearOnConditionalChange('suspension_revocation_history_q6', 'had_suspensions_revocations', event.target.value, 'agencies', [blankAgencyFields])} />
             </div>
 
             <div className={hiddenQ6}>
@@ -447,7 +456,7 @@ export class FosterCareHistoryFields extends React.Component {
                   <Button
                     buttonId='addAgency_suspension_q6'
                     label='Add Another Agency +'
-                    onClick={(event) => this.addAgencyCard(event, q6History.agencies, 'suspension_revocation_history_q6', 'agencies') } />
+                    onClick={(event) => this.addAgencyCard(event, q6History.agencies, 'suspension_revocation_history_q6', 'agencies')} />
                 </div>
               </div>
             </div>
