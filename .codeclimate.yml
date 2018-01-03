@@ -1,20 +1,18 @@
-engines:
+version: "2"
+checks:
+  similar-code:
+    enabled: false
+plugins:
   brakeman:
     enabled: true
   bundler-audit:
     enabled: true
-  duplication:
-    config:
-      languages:
-       - javascript
-       - ruby
-    enabled: true
   eslint:
+    enabled: true
     config:
       extensions:
         - .js
         - .jsx
-    enabled: true
   fixme:
     checks:
       TODO:
@@ -22,7 +20,7 @@ engines:
     enabled: true
   rubocop:
     enabled: true
-exclude_paths:
+exclude_patterns:
   - config/
   - spec/
   - test/
@@ -32,17 +30,3 @@ exclude_paths:
   - coverage/
   - node_modules/
   - lib/
-ratings:
-  paths:
-    - Gemfile.lock
-    - "**.erb"
-    - "**.haml"
-    - "**.rb"
-    - "**.rhtml"
-    - "**.slim"
-    - "**.inc"
-    - "**.js"
-    - "**.jsx"
-    - "**.module"
-    - "**.php"
-    - "**.py"
