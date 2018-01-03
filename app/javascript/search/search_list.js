@@ -14,7 +14,7 @@ export default class SearchList extends React.Component {
         <tr key={index}>
           <td><a href={urlPrefixHelper('/facilities/' + result.license_number)}>{result.name}</a></td>
           <td>{result.license_number}</td>
-          <td>{checkForNA(result.type)}</td>
+          <td>{checkForNA(result.type) + ' /' + ''}</td>
           <td>{checkForNA(result.status)}</td>
           <td>{result.name}</td>
           <td>{fullAddress}</td>
@@ -33,7 +33,7 @@ export default class SearchList extends React.Component {
             <tr>
               <th>Facility Name </th>
               <th>Facility license/ Approval #</th>
-              <th>Facility Type</th>
+              <th>Facility Type/ Facility Source</th>
               <th>Status</th>
               <th>Licensee Name</th>
               <th>Facility Address</th>

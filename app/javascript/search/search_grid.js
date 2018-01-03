@@ -32,13 +32,16 @@ export default class SearchGrid extends React.Component {
                 title={'Facility Type'}
                 value={checkForNA(result.type)} />
               <GridInnerLayout
+                title={'Facility Source'}
+                value='' />
+              <GridInnerLayout
                 title={'Status'}
                 value={checkForNA(result.status)} />
+            </GridOuterLayout>
+            <GridOuterLayout>
               <GridInnerLayout
                 title={'Licensee Name'}
                 value={result.name} />
-            </GridOuterLayout>
-            <GridOuterLayout>
               <GridInnerLayout
                 title={'Facility Address'}
                 value = {fullAddress} />
