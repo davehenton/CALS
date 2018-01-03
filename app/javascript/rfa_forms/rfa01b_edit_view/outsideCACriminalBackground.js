@@ -11,6 +11,7 @@ import YesNoRadioComponent from 'components/common/yesNoFields'
 import {Rfa01bOutsideCACriminalBackgroundCardText} from 'constants/rfaText'
 import {disclosureDefaults} from 'constants/defaultFields'
 import {addCardAsJS, removeCard} from 'helpers/cardsHelper.jsx'
+import {checkArrayObjectPresence} from 'helpers/commonHelper.jsx'
 
 export default class OutsideCACriminalBackground extends React.Component {
   constructor (props) {
@@ -34,8 +35,8 @@ export default class OutsideCACriminalBackground extends React.Component {
   }
 
   render () {
-    const convictedInAnotherState = this.props.convictedInAnotherState
-    const disclosures = this.props.disclosures
+    const convictedInAnotherState = String(this.props.convictedInAnotherState)
+    const disclosures = checkArrayObjectPresence(this.props.disclosures) || [disclosureDefaults]
     return (
       <CardLayout
         idClassName='outside_ca_criminal_background'
@@ -51,10 +52,10 @@ export default class OutsideCACriminalBackground extends React.Component {
             <YesNoRadioComponent
               idPrefix='outsideCACriminalBackground'
               value={convictedInAnotherState}
-              onFieldChange={(event) => this.props.setParentState('convicted_in_another_state', !convictedInAnotherState)} />
+              onFieldChange={(event) => this.props.handleClearOnConditionalChange('convicted_in_another_state', event.target.value, 'convicted_in_another_state_disclosures', [disclosureDefaults])} />
           </div>
         </div>
-        {convictedInAnotherState
+        {convictedInAnotherState === 'true'
           ? disclosures.map((crime, index) => {
             return (
               <div key={'outsideCaliforniaCriminalBackground' + index}>
@@ -69,7 +70,7 @@ export default class OutsideCACriminalBackground extends React.Component {
           })
           : null
         }
-        {convictedInAnotherState
+        {convictedInAnotherState === 'true'
           ? <div>
             <Button
               id='outsideCACrimeAdd'
@@ -83,7 +84,7 @@ export default class OutsideCACriminalBackground extends React.Component {
 }
 
 OutsideCACriminalBackground.propTypes = {
-  convictedInAnotherState: PropTypes.bool,
+  convictedInAnotherState: PropTypes.any,
   disclosures: PropTypes.array,
   getFocusClassName: PropTypes.func,
   setFocusState: PropTypes.func,
@@ -94,7 +95,7 @@ OutsideCACriminalBackground.propTypes = {
   errors: PropTypes.array
 }
 OutsideCACriminalBackground.defaultProps = {
-  convictedInAnotherState: false,
+  convictedInAnotherState: '',
   disclosures: [disclosureDefaults],
   errors: []
 }

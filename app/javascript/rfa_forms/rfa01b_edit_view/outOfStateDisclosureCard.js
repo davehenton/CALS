@@ -10,14 +10,14 @@ import {getDictionaryId, dictionaryNilSelect} from 'helpers/commonHelper.jsx'
 const otherStatesOfLivingDefaults = Object.freeze({
   'other_states_of_living': [
     {
-      'value': 'string',
-      'id': 'string'
+      'value': '',
+      'id': ''
     }
   ]})
 
 export default class OutOfStateDisclosureCard extends React.Component {
   render () {
-    const livedInOtherState = this.props.livedInOtherState
+    const livedInOtherState = String(this.props.livedInOtherState)
 
     return (
       <CardLayout
@@ -32,9 +32,9 @@ export default class OutOfStateDisclosureCard extends React.Component {
           <YesNoRadioComponent
             idPrefix='outOfStateDisclosureCard'
             value={livedInOtherState}
-            onFieldChange={(event) => this.props.setParentState('lived_in_other_state', !livedInOtherState)} />
+            onFieldChange={(event) => this.props.handleClearOnConditionalChange('lived_in_other_state', event.target.value, 'other_states_of_living', [])} />
         </div>
-        {livedInOtherState
+        {livedInOtherState === 'true'
           ? <div>
             <MultiSelect
               label={Rfa01bOutOfStateDisclosureCardText.identifyStates}
@@ -51,7 +51,7 @@ export default class OutOfStateDisclosureCard extends React.Component {
 }
 
 OutOfStateDisclosureCard.propTypes = {
-  livedInOtherState: PropTypes.bool,
+  livedInOtherState: PropTypes.any,
   otherStatesOfLiving: PropTypes.array,
   getFocusClassName: PropTypes.func,
   setFocusState: PropTypes.func,
@@ -60,7 +60,7 @@ OutOfStateDisclosureCard.propTypes = {
   errors: PropTypes.array
 }
 OutOfStateDisclosureCard.defaultProps = {
-  livedInOtherState: false,
+  livedInOtherState: '',
   otherStatesOfLiving: [],
   errors: []
 }

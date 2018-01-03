@@ -5,6 +5,7 @@ import Immutable from 'immutable'
 import {InputComponent} from 'components/common/inputFields'
 import {TextAreaComponent} from 'components/common/textArea'
 import {Rfa01bCriminalFieldsCardText} from 'constants/rfaText'
+import {disclosureDefaults} from 'constants/defaultFields'
 import Button from 'components/common/button'
 
 export default class CriminalFields extends React.Component {
@@ -54,5 +55,6 @@ CriminalFields.propTypes = {
 }
 
 CriminalFields.defaultProps = {
-  errors: []
+  errors: [],
+  crime: disclosureDefaults
 }

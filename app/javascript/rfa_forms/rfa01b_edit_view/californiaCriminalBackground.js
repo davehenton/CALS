@@ -10,6 +10,7 @@ import CardLayout from 'components/common/cardLayout'
 import Button from 'components/common/button'
 import {Rfa01bCaliforniaCriminalBackGroundCardText} from 'constants/rfaText'
 import {addCardAsJS, removeCard} from 'helpers/cardsHelper.jsx'
+import {checkArrayObjectPresence} from 'helpers/commonHelper.jsx'
 
 const disclosureDefaults = Object.freeze({
   'offense': '',
@@ -44,8 +45,8 @@ export default class CaliforniaCriminalBackground extends React.Component {
   }
 
   render () {
-    const convictedInCalifornia = this.props.convictedInCalifornia
-    const disclosures = this.props.disclosures
+    const convictedInCalifornia = String(this.props.convictedInCalifornia)
+    const disclosures = checkArrayObjectPresence(this.props.disclosures) || [disclosureDefaults]
     return (
 
       <CardLayout
@@ -62,10 +63,11 @@ export default class CaliforniaCriminalBackground extends React.Component {
             <YesNoRadioComponent
               idPrefix='californiaCriminalBackgroundRadio'
               value={convictedInCalifornia}
-              onFieldChange={(event) => this.props.setParentState('convicted_in_california', !convictedInCalifornia)} />
+              onFieldChange={(event) => this.props.handleClearOnConditionalChange('convicted_in_california', event.target.value, 'convicted_in_california_disclosures', [disclosureDefaults])} />
+
           </div>
         </div>
-        {convictedInCalifornia
+        {convictedInCalifornia === 'true'
           ? disclosures.map((crime, index) => {
             return (
               <div key={'californiaCriminalBackgroundKey' + index}>
@@ -81,7 +83,7 @@ export default class CaliforniaCriminalBackground extends React.Component {
           : null
         }
 
-        {convictedInCalifornia
+        {convictedInCalifornia === 'true'
           ? <div>
             <Button
               id='CACrimeAdd'
@@ -96,7 +98,7 @@ export default class CaliforniaCriminalBackground extends React.Component {
 }
 
 CaliforniaCriminalBackground.propTypes = {
-  convictedInCalifornia: PropTypes.bool,
+  convictedInCalifornia: PropTypes.any,
   getFocusClassName: PropTypes.func,
   setFocusState: PropTypes.func,
   setParentState: PropTypes.func,
@@ -107,7 +109,7 @@ CaliforniaCriminalBackground.propTypes = {
 }
 
 CaliforniaCriminalBackground.defaultProps = {
-  convictedInCalifornia: false,
+  convictedInCalifornia: '',
   disclosures: [disclosureDefaults],
   errors: []
 }

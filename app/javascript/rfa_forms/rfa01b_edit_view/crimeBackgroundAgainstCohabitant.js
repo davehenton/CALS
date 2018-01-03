@@ -11,6 +11,7 @@ import Button from 'components/common/button'
 import {Rfa01bCrimeBackGroundAgainstCohabCardText} from 'constants/rfaText'
 import {disclosureDefaults} from 'constants/defaultFields'
 import {addCardAsJS, removeCard} from 'helpers/cardsHelper.jsx'
+import {checkArrayObjectPresence} from 'helpers/commonHelper.jsx'
 
 export default class CrimeBackgroundAgainstCohabitant extends React.Component {
   constructor (props) {
@@ -34,8 +35,8 @@ export default class CrimeBackgroundAgainstCohabitant extends React.Component {
   }
 
   render () {
-    const arrestedForCrime = this.props.arrestedForCrime
-    const disclosures = this.props.disclosures
+    const arrestedForCrime = String(this.props.arrestedForCrime)
+    const disclosures = checkArrayObjectPresence(this.props.disclosures) || [disclosureDefaults]
 
     return (
       <CardLayout
@@ -51,10 +52,11 @@ export default class CrimeBackgroundAgainstCohabitant extends React.Component {
             <YesNoRadioComponent
               idPrefix='crimeBackgroundAgainstCohabitantRadio'
               value={arrestedForCrime}
-              onFieldChange={(event) => this.props.setParentState('arrested_for_crime', !arrestedForCrime)} />
+              onFieldChange={(event) => this.props.handleClearOnConditionalChange('arrested_for_crime', event.target.value, 'arrested_for_crime_disclosures', [disclosureDefaults])} />
+
           </div>
         </div>
-        { arrestedForCrime
+        { arrestedForCrime === 'true'
           ? disclosures.map((crime, index) => {
             return (
               <div key={'crimeBackgroundAgainstCohabitant' + index} >
@@ -70,7 +72,7 @@ export default class CrimeBackgroundAgainstCohabitant extends React.Component {
           : null
         }
 
-        {arrestedForCrime
+        {arrestedForCrime === 'true'
           ? <div>
             <Button
               id='CrimeAgainstCohabAdd'
@@ -85,7 +87,7 @@ export default class CrimeBackgroundAgainstCohabitant extends React.Component {
 }
 
 CrimeBackgroundAgainstCohabitant.propTypes = {
-  arrestedForCrime: PropTypes.bool,
+  arrestedForCrime: PropTypes.any,
   disclosures: PropTypes.array,
   getFocusClassName: PropTypes.func,
   setFocusState: PropTypes.func,
@@ -96,7 +98,7 @@ CrimeBackgroundAgainstCohabitant.propTypes = {
   errors: PropTypes.array
 }
 CrimeBackgroundAgainstCohabitant.defaultProps = {
-  arrestedForCrime: false,
+  arrestedForCrime: '',
   disclosures: [disclosureDefaults],
   errors: []
 }
