@@ -3,6 +3,11 @@ checks:
   similar-code:
     enabled: false
 plugins:
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - ruby:
   brakeman:
     enabled: true
   bundler-audit:
