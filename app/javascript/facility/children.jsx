@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {checkfullNameorNA} from 'search/common/commonUtils'
 
 const title = 'Children currently placed in facility'
 
@@ -19,7 +20,7 @@ export default class Children extends React.Component {
           <td data-label='age'> {child.person.age} </td>
           <td data-label='date of birth'> {child.person.date_of_birth} </td>
           <td data-label='date of placement'> {child.date_of_placement} </td>
-          <td data-label='assigned worker'> {child.assigned_worker ? child.assigned_worker : 'N/A'} </td>
+          <td data-label='assigned worker'> {checkfullNameorNA(child.assigned_worker)} </td>
           <td data-label='county of origin'> {child.county_of_origin} </td>
         </tr>
       )
