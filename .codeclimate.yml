@@ -1,31 +1,9 @@
 version: "2"
 plugins:
-  duplication:
-    enabled: true
-    config:
-      languages:
-      - ruby
-  brakeman:
-    enabled: true
-  bundler-audit:
-    enabled: true
-  eslint:
-    enabled: true
-    config:
-      extensions:
-        - .js
-        - .jsx
   fixme:
     enabled: true
-  rubocop:
-    enabled: true
-exclude_patterns:
-  - config/
-  - spec/
-  - test/
-  - vendor/
-  - public/
-  - docker/
-  - coverage/
-  - node_modules/
-  - lib/
+    config:
+      strings:
+      - FIXME
+      - BUG
+      - CUSTOM
