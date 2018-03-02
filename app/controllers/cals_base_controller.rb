@@ -9,7 +9,11 @@ class CalsBaseController < ApplicationController
     default_callback_url = ''
     redirect_to Cwds::Authentication.logout_url(AUTHENTICATION_API_BASE_URL, default_callback_url)
   end
-
+DEBUG
+DEBUG
+DEBUG
+FIXME
+FIXME
   protected
 
   def process_items_for_persistance(items, helper, parent_id)
