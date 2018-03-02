@@ -16,9 +16,6 @@ plugins:
         - .js
         - .jsx
   fixme:
-    checks:
-      TODO:
-        enabled: false
     enabled: true
   rubocop:
     enabled: true
